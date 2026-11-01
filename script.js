@@ -30,7 +30,7 @@
 // Form submissions -> Google Sheets (Apps Script web app)
 // FORMS_ENDPOINT is filled in once the sheet's web app is deployed.
 // ---------------------------------------------------------------------
-var FORMS_ENDPOINT = ''; // e.g. https://script.google.com/macros/s/.../exec
+var FORMS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyex1LPWaKFcagAHRs8goNEGXgPQ2DMBSdhE3ZgYaNFGxn6SkUeHHFqAALUBJmVgk8GCg/exec'; // deployed web app
 var FORMS_KEY = 'ojfq02d56tis9ch8xmvzegb4';
 
 (function () {
