@@ -7,6 +7,7 @@ Wedding website for **Charlotte & Ciaran**, 3 July 2027 at Castell de Tamarit, C
 - `index.html` — home, hero with countdown
 - `schedule.html` — the weekend: Day 0 welcome drinks, Day 1 wedding, Day 2 TBA
 - `where-to-stay.html` — accommodation recommendations (some with guest rates)
+- `local-area.html` — getting there (air, train, transfers), local taxis, restaurants, things to do
 - `register-interest.html` — accommodation interest form (backend hookup TODO)
 - `rsvp.html` — RSVP form (backend hookup TODO: responses, dietary needs, food choices)
 - `faq.html` — questions
