@@ -46,6 +46,10 @@ a { color: var(--burgundy); }
   content: ''; position: absolute; left: 50%; bottom: 0; width: 1px; height: 0; background: none;
 }
 .hero > * { position: relative; z-index: 2; }
+
+/* cherub line art, blended onto the burgundy */
+.hero-cherubs { position: absolute; top: 2.2rem; left: 50%; transform: translateX(-50%); width: min(240px, 46vw); opacity: .28; mix-blend-mode: screen; pointer-events: none; z-index: 1; }
+.hero-cherubs img { width: 100%; height: auto; }
 .hero-kicker { text-transform: uppercase; letter-spacing: .42em; font-size: .68rem; font-weight: 400; color: rgba(255,246,226,.75); margin-bottom: 1.6rem; }
 .hero h1 { font-family: var(--script); font-weight: 400; font-size: clamp(3.6rem, 13vw, 8rem); line-height: .95; color: var(--cream); }
 .hero h1 .amp { font-style: normal; color: var(--cream); opacity: .75; padding: 0 .1em; }
@@ -104,6 +108,11 @@ a { color: var(--burgundy); }
 .site-footer { background: var(--burgundy); color: var(--cream); text-align: center; padding: 3.5rem 1.25rem; margin-top: 2rem; }
 .site-footer .names { font-family: var(--script); font-size: 2.6rem; line-height: 1; letter-spacing: .02em; }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
+
+/* Photo strip */
+.strip { display: flex; justify-content: center; margin: 0 auto 3rem; }
+.strip img { width: min(280px, 68vw); height: auto; border: 1px solid var(--line); box-shadow: 0 18px 45px rgba(89,20,20,.16); }
+.strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
 @media (max-width: 560px) {
   .nav { justify-content: center; }
