@@ -5,10 +5,10 @@
   --ink-soft: #5c5450;
   --cream: #fff6e2;
   --cream-soft: #faf7ef;
-  --burgundy: #591414;
+  --burgundy: #501e1f;
   --burgundy-soft: #6f2222;
-  --line: rgba(89,20,20,.18);
-  --accent: #591414;
+  --line: rgba(80,30,31,.18);
+  --accent: #501e1f;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --script: 'Italianno', 'Cormorant Garamond', cursive;
   --sans: 'Jost', 'Segoe UI', sans-serif;
@@ -49,6 +49,16 @@ a { color: var(--burgundy); }
   content: ''; position: absolute; left: 50%; bottom: 0; width: 1px; height: 0; background: none;
 }
 .hero > * { position: relative; z-index: 2; }
+
+/* botanical garland along the foot of the hero (artwork from the save-the-date) */
+.hero-botanicals {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 210px; z-index: 1;
+  background: url('images/bot-bottom.jpg') center bottom / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 32%, rgba(0,0,0,.35) 72%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 0%, #000 32%, rgba(0,0,0,.35) 72%, transparent 100%);
+  opacity: .55;
+  pointer-events: none;
+}
 
 /* cherub line art, blended onto the burgundy */
 .hero-cherubs { position: absolute; top: 2.2rem; left: 50%; transform: translateX(-50%); width: min(240px, 46vw); opacity: .28; mix-blend-mode: screen; pointer-events: none; z-index: 1; }
