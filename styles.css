@@ -26,7 +26,7 @@ img { max-width: 100%; display: block; }
 a { color: var(--burgundy); }
 
 /* Header */
-.site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy); background-image: linear-gradient(rgba(89,20,20,.92), rgba(89,20,20,.92)), url('images/wallpaper.jpg'); background-size: cover; background-position: center 42%; border-bottom: 1px solid rgba(255,246,226,.14); }
+.site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy); background-image: linear-gradient(rgba(89,20,20,.55), rgba(89,20,20,.55)), url('images/bot-bottom.jpg'); background-size: auto, cover; background-position: center, center 42%; background-repeat: no-repeat, no-repeat; border-bottom: 1px solid rgba(255,246,226,.14); }
 .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.15rem 1.5rem; max-width: 1080px; margin: 0 auto; }
 .nav-links { display: flex; gap: 1.6rem; flex-wrap: wrap; }
 .nav-left { justify-content: flex-end; }
@@ -52,12 +52,7 @@ a { color: var(--burgundy); }
 
 /* botanical garland along the foot of the hero (artwork from the save-the-date) */
 .hero-botanicals {
-  position: absolute; left: 0; right: 0; top: 0; height: 230px; z-index: 1;
-  background: url('images/bot-bottom.jpg') center top / cover no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0,0,0,.35) 70%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0,0,0,.35) 70%, transparent 100%);
-  opacity: .55;
-  pointer-events: none;
+  display: none;
 }
 
 /* cherub line art, blended onto the burgundy */
