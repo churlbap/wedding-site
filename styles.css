@@ -20,10 +20,7 @@
   --white: var(--cream-soft);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 html { scroll-behavior: smooth; }
-body { overflow-x: hidden; }
-html { overflow-x: hidden; }
 body { font-family: var(--sans); font-weight: 300; color: var(--ink); background: var(--cream-soft); line-height: 1.75; letter-spacing: .01em; }
 img { max-width: 100%; display: block; }
 a { color: var(--burgundy); }
@@ -41,54 +38,17 @@ a { color: var(--burgundy); }
 .monogram em { font-style: normal; font-size: .55em; vertical-align: middle; opacity: .8; padding: 0 .06em; }
 
 /* Hero */
-.hero { position: relative; width: 100%; max-width: 100vw; min-height: 82vh; display: flex; flex-direction: row; align-items: stretch; justify-content: center; text-align: center; padding: 0;
-  background-color: var(--burgundy);
-  overflow: hidden;
+.hero { position: relative; min-height: 82vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4.5rem 1.25rem;
+  background: var(--burgundy); overflow: hidden;
 }
-.hero-rail { flex: 0 0 58px; background-repeat: repeat-y; background-size: 100% auto; opacity: .4; }
-.hero-rail.left { background-image: url('images/bot-vertical.jpg'); }
-.hero-rail.right { background-image: url('images/bot-vertical-r.jpg'); }
-.hero-inner { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4.5rem 1rem; }
-
-/* Invitation-style hero: names flanking a tilted strip */
-.hero-invite {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
-  align-items: center;
-  gap: clamp(.3rem, 1.5vw, 1.2rem);
-  position: relative; z-index: 2;
-  width: 100%; max-width: 100%; margin: 0 auto 1.8rem;
+.hero::before { /* soft cream glow */
+  content: ''; position: absolute; left: 50%; bottom: 20%; width: 70%; height: 55%; transform: translateX(-50%);
+  background: radial-gradient(circle at 50% 60%, rgba(255,246,226,.10) 0%, transparent 68%);
 }
-.hero-invite .name { min-width: 0; overflow-wrap: break-word; }
-.hero-invite .name {
-  font-family: var(--script);
-  font-size: clamp(1.5rem, 5.6vw, 3rem);
-  line-height: 1;
-  color: var(--cream);
+.hero::after { /* fine rule */
+  content: ''; position: absolute; left: 50%; bottom: 0; width: 1px; height: 0; background: none;
 }
-.hero-invite .name-left { text-align: right; }
-.hero-invite .name-right { text-align: left; }
-.hero-invite .strip-mid { position: relative; }
-.hero-invite .strip-mid img {
-  display: block;
-  width: clamp(96px, 21vw, 140px);
-  height: auto;
-  transform: rotate(-7deg);
-  box-shadow: 0 16px 38px rgba(0,0,0,.42);
-}
-/* cupids floating beside the strip, top right */
-/* cupids floating beside the strip, top right */
-.hero-invite .cupids {
-  position: absolute; top: -18%; left: 50%; transform: translateX(-50%);
-  width: clamp(70px, 18vw, 112px);
-  opacity: .9; pointer-events: none;
-}
-.hero-invite .cupids img { width: 100%; height: auto; display: block; }
-/* floral borders running down both sides of the hero */
 .hero > * { position: relative; z-index: 2; }
-
-
-
 
 /* botanical garland along the foot of the hero (artwork from the save-the-date) */
 .hero-botanicals {
@@ -106,12 +66,11 @@ a { color: var(--burgundy); }
 .hero-kicker { text-transform: uppercase; letter-spacing: .42em; font-size: .68rem; font-weight: 400; color: rgba(255,246,226,.75); margin-bottom: 1.6rem; }
 .hero h1 { font-family: var(--script); font-weight: 400; font-size: clamp(3.6rem, 13vw, 8rem); line-height: .95; color: var(--cream); }
 .hero h1 .amp { font-style: normal; color: var(--cream); opacity: .75; padding: 0 .1em; }
-.hero-date { font-family: var(--sans); text-transform: uppercase; letter-spacing: .18em; font-size: clamp(.56rem, 1.5vw, .72rem); color: var(--cream); margin: 1.8rem 1rem 2.4rem; max-width: 30rem; line-height: 1.9; }
+.hero-date { font-family: var(--sans); text-transform: uppercase; letter-spacing: .32em; font-size: clamp(.7rem, 1.6vw, .82rem); color: var(--cream); margin: 1.8rem 0 2.4rem; }
 
 /* Countdown */
-.countdown { display: flex; gap: .45rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.6rem; max-width: 100%; }
-.cd-box { flex: 0 0 auto; }
-.cd-box { background: transparent; border: 1px solid rgba(255,246,226,.3); border-radius: 0; padding: .7rem .6rem; min-width: 58px; }
+.countdown { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.6rem; }
+.cd-box { background: transparent; border: 1px solid rgba(255,246,226,.3); border-radius: 0; padding: .7rem 1rem; min-width: 68px; }
 .cd-num { font-family: var(--serif); font-weight: 400; font-size: 1.7rem; line-height: 1.1; color: var(--cream); }
 .cd-label { font-size: .58rem; text-transform: uppercase; letter-spacing: .22em; color: rgba(255,246,226,.65); margin-top: .2rem; }
 
