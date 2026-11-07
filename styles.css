@@ -52,10 +52,10 @@ a { color: var(--burgundy); }
 
 /* botanical garland along the foot of the hero (artwork from the save-the-date) */
 .hero-botanicals {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 210px; z-index: 1;
-  background: url('images/bot-bottom.jpg') center bottom / cover no-repeat;
-  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 32%, rgba(0,0,0,.35) 72%, transparent 100%);
-  mask-image: linear-gradient(to top, #000 0%, #000 32%, rgba(0,0,0,.35) 72%, transparent 100%);
+  position: absolute; left: 0; right: 0; top: 0; height: 230px; z-index: 1;
+  background: url('images/bot-bottom.jpg') center top / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0,0,0,.35) 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0,0,0,.35) 70%, transparent 100%);
   opacity: .55;
   pointer-events: none;
 }
