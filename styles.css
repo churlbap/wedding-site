@@ -26,12 +26,21 @@ img { max-width: 100%; display: block; }
 a { color: var(--burgundy); }
 
 /* Header */
-.site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy); background-image: linear-gradient(rgba(89,20,20,.55), rgba(89,20,20,.55)), url('images/bot-bottom.jpg'); background-size: auto, cover; background-position: center, center 42%; background-repeat: no-repeat, no-repeat; border-bottom: 1px solid rgba(255,246,226,.14); }
-.nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.15rem 1.5rem; max-width: 1080px; margin: .55rem auto; border: 1px solid rgba(255,246,226,.55); }
+.site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy); }
+.header-flowers { position: absolute; inset: 0 0 auto 0; z-index: 0; pointer-events: none;
+  height: clamp(130px, 50vw, 210px);
+  background-image: url('images/bot-bottom.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  opacity: .9; }
+.header-flowers::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
+  background: linear-gradient(to bottom, rgba(80,30,31,0) 0%, rgba(80,30,31,.55) 45%, rgba(80,30,31,.92) 78%, #501e1f 100%); }
+.nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.15rem 1.5rem; max-width: 1080px; width: 100%; margin: .55rem auto; border: 1px solid rgba(255,246,226,.45); position: relative; z-index: 1; }
 .nav-links { display: flex; gap: 1.6rem; flex-wrap: wrap; }
 .nav-left { justify-content: flex-end; }
 .nav-right { justify-content: flex-start; }
-.nav-links a { text-decoration: none; font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; color: rgba(255,246,226,.78); padding: .2rem 0; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; }
+.nav-links a { text-decoration: none; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,246,226,.9); padding: .38rem .6rem; border: 1px solid rgba(255,246,226,.4); transition: color .2s ease, border-color .2s ease; }
 .nav-links a:hover { color: var(--cream); border-color: var(--cream); }
 .brand { text-align: center; text-decoration: none; }
 .monogram { font-family: var(--script); font-size: 2.5rem; line-height: .85; color: var(--cream); white-space: nowrap; }
