@@ -109,9 +109,10 @@ a { color: var(--burgundy); }
 .site-footer .names { font-family: var(--script); font-size: 2.6rem; line-height: 1; letter-spacing: .02em; }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
 
-/* Photo strip */
-.strip { display: flex; justify-content: center; margin: 0 auto 3rem; }
-.strip img { width: min(280px, 68vw); height: auto; border: 0; box-shadow: none; }
+/* Photo strip on burgundy */
+.strip-band { background: var(--burgundy); padding: 4.5rem 1.25rem; text-align: center; }
+.strip { display: flex; justify-content: center; margin: 0 auto; }
+.strip img { width: min(300px, 70vw); height: auto; border: 0; box-shadow: 0 22px 55px rgba(0,0,0,.35); }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
 @media (max-width: 560px) {
