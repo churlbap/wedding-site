@@ -111,7 +111,7 @@ a { color: var(--burgundy); }
 
 /* Photo strip */
 .strip { display: flex; justify-content: center; margin: 0 auto 3rem; }
-.strip img { width: min(280px, 68vw); height: auto; border: 1px solid var(--line); box-shadow: 0 18px 45px rgba(89,20,20,.16); }
+.strip img { width: min(280px, 68vw); height: auto; border: 0; box-shadow: none; }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
 @media (max-width: 560px) {
