@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italianno&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=36">
 </head>
 <body>
   <header class="site-header">
@@ -27,10 +27,19 @@
   </header>
 
   <section class="hero" id="countdown">
-    <div class="hero-cherubs" aria-hidden="true"><img src="images/cherubs.png" alt=""></div>
+    <div class="hero-rail left" aria-hidden="true"></div>
+    <div class="hero-inner">
     <div class="hero-botanicals" aria-hidden="true"></div>
     <p class="hero-kicker">We're getting married</p>
-    <h1>Charlotte <span class="amp">&amp;</span> Ciaran</h1>
+    <h1 class="visually-hidden">Charlotte &amp; Ciaran</h1>
+    <div class="hero-invite">
+      <div class="name name-left">Charlotte</div>
+      <div class="strip-mid">
+        <img src="images/photostrip-straight.png" alt="Charlotte and Ciaran">
+        <div class="cupids" aria-hidden="true"><img src="images/cherubs-keyed.png" alt=""></div>
+      </div>
+      <div class="name name-right">Ciaran</div>
+    </div>
     <p class="hero-date">Saturday 3rd July 2027 — Castell de Tamarit, Catalonia</p>
     <div class="countdown" aria-label="Countdown to the wedding">
       <div class="cd-box"><div class="cd-num" id="cd-days">--</div><div class="cd-label">Days</div></div>
@@ -43,10 +52,8 @@
       &nbsp;
       <a class="btn ghost" href="where-to-stay.html">Where to Stay</a>
     </div>
-  </section>
-
-  <section class="strip-band">
-    <div class="strip"><img src="images/photostrip-straight.png" alt="Charlotte and Ciaran photo booth strip"></div>
+  </div>
+    <div class="hero-rail right" aria-hidden="true"></div>
   </section>
 
   <section class="section">
