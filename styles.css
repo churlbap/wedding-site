@@ -144,8 +144,12 @@ a { color: var(--burgundy); }
 
 /* Photo strip on burgundy */
 .strip-band { background: var(--burgundy); padding: 3rem 1.25rem; text-align: center; }
-.strip { display: flex; justify-content: center; margin: 0 auto; }
-.strip img { width: min(200px, 52vw); height: auto; border: 0; box-shadow: 0 18px 45px rgba(0,0,0,.34); }
+.strip { display: flex; align-items: center; justify-content: center; gap: clamp(.6rem, 3vw, 1.6rem); margin: 0 auto; }
+.strip img { height: auto; border: 0; }
+.strip-photo { width: min(200px, 52vw); box-shadow: 0 18px 45px rgba(0,0,0,.34); }
+.strip-orn { width: clamp(46px, 13vw, 88px); opacity: .55; flex: 0 0 auto; }
+.strip-orn:first-child { transform: rotate(-4deg); }
+.strip-orn:last-child { transform: rotate(4deg); }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
 @media (max-width: 720px) {
