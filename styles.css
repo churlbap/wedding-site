@@ -27,8 +27,8 @@ a { color: var(--burgundy); }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy); display: flow-root;
-  /* reserve the floral band's height so it sits inside the header, above the nav */
-  padding-top: clamp(130px, 50vw, 210px); }
+  /* let the nav sit on the lower part of the floral band, so the boxes span the border */
+  padding-top: calc(clamp(130px, 50vw, 210px) - 5.2rem); }
 .header-flowers { position: absolute; inset: 0 0 auto 0; z-index: 0; pointer-events: none;
   height: clamp(130px, 50vw, 210px);
   background-image: url('images/bot-bottom.jpg');
