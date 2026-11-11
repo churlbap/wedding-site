@@ -53,9 +53,8 @@ a { color: var(--burgundy); }
   padding: 1.1rem 1.25rem 3rem;
   background: var(--burgundy); overflow: hidden;
 }
-.hero::before { /* soft cream glow */
-  content: ''; position: absolute; left: 50%; bottom: 20%; width: 70%; height: 55%; transform: translateX(-50%);
-  background: radial-gradient(circle at 50% 60%, rgba(255,246,226,.10) 0%, transparent 68%);
+.hero::before { /* no cream wash — keeps the burgundy solid under the florals */
+  content: none;
 }
 .hero::after { /* fine rule */
   content: ''; position: absolute; left: 50%; bottom: 0; width: 1px; height: 0; background: none;
