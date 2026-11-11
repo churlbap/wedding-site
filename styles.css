@@ -26,16 +26,16 @@ img { max-width: 100%; display: block; }
 a { color: var(--burgundy); }
 
 /* Header */
-.site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy); display: flow-root;
-  /* let the nav sit on the lower part of the floral band, so the boxes span the border */
-  padding-top: calc(clamp(130px, 50vw, 210px) - 5.2rem); }
-.header-flowers { position: absolute; inset: 0 0 auto 0; z-index: 0; pointer-events: none;
-  height: clamp(130px, 50vw, 210px);
+.site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy);
+  /* the header is exactly as tall as the floral band, so the image can never
+     overhang into the hero and leave a translucent double-exposure */
+  height: clamp(130px, 50vw, 210px); display: flex; align-items: flex-end; overflow: hidden; }
+.header-flowers { position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background-image: url('images/bot-bottom.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  opacity: .9; }
+  opacity: 1; }
 .header-flowers::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
   background: linear-gradient(to bottom, rgba(80,30,31,0) 0%, rgba(80,30,31,.55) 45%, rgba(80,30,31,.92) 78%, #501e1f 100%); }
 .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .75rem; padding: 1.15rem 1rem; max-width: 100%; width: 100%; margin: 0; border: 0; position: relative; z-index: 1; }
