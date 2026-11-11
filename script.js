@@ -37,13 +37,13 @@ var FORMS_KEY = 'ojfq02d56tis9ch8xmvzegb4';
   var form = document.querySelector('form.form-grid');
   if (!form) return;
 
-  // RSVP page has select#attending; interest page has select#option.
+  // Only the accommodation interest form is live for now; RSVP returns with the invites.
   var formType = document.getElementById('attending') ? 'rsvp' : 'interest';
 
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     if (!FORMS_ENDPOINT) {
-      setStatus('RSVP submission isn\'t live quite yet — invitations will follow. Watch this space!');
+      setStatus('Form submission isn\'t live quite yet — details will follow. Watch this space!');
       return;
     }
     var btn = form.querySelector('button[type="submit"]');
