@@ -152,24 +152,6 @@ a { color: var(--burgundy); }
 .strip-orn { width: clamp(46px, 13vw, 88px); opacity: .55; flex: 0 0 auto; transform: rotate(4deg); }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
-/* little hand-written note beside the Polaroid */
-.strip-note { flex: 0 1 auto; width: clamp(140px, 34vw, 205px); background: var(--cream);
-  padding: .9rem .85rem 1.1rem; transform: rotate(-3.5deg);
-  box-shadow: 0 14px 34px rgba(0,0,0,.28); text-align: left; }
-.strip-note-line { font-family: var(--serif); font-style: italic; font-weight: 500;
-  font-size: clamp(.86rem, 2.5vw, 1.06rem); line-height: 1.75; color: var(--burgundy);
-  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.75em - 1px), rgba(80,30,31,.16) calc(1.75em - 1px), rgba(80,30,31,.16) 1.75em);
-  background-position: 0 .2em; }
-.strip-note-sign { font-family: var(--serif); font-style: italic; font-weight: 600;
-  font-size: clamp(.9rem, 2.6vw, 1.12rem); color: var(--burgundy); margin-top: .35rem; }
-.strip-note-sign .amp { font-style: normal; opacity: .75; padding: 0 .05em; }
-
-@media (max-width: 560px) {
-  .strip { gap: .55rem; }
-  .strip-orn { display: none; }
-  .strip-note { width: 38vw; padding: .7rem .6rem .85rem; }
-}
-
 @media (max-width: 720px) {
   .nav { padding: 0 .55rem .75rem; }
   .nav-links { gap: .22rem; flex-wrap: nowrap; justify-content: space-between; }
