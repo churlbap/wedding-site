@@ -29,7 +29,8 @@ a { color: var(--burgundy); }
 .site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy);
   /* the header is exactly as tall as the floral band, so the image can never
      overhang into the hero and leave a translucent double-exposure */
-  height: clamp(130px, 50vw, 210px); display: flex; align-items: flex-end; overflow: hidden; }
+  height: clamp(150px, 54vw, 235px); display: flex; flex-direction: column;
+  align-items: stretch; justify-content: space-between; overflow: hidden; }
 .header-flowers { position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background-image: url('images/bot-bottom.jpg');
   background-repeat: no-repeat;
@@ -38,9 +39,10 @@ a { color: var(--burgundy); }
   opacity: 1; }
 .header-flowers::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
   background: linear-gradient(to bottom, rgba(80,30,31,0) 0%, rgba(80,30,31,.55) 45%, rgba(80,30,31,.92) 78%, #501e1f 100%); }
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 0; padding: 1.15rem 1rem; max-width: 100%; width: 100%; margin: 0; border: 0; position: relative; z-index: 1; }
-.nav-links { display: flex; flex: 1 1 0; gap: .5rem; justify-content: space-around; align-items: center; }
-.brand { flex: 0 0 auto; padding: 0 1rem; text-align: center; text-decoration: none; }
+.nav { display: block; padding: 0 1rem .95rem; max-width: 100%; width: 100%; margin: 0; border: 0; position: relative; z-index: 1; }
+.nav-links { display: flex; gap: .5rem; justify-content: space-between; align-items: center; }
+.nav-links a { flex: 1 1 auto; text-align: center; }
+.brand { display: block; padding: 1.05rem 1rem .35rem; text-align: center; text-decoration: none; position: relative; z-index: 1; }
 .nav-links a { text-decoration: none; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,246,226,.9); padding: .38rem .6rem; border: 1px solid rgba(255,246,226,.4); transition: color .2s ease, border-color .2s ease; }
 .nav-links a:hover { color: var(--cream); border-color: var(--cream); }
 
@@ -151,11 +153,11 @@ a { color: var(--burgundy); }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
 @media (max-width: 720px) {
-  .nav { gap: 0; padding: .9rem .6rem; }
-  .nav-links { gap: .25rem; flex-wrap: nowrap; justify-content: space-around; }
-  .nav-links a { font-size: .55rem; letter-spacing: .1em; padding: .3rem .3rem; }
-  .brand { padding: 0 .5rem; }
-  .monogram { font-size: 1.9rem; }
+  .nav { padding: 0 .55rem .75rem; }
+  .nav-links { gap: .22rem; flex-wrap: nowrap; justify-content: space-between; }
+  .nav-links a { font-size: .55rem; letter-spacing: .09em; padding: .3rem .18rem; }
+  .brand { padding: .85rem .5rem .25rem; }
+  .monogram { font-size: 2rem; }
 }
 
 @media (max-width: 560px) {
