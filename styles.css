@@ -150,6 +150,13 @@ a { color: var(--burgundy); }
 .strip img { height: auto; border: 0; }
 .strip-photo { width: min(200px, 52vw); box-shadow: 0 18px 45px rgba(0,0,0,.34); }
 .strip-orn { width: clamp(46px, 13vw, 88px); opacity: .55; flex: 0 0 auto; transform: rotate(4deg); }
+
+/* note jotted onto the page, sitting above the cupids */
+.strip-side { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 auto; }
+.strip-note { font-family: var(--serif); font-style: italic; font-weight: 500;
+  font-size: clamp(.82rem, 2.4vw, 1.02rem); line-height: 1.5; color: var(--cream);
+  text-align: center; transform: rotate(-4deg); margin-bottom: .95rem; opacity: .92; }
+.strip-note-sign { font-size: .92em; font-weight: 600; }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
 @media (max-width: 720px) {
@@ -162,4 +169,8 @@ a { color: var(--burgundy); }
 
 @media (max-width: 560px) {
   .countdown { flex-wrap: wrap; }
+  .strip { gap: .5rem; }
+  .strip-photo { width: min(174px, 44vw); }
+  .strip-note { font-size: .74rem; }
+  .strip-orn { width: clamp(38px, 10vw, 58px); }
 }
