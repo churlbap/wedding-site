@@ -127,6 +127,21 @@ a { color: var(--burgundy); }
 .card { background: var(--cream); border: 1px solid var(--line); border-radius: 0; padding: 2rem 1.75rem; }
 .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin-bottom: .6rem; }
 .card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.8; }
+
+/* Illustrated area map on Where to Stay */
+.map-wrap { max-width: 880px; margin: 0 auto 2.6rem; }
+.area-map { width: 100%; height: auto; display: block; border: 1px solid rgba(80,30,31,.14); }
+.map-spot { text-decoration: none; cursor: pointer; }
+.map-spot .spot { transition: opacity .22s ease, transform .22s ease; }
+.map-spot:hover .spot { transform: translateY(-2px); }
+.map-spot:focus-visible .spot { outline: none; filter: drop-shadow(0 0 5px rgba(178,86,79,.8)); }
+.map-label { font-family: var(--sans); font-size: 12px; letter-spacing: .2em; fill: #3b2f26; text-transform: uppercase; font-weight: 500; }
+.map-label-hero { font-family: var(--serif); font-size: 17px; letter-spacing: .12em; fill: #501e1f; }
+.map-label-sm { font-family: var(--sans); font-size: 9.5px; letter-spacing: .14em; fill: #6b5b47; text-transform: uppercase; }
+.map-water { font-family: var(--sans); font-size: 10px; letter-spacing: .4em; fill: #6b8f8a; }
+.map-arrow-sm { font-family: var(--sans); font-size: 9.5px; letter-spacing: .1em; fill: #8a7a62; }
+.map-caption { text-align: center; font-size: .72rem; letter-spacing: .04em; color: #4a3a1e; opacity: .7; margin-top: .8rem; }
+
 .tag { display: inline-block; font-size: .6rem; text-transform: uppercase; letter-spacing: .24em; background: transparent; color: var(--burgundy); border: 1px solid var(--line); border-radius: 0; padding: .3rem .7rem; margin: 0 .35rem .8rem 0; }
 
 /* Timeline */

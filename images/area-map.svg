@@ -1,0 +1,287 @@
+<svg class="area-map" viewBox="0 0 900 640" role="img" aria-labelledby="mapTitle mapDesc" xmlns="http://www.w3.org/2000/svg">
+  <title id="mapTitle">Illustrated map of the wedding area</title>
+  <desc id="mapDesc">A hand-drawn map of the Costa Daurada coast from Tarragona to Barcelona, showing La Mora, Castell de Tamarit, Altafulla and Torredembarra, with the hotels marked.</desc>
+
+  <!-- paper -->
+  <rect width="900" height="640" fill="#fffaf0"/>
+
+  <!-- ================= SEA ================= -->
+  <path d="M0,470 C120,452 210,478 300,452 C380,430 420,404 500,392
+           C600,377 660,332 740,300 C800,276 850,262 900,250
+           L900,640 L0,640 Z" fill="#e6eee9"/>
+  <!-- shoreline -->
+  <path d="M0,470 C120,452 210,478 300,452 C380,430 420,404 500,392
+           C600,377 660,332 740,300 C800,276 850,262 900,250"
+        fill="none" stroke="#3b2f26" stroke-width="2" stroke-linecap="round"/>
+  <!-- sand strip -->
+  <path d="M0,470 C120,452 210,478 300,452 C380,430 420,404 500,392
+           C600,377 660,332 740,300 C800,276 850,262 900,250
+           L900,236 C850,248 795,262 738,286 C656,320 596,364 498,378
+           C420,390 378,416 298,438 C208,464 118,438 0,456 Z"
+        fill="#f0e2c6"/>
+  <path d="M0,470 C120,452 210,478 300,452 C380,430 420,404 500,392
+           C600,377 660,332 740,300 C800,276 850,262 900,250"
+        fill="none" stroke="#3b2f26" stroke-width="1.3" stroke-linecap="round" opacity=".55"/>
+
+  <!-- waves -->
+  <g stroke="#5f8b86" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".75">
+    <path d="M120,510 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M226,548 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M360,520 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M470,566 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M596,512 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M700,556 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M790,500 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M60,588 q11,-8 22,0 q11,8 22,0"/>
+    <path d="M520,610 q11,-8 22,0 q11,8 22,0"/>
+  </g>
+
+  <!-- sailboat -->
+  <g class="doodle" stroke="#3b2f26" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M624,470 l0,-38 l26,26 z" fill="#fffaf0"/>
+    <path d="M624,470 l0,-38 l-16,26 z" fill="#f6efdd"/>
+    <path d="M600,474 h50 l-8,12 h-34 z" fill="#e8d9b8"/>
+  </g>
+
+  <!-- fish -->
+  <g class="doodle" stroke="#5f8b86" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M220,596 q10,-8 20,0 q-10,8 -20,0 z M240,596 l7,-6 v12 z"/>
+    <path d="M760,588 q9,-7 18,0 q-9,7 -18,0 z M778,588 l6,-5 v10 z"/>
+  </g>
+
+  <text x="450" y="622" class="map-water" text-anchor="middle">MEDITERRANEAN SEA</text>
+
+  <!-- ================= LAND / ROAD ================= -->
+  <!-- main coast road, dashed -->
+  <path d="M-10,404 C110,398 200,412 300,390 C382,372 420,346 500,332
+           C600,316 664,272 744,240 C802,218 852,204 910,192"
+        fill="none" stroke="#8a7a62" stroke-width="2.2"
+        stroke-dasharray="10 9" stroke-linecap="round" opacity=".85"/>
+
+  <!-- ================= TARRAGONA (off-map hint) ================= -->
+  <a href="local-area.html" class="map-spot" aria-label="Directions to Tarragona">
+    <g class="spot">
+      <g stroke="#3b2f26" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M42,352 l0,-52 M30,300 l12,-16 l12,16"/>
+        <circle cx="42" cy="286" r="3.5" fill="#3b2f26"/>
+      </g>
+      <text x="42" y="372" class="map-label" text-anchor="middle">TARRAGONA</text>
+      <text x="42" y="386" class="map-label-sm" text-anchor="middle">20 min</text>
+    </g>
+  </a>
+
+  <!-- ================= BARCELONA (off-map hint) ================= -->
+  <a href="local-area.html" class="map-spot" aria-label="Directions to Barcelona">
+    <g class="spot">
+      <g stroke="#3b2f26" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M812,120 l46,-20 M846,88 l14,-2 l-4,14"/>
+        <circle cx="812" cy="120" r="3.5" fill="#3b2f26"/>
+      </g>
+      <text x="836" y="146" class="map-label" text-anchor="middle">BARCELONA</text>
+      <text x="836" y="160" class="map-label-sm" text-anchor="middle">1 hr</text>
+    </g>
+  </a>
+
+  <!-- ================= LA MORA ================= -->
+  <a href="#stay-tamarit" class="map-spot" aria-label="La Mora and Tamarit Beach Resort">
+    <g class="spot">
+      <!-- pine cluster -->
+      <g stroke="#4e6b4a" stroke-width="1.7" fill="#dfe7d6" stroke-linejoin="round">
+        <path d="M196,410 l13,-26 l13,26 z"/>
+        <path d="M199,394 l10,-20 l10,20 z"/>
+        <path d="M236,420 l11,-22 l11,22 z"/>
+        <path d="M239,407 l8,-16 l8,16 z"/>
+        <path d="M160,424 l10,-20 l10,20 z"/>
+      </g>
+      <g stroke="#4e6b4a" stroke-width="1.6" fill="none" stroke-linecap="round">
+        <path d="M209,410 v14 M247,420 v12 M170,424 v12"/>
+      </g>
+      <!-- houses -->
+      <g stroke="#3b2f26" stroke-width="1.7" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M266,404 v-26 l17,-13 l17,13 v26 z"/>
+        <path d="M284,404 v-16 h12 v16"/>
+        <path d="M300,410 v-20 l14,-11 l14,11 v20 z"/>
+        <path d="M330,406 v-14 l10,-8 l10,8 v14 z"/>
+      </g>
+      <!-- umbrella -->
+      <g stroke="#3b2f26" stroke-width="1.6" fill="#e9cfc4" stroke-linecap="round">
+        <path d="M188,452 q28,-24 56,0 z"/>
+        <path d="M216,452 v16" fill="none"/>
+      </g>
+      <text x="264" y="438" class="map-label" text-anchor="middle">LA MORA</text>
+    </g>
+  </a>
+
+  <!-- ================= LES BOTIGUES ================= -->
+  <a href="#stay-airbnb" class="map-spot" aria-label="Les Botigues de Mar beach restaurants">
+    <g class="spot">
+      <g stroke="#3b2f26" stroke-width="1.6" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M366,412 v-14 l11,-9 l11,9 v14 z"/>
+        <path d="M392,416 v-12 l10,-8 l10,8 v12 z"/>
+        <path d="M416,418 v-10 l9,-7 l9,7 v10 z"/>
+      </g>
+      <g stroke="#3b2f26" stroke-width="1.4" fill="none" stroke-linecap="round">
+        <path d="M372,428 q18,-14 36,0" opacity=".8"/>
+      </g>
+      <text x="400" y="444" class="map-label-sm" text-anchor="middle">LES BOTIGUES</text>
+    </g>
+  </a>
+
+  <!-- ================= CASTELL DE TAMARIT ================= -->
+  <a href="#stay-tamarit" class="map-spot" aria-label="Castell de Tamarit, the wedding venue">
+    <g class="spot spot-hero">
+      <!-- headland -->
+      <path d="M452,392 C466,372 500,364 524,368 C548,372 566,384 570,396
+               C560,404 470,404 452,392 Z"
+            fill="#efe4cb" stroke="#3b2f26" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- walls -->
+      <g stroke="#3b2f26" stroke-width="1.9" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M474,368 v-42 h56 v42"/>
+        <path d="M474,326 h7 v-7 h8 v7 h8 v-7 h8 v7 h8 v-7 h8 v7 h8 v-7 h5"/>
+      </g>
+      <!-- towers -->
+      <g stroke="#3b2f26" stroke-width="1.9" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M456,366 v-62 h22 v62"/>
+        <path d="M456,304 h6 v-8 h5 v8 h5 v-8 h6 v8"/>
+        <path d="M526,364 v-58 h22 v58"/>
+        <path d="M526,306 h6 v-8 h5 v8 h5 v-8 h6 v8"/>
+      </g>
+      <!-- keep -->
+      <g stroke="#3b2f26" stroke-width="1.9" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M494,326 v-26 h18 v26"/>
+        <path d="M494,300 h5 v-7 h8 v7"/>
+      </g>
+      <!-- door and windows -->
+      <g stroke="#3b2f26" stroke-width="1.5" fill="none">
+        <path d="M496,368 v-16 q6,-8 12,0 v16"/>
+        <rect x="482" y="338" width="6" height="9"/>
+        <rect x="516" y="338" width="6" height="9"/>
+        <rect x="463" y="320" width="7" height="10"/>
+        <rect x="534" y="320" width="7" height="10"/>
+      </g>
+      <!-- flag -->
+      <g stroke="#3b2f26" stroke-width="1.6" fill="#b2564f" stroke-linejoin="round">
+        <path d="M503,274 v-24"/>
+        <path d="M503,250 l20,7 l-20,8 z"/>
+      </g>
+      <text x="503" y="238" class="map-label map-label-hero" text-anchor="middle">CASTELL DE TAMARIT</text>
+      <text x="503" y="216" class="map-label-sm" text-anchor="middle">THE WEDDING</text>
+    </g>
+  </a>
+
+  <!-- ================= ALTAFULLA ================= -->
+  <a href="#stay-claustre" class="map-spot" aria-label="Altafulla old town and Gran Claustre">
+    <g class="spot">
+      <!-- hill -->
+      <path d="M604,352 C630,336 690,336 716,352 C700,364 620,364 604,352 Z"
+            fill="#efe4cb" stroke="#3b2f26" stroke-width="1.4" stroke-linejoin="round"/>
+      <!-- church -->
+      <g stroke="#3b2f26" stroke-width="1.8" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M638,340 v-34 h34 v34"/>
+        <path d="M638,306 l17,-13 l17,13"/>
+        <path d="M656,293 v-16"/>
+        <path d="M649,277 h14"/>
+        <path d="M648,340 v-12 q8,-8 15,0 v12"/>
+      </g>
+      <!-- old town houses -->
+      <g stroke="#3b2f26" stroke-width="1.6" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M676,344 v-18 l12,-9 l12,9 v18 z"/>
+        <path d="M610,346 v-16 l11,-8 l11,8 v16 z"/>
+      </g>
+      <text x="660" y="372" class="map-label" text-anchor="middle">ALTAFULLA</text>
+      <text x="660" y="386" class="map-label-sm" text-anchor="middle">OLD TOWN</text>
+    </g>
+  </a>
+
+  <!-- ================= HOTEL: MAY BOUTIQUE ================= -->
+  <a href="#stay-may" class="map-spot" aria-label="May Altafulla Beach Boutique Hotel">
+    <g class="spot">
+      <g stroke="#3b2f26" stroke-width="1.8" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M556,368 h44 v-30 h-44 z"/>
+        <path d="M556,338 h44"/>
+        <path d="M556,338 v-8 h44 v8"/>
+      </g>
+      <g stroke="#3b2f26" stroke-width="1.3" fill="none">
+        <path d="M562,348 h8 M578,348 h8 M594,348 h4"/>
+        <path d="M562,358 h8 M578,358 h8 M594,358 h4"/>
+      </g>
+      <!-- beach umbrella -->
+      <g stroke="#3b2f26" stroke-width="1.5" fill="#e9cfc4" stroke-linecap="round">
+        <path d="M610,392 q20,-18 40,0 z"/>
+        <path d="M630,392 v12" fill="none"/>
+      </g>
+      <text x="578" y="408" class="map-label-sm" text-anchor="middle">MAY BOUTIQUE</text>
+    </g>
+  </a>
+
+  <!-- ================= HOTEL: ALTAFULLA MAR ================= -->
+  <a href="#stay-mar" class="map-spot" aria-label="Hotel Altafulla Mar">
+    <g class="spot">
+      <g stroke="#3b2f26" stroke-width="1.8" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M706,318 h46 v-34 h-46 z"/>
+        <path d="M706,284 h46"/>
+      </g>
+      <g stroke="#3b2f26" stroke-width="1.3" fill="none">
+        <path d="M713,294 h9 M729,294 h9 M745,294 h3"/>
+        <path d="M713,305 h9 M729,305 h9 M745,305 h3"/>
+      </g>
+      <!-- pool -->
+      <g stroke="#5f8b86" stroke-width="1.5" fill="#dcebe7">
+        <rect x="706" y="324" width="46" height="14" rx="7"/>
+      </g>
+      <g stroke="#5f8b86" stroke-width="1.2" fill="none" stroke-linecap="round">
+        <path d="M714,331 q7,-4 14,0 q7,4 14,0"/>
+      </g>
+      <text x="729" y="354" class="map-label-sm" text-anchor="middle">ALTAFULLA MAR</text>
+    </g>
+  </a>
+
+  <!-- ================= TORREDEMBARRA ================= -->
+  <a href="local-area.html" class="map-spot" aria-label="Torredembarra and its marina">
+    <g class="spot">
+      <!-- lighthouse -->
+      <g stroke="#3b2f26" stroke-width="1.7" fill="#fffaf0" stroke-linejoin="round">
+        <path d="M790,268 l8,-44 l8,44 z"/>
+        <path d="M790,224 h16 l-3,-9 h-10 z"/>
+      </g>
+      <g stroke="#b2564f" stroke-width="1.4" fill="none">
+        <path d="M793,250 h14 M795,238 h10"/>
+      </g>
+      <!-- boats -->
+      <g stroke="#3b2f26" stroke-width="1.4" fill="#f6efdd" stroke-linejoin="round">
+        <path d="M820,296 h18 l-4,7 h-10 z"/>
+        <path d="M826,296 v-11 l8,8 z"/>
+      </g>
+      <text x="800" y="312" class="map-label-sm" text-anchor="middle">TORREDEMBARRA</text>
+    </g>
+  </a>
+
+  <!-- ================= SUN ================= -->
+  <g class="doodle" stroke="#c08a3e" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <circle cx="112" cy="112" r="24" fill="#f7ecd2"/>
+    <path d="M112,74 v-14 M112,150 v14 M74,112 h-14 M150,112 h14
+             M85,85 l-10,-10 M139,139 l10,10 M139,85 l10,-10 M85,139 l-10,10"/>
+    <!-- smile -->
+    <path d="M102,116 q10,9 20,0"/>
+    <circle cx="104" cy="105" r="1.8" fill="#c08a3e"/>
+    <circle cx="121" cy="105" r="1.8" fill="#c08a3e"/>
+  </g>
+
+  <!-- birds -->
+  <g stroke="#3b2f26" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".7">
+    <path d="M258,150 q10,-8 20,0"/>
+    <path d="M290,132 q8,-6 16,0"/>
+    <path d="M330,158 q8,-6 16,0"/>
+    <path d="M196,176 q7,-6 14,0"/>
+  </g>
+
+  <!-- compass rose -->
+  <g class="doodle" stroke="#3b2f26" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8">
+    <circle cx="86" cy="500" r="26"/>
+    <path d="M86,478 l7,22 l-7,-6 l-7,6 z" fill="#3b2f26"/>
+    <text x="86" y="466" class="map-label-sm" text-anchor="middle">N</text>
+  </g>
+
+  <!-- legend -->
+  <text x="16" y="628" class="map-arrow-sm">Tap a place for details</text>
+</svg>
