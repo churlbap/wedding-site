@@ -151,14 +151,13 @@ a { color: var(--burgundy); }
 .strip img { height: auto; border: 0; }
 .strip-photo { width: min(200px, 52vw); box-shadow: 0 18px 45px rgba(0,0,0,.34); }
 .strip-orn { width: clamp(46px, 13vw, 88px); opacity: .55; flex: 0 0 auto; transform: rotate(4deg); }
-/* extra mirrored ornaments only appear where there is room for them */
-.strip-orn-extra { display: none; }
+/* extra copies of the strip appear only where there is room for them */
+.strip-photo-extra { display: none; }
 
 @media (min-width: 900px) {
-  .strip-orn-extra { display: block; }
-  .strip { gap: 2.2rem; }
-  .strip-orn { width: 92px; }
-  .strip-orn-extra { width: 78px; opacity: .45; }
+  .strip-photo-extra { display: block; }
+  .strip { gap: 1.6rem; }
+  .strip-photo { width: 190px; }
 }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
