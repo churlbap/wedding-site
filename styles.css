@@ -32,12 +32,22 @@ a { color: var(--burgundy); }
   height: clamp(150px, 54vw, 235px); display: flex; flex-direction: column;
   align-items: stretch; justify-content: space-between; overflow: hidden; }
 .header-flowers { position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image: url('images/bot-bottom-wide.jpg');
-  background-repeat: repeat-x;
-  /* keep the artwork's proportions on wide screens instead of stretching it */
-  background-size: auto 100%;
+  /* phones get the single unmirrored artwork, as originally designed */
+  background-image: url('images/bot-bottom.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center top;
   opacity: 1; }
+
+/* only wide screens use the tiled mirrored band, where it reads as a repeat
+   rather than a visible reflection on a narrow screen */
+@media (min-width: 900px) {
+  .header-flowers {
+    background-image: url('images/bot-bottom-wide.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+  }
+}
 .header-flowers::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
   background: linear-gradient(to bottom, rgba(80,30,31,0) 0%, rgba(80,30,31,.55) 45%, rgba(80,30,31,.92) 78%, #501e1f 100%); }
 .nav { display: block; padding: 0 1rem .95rem; max-width: 100%; width: 100%; margin: 0; border: 0; position: relative; z-index: 1; }
