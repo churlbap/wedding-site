@@ -156,8 +156,13 @@ a { color: var(--burgundy); }
 
 @media (min-width: 900px) {
   .strip-photo-extra { display: block; }
-  .strip { gap: 1.6rem; }
-  .strip-photo { width: 190px; }
+  /* spread the three strips right across the screen, evenly */
+  .strip { width: 100%; justify-content: space-between; gap: 0; }
+  .strip-photo { width: clamp(150px, 15vw, 220px); }
+  /* the floating cupids would break the even spread; the swans are already
+     baked into each Polaroid's bottom-left corner */
+  .strip-orn { display: none; }
+  .strip-band { padding: 3rem clamp(1.5rem, 5vw, 4rem); }
 }
 .strip-caption { text-align: center; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-top: 1.4rem; }
 
