@@ -32,9 +32,10 @@ a { color: var(--burgundy); }
   height: clamp(150px, 54vw, 235px); display: flex; flex-direction: column;
   align-items: stretch; justify-content: space-between; overflow: hidden; }
 .header-flowers { position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image: url('images/bot-bottom.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('images/bot-bottom-wide.jpg');
+  background-repeat: repeat-x;
+  /* keep the artwork's proportions on wide screens instead of stretching it */
+  background-size: auto 100%;
   background-position: center top;
   opacity: 1; }
 .header-flowers::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
