@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italianno&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=68">
+  <link rel="stylesheet" href="styles.css?v=69">
 </head>
 <body>
   <header class="site-header">
@@ -27,8 +27,177 @@
     <h2>Where to Stay</h2>
     <p class="lede">The venue sits between La Mora and Altafulla on the Costa Daurada. Here are our recommendations — some with special rates for our guests. If you'd like us to hold a room for you, use Register Interest and we'll confirm it directly with the hotel.</p>
 
+    <div class="map-wrap">
+      <svg class="area-map" viewBox="0 0 820 460" role="img" aria-labelledby="mapTitle mapDesc" xmlns="http://www.w3.org/2000/svg">
+        <title id="mapTitle">Map of where to stay around Castell de Tamarit</title>
+        <desc id="mapDesc">An illustrated map showing La Mora to the west, Castell de Tamarit in the centre, and Altafulla with its hotels to the east, along the Costa Daurada coast.</desc>
+
+        <!-- sea -->
+        <path d="M0,352 C120,342 240,360 380,350 C520,340 660,362 820,348 L820,460 L0,460 Z"
+              fill="rgba(255,246,226,.055)"/>
+        <path d="M0,352 C120,342 240,360 380,350 C520,340 660,362 820,348"
+              fill="none" stroke="rgba(255,246,226,.45)" stroke-width="1.6"/>
+        <g stroke="rgba(255,246,226,.32)" stroke-width="1.4" fill="none" stroke-linecap="round">
+          <path d="M70,392 q10,-7 20,0 q10,7 20,0"/>
+          <path d="M180,412 q10,-7 20,0 q10,7 20,0"/>
+          <path d="M330,398 q10,-7 20,0 q10,7 20,0"/>
+          <path d="M470,418 q10,-7 20,0 q10,7 20,0"/>
+          <path d="M600,394 q10,-7 20,0 q10,7 20,0"/>
+          <path d="M700,414 q10,-7 20,0 q10,7 20,0"/>
+        </g>
+        <text x="410" y="440" class="map-water" text-anchor="middle">MEDITERRANEAN</text>
+
+        <!-- coastline road, dotted -->
+        <path d="M20,336 C140,326 250,344 400,334 C560,323 690,344 800,332"
+              fill="none" stroke="rgba(255,246,226,.5)" stroke-width="1.6"
+              stroke-dasharray="2 7" stroke-linecap="round"/>
+
+        <!-- sun -->
+        <g stroke="rgba(255,246,226,.85)" stroke-width="1.7" fill="none" stroke-linecap="round">
+          <circle cx="735" cy="72" r="20"/>
+          <path d="M735,36 v-12 M735,120 v12 M699,72 h-12 M771,72 h12
+                   M710,47 l-9,-9 M760,97 l9,9 M760,47 l9,-9 M710,97 l-9,9"/>
+        </g>
+
+        <!-- birds -->
+        <g stroke="rgba(255,246,226,.7)" stroke-width="1.5" fill="none" stroke-linecap="round">
+          <path d="M556,86 q9,-7 18,0 M552,86 q9,-7 -0,0"/>
+          <path d="M600,64 q7,-6 14,0"/>
+          <path d="M528,112 q7,-6 14,0"/>
+        </g>
+
+        <!-- ============ LA MORA ============ -->
+        <a href="#stay-tamarit" class="map-spot" aria-label="La Mora beach and Tamarit Beach Resort">
+          <g class="spot">
+            <!-- pines -->
+            <g stroke="rgba(255,246,226,.8)" stroke-width="1.6" fill="none" stroke-linejoin="round">
+              <path d="M56,300 l10,-20 l10,20 z M58,288 l8,-16 l8,16 z M66,306 v10"/>
+              <path d="M96,306 l9,-18 l9,18 z M98,295 l7,-14 l7,14 z M105,310 v9"/>
+              <path d="M30,312 l8,-16 l8,16 z M36,318 v8"/>
+            </g>
+            <!-- houses -->
+            <g stroke="rgba(255,246,226,.9)" stroke-width="1.7" fill="none" stroke-linejoin="round">
+              <path d="M120,296 v-26 l16,-12 l16,12 v26 z"/>
+              <path d="M142,296 v-16 h14 v16"/>
+              <path d="M160,300 v-20 l13,-10 l13,10 v20 z"/>
+            </g>
+            <!-- umbrella -->
+            <g stroke="rgba(255,246,226,.85)" stroke-width="1.6" fill="none" stroke-linecap="round">
+              <path d="M118,326 q26,-22 52,0 z"/>
+              <path d="M144,326 v14"/>
+            </g>
+            <text x="112" y="368" class="map-label" text-anchor="middle">LA MORA</text>
+          </g>
+        </a>
+
+        <!-- ============ CASTELL DE TAMARIT ============ -->
+        <a href="#stay-tamarit" class="map-spot" aria-label="Castell de Tamarit, the wedding venue">
+          <g class="spot spot-hero">
+            <!-- rock -->
+            <path d="M352,332 L470,332 L462,314 L358,314 Z"
+                  fill="none" stroke="rgba(255,246,226,.75)" stroke-width="1.6" stroke-linejoin="round"/>
+            <!-- outer walls -->
+            <g stroke="rgba(255,246,226,.95)" stroke-width="1.8" fill="none" stroke-linejoin="round">
+              <path d="M366,314 v-44 h70 v44"/>
+              <!-- crenellations on the wall -->
+              <path d="M366,270 h8 v-6 h9 v6 h9 v-6 h9 v6 h9 v-6 h9 v6 h8"/>
+            </g>
+            <!-- towers -->
+            <g stroke="rgba(255,246,226,.95)" stroke-width="1.8" fill="none" stroke-linejoin="round">
+              <path d="M348,314 v-70 h24 v70"/>
+              <path d="M348,244 h6 v-7 h6 v7 h6 v-7 h6 v7"/>
+              <path d="M430,314 v-70 h24 v70"/>
+              <path d="M430,244 h6 v-7 h6 v7 h6 v-7 h6 v7"/>
+            </g>
+            <!-- keep -->
+            <g stroke="rgba(255,246,226,.95)" stroke-width="1.8" fill="none" stroke-linejoin="round">
+              <path d="M392,270 v-32 h22 v32"/>
+              <path d="M392,238 h5 v-6 h12 v6"/>
+            </g>
+            <!-- door + windows -->
+            <g stroke="rgba(255,246,226,.85)" stroke-width="1.5" fill="none">
+              <path d="M394,314 v-18 q7,-9 14,0 v18"/>
+              <rect x="378" y="282" width="6" height="9"/>
+              <rect x="418" y="282" width="6" height="9"/>
+              <rect x="356" y="262" width="7" height="10"/>
+              <rect x="438" y="262" width="7" height="10"/>
+            </g>
+            <!-- flag -->
+            <g stroke="rgba(255,246,226,.95)" stroke-width="1.6" fill="none" stroke-linejoin="round">
+              <path d="M403,232 v-22"/>
+              <path d="M403,210 l18,6 l-18,7 z"/>
+            </g>
+            <text x="404" y="180" class="map-label map-label-hero" text-anchor="middle">CASTELL DE TAMARIT</text>
+          </g>
+        </a>
+
+        <!-- ============ ALTAFULLA ============ -->
+        <a href="#stay-may" class="map-spot" aria-label="Altafulla old town and the hotels">
+          <g class="spot">
+            <!-- church -->
+            <g stroke="rgba(255,246,226,.95)" stroke-width="1.8" fill="none" stroke-linejoin="round">
+              <path d="M600,308 v-40 h40 v40"/>
+              <path d="M600,268 l20,-14 l20,14"/>
+              <path d="M622,254 v-18"/>
+              <path d="M614,236 h16"/>
+              <path d="M612,308 v-14 q8,-9 16,0 v14"/>
+            </g>
+            <!-- houses -->
+            <g stroke="rgba(255,246,226,.9)" stroke-width="1.7" fill="none" stroke-linejoin="round">
+              <path d="M648,312 v-24 l14,-11 l14,11 v24 z"/>
+              <path d="M676,316 v-18 l12,-9 l12,9 v18 z"/>
+              <path d="M566,316 v-20 l12,-9 l12,9 v20 z"/>
+            </g>
+            <!-- hotel blocks -->
+            <g stroke="rgba(255,246,226,.95)" stroke-width="1.8" fill="none">
+              <rect x="700" y="272" width="40" height="44"/>
+              <path d="M708,272 v-10 h24 v10"/>
+              <g stroke-width="1.4">
+                <path d="M708,284 h10 M726,284 h10 M708,296 h10 M726,296 h10 M708,308 h10 M726,308 h10"/>
+              </g>
+            </g>
+            <g stroke="rgba(255,246,226,.85)" stroke-width="1.7" fill="none">
+              <rect x="752" y="288" width="32" height="28"/>
+              <path d="M758,296 h6 M772,296 h6 M758,306 h6 M772,306 h6"/>
+            </g>
+            <!-- pool -->
+            <g stroke="rgba(255,246,226,.8)" stroke-width="1.5" fill="none">
+              <rect x="700" y="322" width="40" height="12" rx="6"/>
+              <path d="M706,328 q6,-4 12,0 q6,4 12,0"/>
+            </g>
+            <text x="636" y="368" class="map-label" text-anchor="middle">ALTAFULLA</text>
+          </g>
+        </a>
+
+        <!-- ============ BEACH STRIP (Les Botigues) ============ -->
+        <a href="#stay-airbnb" class="map-spot" aria-label="Les Botigues de Mar beach strip">
+          <g class="spot">
+            <g stroke="rgba(255,246,226,.85)" stroke-width="1.6" fill="none" stroke-linejoin="round">
+              <path d="M240,306 v-16 l12,-9 l12,9 v16 z"/>
+              <path d="M272,310 v-14 l10,-8 l10,8 v14 z"/>
+              <path d="M300,312 v-12 l9,-7 l9,7 v12 z"/>
+              <path d="M232,330 q20,-16 40,0 z"/>
+              <path d="M252,330 v10"/>
+            </g>
+            <text x="276" y="352" class="map-label-sm" text-anchor="middle">LES BOTIGUES</text>
+          </g>
+        </a>
+
+        <!-- direction hints -->
+        <a href="local-area.html" class="map-spot" aria-label="Getting there and around">
+          <g class="spot">
+            <text x="26" y="60" class="map-arrow" text-anchor="start">TARRAGONA &#8594;</text>
+            <text x="26" y="80" class="map-arrow-sm" text-anchor="start">20 min</text>
+            <text x="794" y="60" class="map-arrow" text-anchor="end">&#8592; BARCELONA</text>
+            <text x="794" y="80" class="map-arrow-sm" text-anchor="end">1 hr</text>
+          </g>
+        </a>
+      </svg>
+      <p class="map-caption">Tap a place to jump to the detail below.</p>
+    </div>
+
     <div class="cards" style="grid-template-columns:1fr; max-width:680px; margin:0 auto">
-      <div class="card">
+      <div class="card" id="stay-tamarit">
         <span class="tag">Resort</span>
         <span class="tag">Beneath the castle</span>
         <h3>Tamarit Beach Resort &amp; Spa</h3>
@@ -36,7 +205,7 @@
         <p style="margin-top:.8rem"><a class="btn" href="register-interest.html">Register Interest</a> <a class="btn ghost" href="https://www.tamarit.com/en/" target="_blank" rel="noopener">Visit Website</a></p>
       </div>
 
-      <div class="card">
+      <div class="card" id="stay-mar">
         <span class="tag">Hotel</span>
         <span class="tag">Wedding rate: CCHC121</span>
         <span class="tag">From €200 per night, breakfast included</span>
@@ -45,7 +214,7 @@
         <p style="margin-top:.8rem"><a class="btn" href="register-interest.html">Register Interest</a> <a class="btn ghost" href="https://www.altafullamarhotel.com/en/" target="_blank" rel="noopener">Visit Website</a></p>
       </div>
 
-      <div class="card">
+      <div class="card" id="stay-may">
         <span class="tag">Boutique hotel</span>
         <span class="tag">Wedding rate: CHCI27</span>
         <span class="tag">From €210 per night, breakfast included</span>
@@ -54,7 +223,7 @@
         <p style="margin-top:.8rem"><a class="btn" href="register-interest.html">Register Interest</a> <a class="btn ghost" href="https://www.mayboutiquehotel.com/en/" target="_blank" rel="noopener">Visit Website</a></p>
       </div>
 
-      <div class="card">
+      <div class="card" id="stay-claustre">
         <span class="tag">Hotel</span>
         <span class="tag">Old town</span>
         <h3>Gran Claustre</h3>
@@ -62,7 +231,7 @@
         <p style="margin-top:.8rem"><a class="btn ghost" href="https://granclaustre.com/en/" target="_blank" rel="noopener">Visit Website</a></p>
       </div>
 
-      <div class="card">
+      <div class="card" id="stay-airbnb">
         <span class="tag">Apartments &amp; villas</span>
         <h3>Airbnbs in La Mora</h3>
         <p>Both of our families will be staying in Airbnb accommodation in La Mora, so this is a lovely option if you'd like to stay in the same area. If you're looking at Airbnbs, our understanding is that most hosts won't open their booking calendars for our wedding dates until January 2027. Don't worry if there doesn't seem to be much available yet — it's worth checking again then!</p>
