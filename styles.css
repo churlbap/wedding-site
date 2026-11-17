@@ -127,7 +127,8 @@ a { color: var(--burgundy); }
 .map-frame { position: relative; }
 .area-map { width: 100%; height: auto; display: block; }
 /* invisible tap targets sitting over the numbered markers on the artwork */
-.map-hot { position: absolute; width: 9%; height: 12%; transform: translate(-50%,-50%);
+.map-hot { position: absolute; display: block; width: 9%; aspect-ratio: 1;
+  transform: translate(-50%,-50%);
   border-radius: 50%; -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .map-hot:hover, .map-hot:focus-visible {
   outline: none; box-shadow: 0 0 0 3px rgba(255,246,226,.55), 0 0 0 6px rgba(80,30,31,.25); }
