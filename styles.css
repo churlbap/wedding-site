@@ -155,10 +155,13 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 /* Ornamental frame around each accommodation card (Where to Stay) */
 .section-wallpaper .card {
   background: var(--cream);
-  border: 22px solid transparent;
+  border: 26px solid transparent;
   border-image-source: url('images/card-frame.jpg');
-  border-image-slice: 64;          /* no "fill": the centre stays cream behind the text */
-  border-image-width: 22px;
+  /* the scrollwork band runs ~150px in from each edge of the source, so the
+     slice has to reach past it or we only show blank margin. No "fill" keeps
+     the sage centre out and the text on cream. */
+  border-image-slice: 150;
+  border-image-width: 26px;
   border-image-repeat: stretch;
   padding: 1.5rem 1.3rem 1.7rem;
   box-shadow: 0 14px 34px rgba(0,0,0,.18);
