@@ -127,10 +127,14 @@ a { color: var(--burgundy); }
 .map-frame { position: relative; }
 .area-map { width: 100%; height: auto; display: block; }
 /* invisible tap targets sitting over the numbered markers on the artwork */
-.map-hot { position: absolute; width: 11%; height: 15%; transform: translate(-50%,-50%);
-  border-radius: 50%; -webkit-tap-highlight-color: transparent; }
+.map-hot { position: absolute; width: 9%; height: 12%; transform: translate(-50%,-50%);
+  border-radius: 50%; -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .map-hot:hover, .map-hot:focus-visible {
   outline: none; box-shadow: 0 0 0 3px rgba(255,246,226,.55), 0 0 0 6px rgba(80,30,31,.25); }
+/* reference points that don't link anywhere: visible on hover only, no pointer */
+.map-hot-plain, .map-hot-venue { cursor: default; }
+.map-hot-plain:hover, .map-hot-venue:hover { box-shadow: 0 0 0 3px rgba(80,30,31,.18); }
+.map-hot-venue:hover { box-shadow: 0 0 0 3px rgba(255,246,226,.45); }
 
 
 
