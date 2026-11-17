@@ -113,6 +113,12 @@ a { color: var(--burgundy); }
 .section .lede { text-align: center; font-family: var(--sans); font-weight: 300; font-style: normal; font-size: .95rem; color: var(--ink-soft); max-width: 34rem; margin: 1.2rem auto 3rem; }
 .section .lede::after { content: ''; display: block; width: 46px; height: 1px; background: var(--line); margin: 1.6rem auto 0; }
 
+/* Whimsical ornaments on the Local Area page */
+.whimsy-row { display: flex; align-items: center; justify-content: center;
+  gap: clamp(1rem, 5vw, 3rem); margin: 0 auto 2.6rem; flex-wrap: wrap; }
+.whimsy-img { width: clamp(90px, 20vw, 170px); height: auto; opacity: .9; }
+
+
 /* Home page: bergundy texture runs across the whole page */
 body.page-home { background-color: var(--burgundy);
   background-image: url('images/burgundy-texture.jpg');
