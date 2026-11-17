@@ -128,6 +128,11 @@ a { color: var(--burgundy); }
 .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin-bottom: .6rem; }
 .card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.8; }
 
+/* Illustrated area map on Where to Stay */
+.map-wrap { max-width: 880px; margin: 0 auto 2.6rem; }
+.area-map { width: 100%; height: auto; display: block; }
+
+
 
 .tag { display: inline-block; font-size: .6rem; text-transform: uppercase; letter-spacing: .24em; background: transparent; color: var(--burgundy); border: 1px solid var(--line); border-radius: 0; padding: .3rem .7rem; margin: 0 .35rem .8rem 0; }
 
