@@ -27,6 +27,8 @@ a { color: var(--burgundy); }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy);
+  background-image: url('images/burgundy-texture.jpg');
+  background-size: 700px 700px;
   /* the header is exactly as tall as the floral band, so the image can never
      overhang into the hero and leave a translucent double-exposure */
   height: clamp(150px, 54vw, 235px); display: flex; flex-direction: column;
@@ -110,6 +112,22 @@ a { color: var(--burgundy); }
 .section h2 { font-family: var(--script); font-weight: 400; font-size: clamp(2.8rem, 7vw, 4rem); line-height: 1; color: var(--burgundy); text-align: center; }
 .section .lede { text-align: center; font-family: var(--sans); font-weight: 300; font-style: normal; font-size: .95rem; color: var(--ink-soft); max-width: 34rem; margin: 1.2rem auto 3rem; }
 .section .lede::after { content: ''; display: block; width: 46px; height: 1px; background: var(--line); margin: 1.6rem auto 0; }
+
+/* Home page: bergundy texture runs across the whole page */
+body.page-home { background-color: var(--burgundy);
+  background-image: url('images/burgundy-texture.jpg');
+  background-size: 700px 700px; }
+body.page-home .section { color: var(--cream); }
+body.page-home .section h2 { color: var(--cream); }
+body.page-home .section .lede { color: rgba(255,246,226,.85); }
+body.page-home .section .lede::after { background: rgba(255,246,226,.3); }
+body.page-home .card { background: rgba(255,246,226,.94); }
+/* on the home page let the page texture show through instead of re-tiling */
+body.page-home .hero,
+body.page-home .strip-band { background-color: transparent; background-image: none; }
+body.page-home .section { background: transparent; }
+body.page-home .site-footer { background-color: transparent; }
+body.page-home .section-wallpaper { background-color: transparent; background-image: none; }
 
 /* Burgundy page background, matched to the home page hero */
 .section-wallpaper { position: relative; max-width: none; overflow: hidden;
