@@ -152,23 +152,24 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin-bottom: .6rem; }
 .card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.8; }
 
-/* Ornamental frame around each accommodation card (Where to Stay) */
+/* Ornamental frame used as the card background (Where to Stay) */
 .section-wallpaper .card {
-  background: var(--cream);
-  border: 26px solid transparent;
-  border-image-source: url('images/card-frame.jpg');
-  /* the scrollwork band runs ~150px in from each edge of the source, so the
-     slice has to reach past it or we only show blank margin. No "fill" keeps
-     the sage centre out and the text on cream. */
-  border-image-slice: 150;
-  border-image-width: 26px;
-  border-image-repeat: stretch;
-  padding: 1.5rem 1.3rem 1.7rem;
-  box-shadow: 0 14px 34px rgba(0,0,0,.18);
+  background-color: #afa88f;
+  background-image: url('images/card-frame.jpg');   /* portrait frame for tall cards */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  padding: clamp(2.4rem, 7vw, 3.4rem) clamp(1.9rem, 6vw, 2.8rem);
+  box-shadow: 0 14px 34px rgba(0,0,0,.2);
 }
-@media (max-width: 560px) {
-  .section-wallpaper .card { border-width: 14px; border-image-width: 14px; padding: 1.2rem 1rem 1.4rem; }
+/* wide cards look better with the frame turned on its side */
+@media (min-width: 700px) {
+  .section-wallpaper .card { background-image: url('images/card-frame-wide.jpg'); }
 }
+/* copy sits in the open middle of the frame, clear of the scrollwork */
+.section-wallpaper .card h3 { margin-top: .1rem; }
+.section-wallpaper .card p { color: #3a3328; }
+.section-wallpaper .card .tag { border-color: rgba(80,30,31,.35); color: #4a3a1e; }
 
 /* Illustrated area map on Where to Stay — sits on plain white, not the wallpaper */
 .map-wrap { max-width: 880px; margin: 0 auto 2.6rem; background: #fff;
