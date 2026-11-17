@@ -152,6 +152,21 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin-bottom: .6rem; }
 .card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.8; }
 
+/* Ornamental frame around each accommodation card (Where to Stay) */
+.section-wallpaper .card {
+  background: var(--cream);
+  border: 22px solid transparent;
+  border-image-source: url('images/card-frame.jpg');
+  border-image-slice: 64;          /* no "fill": the centre stays cream behind the text */
+  border-image-width: 22px;
+  border-image-repeat: stretch;
+  padding: 1.5rem 1.3rem 1.7rem;
+  box-shadow: 0 14px 34px rgba(0,0,0,.18);
+}
+@media (max-width: 560px) {
+  .section-wallpaper .card { border-width: 14px; border-image-width: 14px; padding: 1.2rem 1rem 1.4rem; }
+}
+
 /* Illustrated area map on Where to Stay — sits on plain white, not the wallpaper */
 .map-wrap { max-width: 880px; margin: 0 auto 2.6rem; background: #fff;
   padding: clamp(.6rem,2vw,1.4rem); box-shadow: 0 18px 45px rgba(0,0,0,.18); }
