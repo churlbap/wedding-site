@@ -206,6 +206,10 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .faq-page::before { left: 0; background-image: url('images/faq-border-left.jpg'); }
 .faq-page::after { right: 0; background-image: url('images/faq-border-right.jpg'); }
 .faq-page > * { position: relative; z-index: 1; max-width: 680px; margin-left: auto; margin-right: auto; }
+/* on phones: no side borders at all, so the questions get the full width */
+@media (max-width: 759px) {
+  .faq-page::before, .faq-page::after { display: none; }
+}
 @media (min-width: 760px) {
   .faq-page { padding-left: clamp(120px, 22vw, 300px); padding-right: clamp(120px, 22vw, 300px); }
 }
