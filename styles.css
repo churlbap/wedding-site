@@ -213,25 +213,16 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 /* FAQ on the vintage floral wallpaper */
 .faq-page { position: relative; max-width: none !important; overflow: hidden;
   background-color: var(--cream-soft);
-  padding: clamp(2rem, 6vw, 4rem) 1.25rem clamp(3rem, 8vw, 5rem); }
-/* floral-and-candle border down each side, leaving the middle clear for questions */
-.faq-page::before, .faq-page::after {
-  content: ''; position: absolute; top: 0; bottom: 0; z-index: 0;
-  width: clamp(90px, 26vw, 300px);
-  background-repeat: no-repeat;
+  background-image: url('images/faq-bg.jpg');
   background-size: 100% 100%;
-  pointer-events: none;
-}
-.faq-page::before { left: 0; background-image: url('images/faq-border-left.jpg'); }
-.faq-page::after { right: 0; background-image: url('images/faq-border-right.jpg'); }
-.faq-page > * { position: relative; z-index: 1; max-width: 680px; margin-left: auto; margin-right: auto; }
-/* on phones: no side borders at all, so the questions get the full width */
-@media (max-width: 759px) {
-  .faq-page::before, .faq-page::after { display: none; }
-}
-@media (min-width: 760px) {
-  .faq-page { padding-left: clamp(120px, 22vw, 300px); padding-right: clamp(120px, 22vw, 300px); }
-}
+  background-repeat: no-repeat;
+  padding: clamp(2.5rem, 7vw, 4.5rem) 1.25rem clamp(3rem, 9vw, 5.5rem); }
+.faq-page > * { position: relative; z-index: 1; max-width: 640px; margin-left: auto; margin-right: auto; }
+/* translucent panels so the copy reads over the painting */
+.faq-page .lede { background: rgba(255,250,240,.72); padding: 1rem 1.2rem; }
+.faq-page .faq-item { background: rgba(255,250,240,.72); padding: 1.3rem 1.4rem; border-bottom: 0;
+  margin-bottom: .85rem; backdrop-filter: blur(1px); }
+.faq-page .faq-item:first-of-type { border-top: 0; }
 .faq-page h2 { color: var(--burgundy); }
 .faq-page .faq-item { background: rgba(253, 248, 236, .82); padding: 1.4rem 1.5rem; border-bottom: 0; margin-bottom: .9rem; }
 .faq-page .faq-item:first-of-type { border-top: 0; }
