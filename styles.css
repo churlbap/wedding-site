@@ -158,7 +158,7 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
    the vine) or swallowing the text. */
 .section-wallpaper .card {
   position: relative;
-  background-color: var(--cream);
+  background-color: #ffffff;
   background-image: none;
   border: 0;
   padding: 1.5rem 1.5rem 1.8rem;
