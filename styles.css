@@ -107,20 +107,13 @@ a { color: var(--burgundy); }
 .section .lede { text-align: center; font-family: var(--sans); font-weight: 300; font-style: normal; font-size: .95rem; color: var(--ink-soft); max-width: 34rem; margin: 1.2rem auto 3rem; }
 .section .lede::after { content: ''; display: block; width: 46px; height: 1px; background: var(--line); margin: 1.6rem auto 0; }
 
-/* Vintage wallpaper (Where to Stay) */
-.section-wallpaper { position: relative; max-width: none; overflow: hidden; }
-.section-wallpaper::before {
-  content: ''; position: absolute; inset: 0; z-index: 0;
-  background-image: url('images/wallpaper.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: .9;
-  pointer-events: none;
-}
+/* Burgundy page background, matched to the home page hero */
+.section-wallpaper { position: relative; max-width: none; overflow: hidden; background: var(--burgundy); }
+.section-wallpaper::before { content: none; }
 .section-wallpaper > * { position: relative; z-index: 1; }
-.section-wallpaper h2, .section-wallpaper .lede { color: #4a3a1e; }
-.section-wallpaper .card { background: rgba(253, 248, 236, .93); }
+.section-wallpaper h2, .section-wallpaper .lede { color: var(--cream); }
+.section-wallpaper .lede::after { background: rgba(255,246,226,.35); }
+.section-wallpaper .card { background: var(--cream); }
 
 /* Cards */
 .cards { display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
