@@ -159,15 +159,23 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border: 0;
-  /* generous padding keeps every word inside the oval's clear centre */
-  padding: clamp(2.6rem, 8vw, 4.2rem) clamp(2.4rem, 15%, 5.5rem);
+  /* the vine runs ~18% in from each side at its widest, and much further in
+     towards the top and bottom, so the text block is inset to stay inside the
+     oval at every height. Nothing should overlap the flowers. */
+  padding: 20% 21% 20% 21%;
   box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-/* wide cards read better with the oval turned on its side */
+/* wide cards: the oval is turned on its side, so the vertical inset doubles */
 @media (min-width: 700px) {
-  .section-wallpaper .card { background-image: url('images/card-oval-wide.png'); }
+  .section-wallpaper .card {
+    background-image: url('images/card-oval-wide.png');
+    padding: 24% 15% 24% 15%;
+  }
 }
-.section-wallpaper .card h3, .section-wallpaper .card p { color: var(--burgundy); }
+.section-wallpaper .card h3 { color: var(--burgundy); }
 .section-wallpaper .card p { color: var(--ink-soft); }
 .section-wallpaper .card .tag { border-color: rgba(80,30,31,.3); color: var(--burgundy); }
 
