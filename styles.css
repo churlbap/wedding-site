@@ -128,8 +128,9 @@ a { color: var(--burgundy); }
 .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin-bottom: .6rem; }
 .card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.8; }
 
-/* Illustrated area map on Where to Stay */
-.map-wrap { max-width: 880px; margin: 0 auto 2.6rem; }
+/* Illustrated area map on Where to Stay — sits on plain white, not the wallpaper */
+.map-wrap { max-width: 880px; margin: 0 auto 2.6rem; background: #fff;
+  padding: clamp(.6rem,2vw,1.4rem); box-shadow: 0 18px 45px rgba(0,0,0,.18); }
 .map-frame { position: relative; }
 .area-map { width: 100%; height: auto; display: block; }
 /* invisible tap targets sitting over the numbered markers on the artwork */
