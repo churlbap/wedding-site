@@ -159,6 +159,18 @@ a { color: var(--burgundy); }
 /* FAQ */
 .faq-item { border-bottom: 1px solid var(--line); padding: 1.6rem 0; }
 .faq-item:first-of-type { border-top: 1px solid var(--line); }
+
+/* FAQ on the vintage floral wallpaper */
+.faq-page { position: relative; max-width: none !important; overflow: hidden;
+  background-image: url('images/faq-wallpaper.jpg');
+  background-size: cover;
+  background-position: center top;
+  padding: clamp(2rem, 6vw, 4rem) 1.25rem clamp(3rem, 8vw, 5rem); }
+.faq-page > * { position: relative; z-index: 1; max-width: 680px; margin-left: auto; margin-right: auto; }
+.faq-page h2 { color: var(--burgundy); }
+.faq-page .faq-item { background: rgba(253, 248, 236, .82); padding: 1.4rem 1.5rem; border-bottom: 0; margin-bottom: .9rem; }
+.faq-page .faq-item:first-of-type { border-top: 0; }
+.faq-page .faq-item h3 { color: var(--burgundy); }
 .faq-item h3 { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; color: var(--burgundy); margin-bottom: .5rem; }
 .faq-item p { color: var(--ink-soft); font-size: .93rem; }
 
