@@ -152,24 +152,24 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin-bottom: .6rem; }
 .card p { color: var(--ink-soft); font-size: .92rem; line-height: 1.8; }
 
-/* Ornamental frame used as the card background (Where to Stay) */
+/* Oval floral frame around each accommodation card (Where to Stay) */
 .section-wallpaper .card {
-  background-color: #afa88f;
-  background-image: url('images/card-frame.jpg');   /* portrait frame for tall cards */
+  background-color: transparent;
+  background-image: url('images/card-oval.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border: 0;
-  padding: clamp(2.4rem, 7vw, 3.4rem) clamp(1.9rem, 6vw, 2.8rem);
-  box-shadow: 0 14px 34px rgba(0,0,0,.2);
+  /* generous padding keeps every word inside the oval's clear centre */
+  padding: clamp(2.6rem, 8vw, 4.2rem) clamp(2.4rem, 15%, 5.5rem);
+  box-shadow: none;
 }
-/* wide cards look better with the frame turned on its side */
+/* wide cards read better with the oval turned on its side */
 @media (min-width: 700px) {
-  .section-wallpaper .card { background-image: url('images/card-frame-wide.jpg'); }
+  .section-wallpaper .card { background-image: url('images/card-oval-wide.png'); }
 }
-/* copy sits in the open middle of the frame, clear of the scrollwork */
-.section-wallpaper .card h3 { margin-top: .1rem; }
-.section-wallpaper .card p { color: #3a3328; }
-.section-wallpaper .card .tag { border-color: rgba(80,30,31,.35); color: #4a3a1e; }
+.section-wallpaper .card h3, .section-wallpaper .card p { color: var(--burgundy); }
+.section-wallpaper .card p { color: var(--ink-soft); }
+.section-wallpaper .card .tag { border-color: rgba(80,30,31,.3); color: var(--burgundy); }
 
 /* Illustrated area map on Where to Stay — sits on plain white, not the wallpaper */
 .map-wrap { max-width: 880px; margin: 0 auto 2.6rem; background: #fff;
