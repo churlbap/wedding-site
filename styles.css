@@ -203,7 +203,11 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   background-image: url('images/rooftop-terrace.jpg');
 }
 .section-wallpaper #stay-tamarit .card-art {
-  background-image: url('images/tamarit-cliff.jpg');
+  background-image: url('images/tamarit-pines.jpg');
+  /* landscape painting — framed slightly low to keep the loungers and the
+     sand in shot beneath the shade sails */
+  height: clamp(200px, 52vw, 330px);
+  background-position: center 58%;
 }
 .section-wallpaper #stay-mar .card-art {
   background-image: url('images/pool-terrace.jpg');
