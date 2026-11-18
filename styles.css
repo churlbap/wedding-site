@@ -200,6 +200,9 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 }
 .section-wallpaper .card h3 { color: var(--burgundy); }
 .section-wallpaper .card p { color: var(--ink-soft); }
+/* The tag strip is uppercase and widely letter-spaced, which makes an
+   italic vanish. Give the emphasised initials weight instead. */
+.tag em { font-style: normal; font-weight: 500; }
 .section-wallpaper .card .tag { border-color: rgba(80,30,31,.3); color: var(--burgundy); }
 
 /* Illustrated area map on Where to Stay — sits on plain white, not the wallpaper */
