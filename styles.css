@@ -201,6 +201,13 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .section-wallpaper #stay-tamarit .card-art {
   background-image: url('images/tamarit-cliff.jpg');
 }
+.section-wallpaper #stay-mar .card-art {
+  background-image: url('images/pool-terrace.jpg');
+  /* this painting is landscape, so it needs less height and a higher focal
+     point to keep the swimmer and the rooftops both in frame */
+  height: clamp(200px, 52vw, 330px);
+  background-position: center 55%;
+}
 .section-wallpaper .card-copy {
   padding: 1.3rem 1.35rem 1.5rem;
 }
