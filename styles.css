@@ -223,6 +223,44 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .section-wallpaper .card-copy {
   padding: 1.3rem 1.35rem 1.5rem;
 }
+/* Buttons inside the Where to Stay cards. The default cream-on-cream button
+   had a cream border too, so against the paper texture it had no visible edge
+   at all and read as plain text. Solid burgundy fill with a border, and a
+   clear pressed state. */
+.section-wallpaper .card .btn {
+  background: var(--burgundy);
+  color: var(--cream);
+  border: 1px solid var(--burgundy-soft);
+  font-weight: 500;
+  box-shadow: 0 3px 0 rgba(58,17,19,.28);
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease, transform .12s ease;
+}
+.section-wallpaper .card .btn:hover,
+.section-wallpaper .card .btn:focus-visible {
+  background: var(--burgundy-soft);
+  color: #fff;
+  border-color: var(--burgundy-soft);
+  box-shadow: 0 4px 0 rgba(58,17,19,.32);
+}
+.section-wallpaper .card .btn:active {
+  box-shadow: 0 1px 0 rgba(58,17,19,.3);
+  transform: translateY(1px);
+}
+/* the secondary "Visit Website" button stays an outline, but with enough
+   contrast to sit next to the filled one without looking unfinished */
+.section-wallpaper .card .btn.ghost {
+  background: transparent;
+  color: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  box-shadow: none;
+  font-weight: 500;
+}
+.section-wallpaper .card .btn.ghost:hover,
+.section-wallpaper .card .btn.ghost:focus-visible {
+  background: var(--burgundy);
+  color: var(--cream);
+  border-color: var(--burgundy);
+}
 .section-wallpaper .card h3 { color: var(--burgundy); }
 .section-wallpaper .card p { color: var(--ink-soft); }
 /* The tag strip is uppercase and widely letter-spaced, which makes an
