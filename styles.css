@@ -202,11 +202,19 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .tag em { font-style: normal; font-weight: 500; }
 .section-wallpaper .card .tag { border-color: rgba(80,30,31,.3); color: var(--burgundy); }
 
-/* Illustrated area map on Where to Stay — sits on plain white, not the wallpaper */
-.map-wrap { max-width: 880px; margin: 0 auto 2.6rem; background: #fff;
+/* Illustrated area map on Where to Stay — same paper texture as the cards,
+   so the page reads as one piece. */
+.map-wrap { max-width: 880px; margin: 0 auto 2.6rem;
+  background-color: #efe8dd;
+  background-image: url('images/paper-texture.jpg');
+  background-size: 320px auto;
+  background-repeat: repeat;
   padding: clamp(.6rem,2vw,1.4rem); box-shadow: 0 18px 45px rgba(0,0,0,.18); }
 .map-frame { position: relative; }
-.area-map { width: 100%; height: auto; display: block; }
+/* The map artwork has a white background. Multiply blending drops the white
+   out so the paper shows through it, and tones the illustration down to the
+   same warmth as everything else instead of glaring white. */
+.area-map { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
 /* invisible tap targets sitting over the numbered markers on the artwork */
 .map-hot { position: absolute; display: block; width: 9%; aspect-ratio: 1;
   transform: translate(-50%,-50%);
