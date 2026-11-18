@@ -198,6 +198,9 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .section-wallpaper #stay-airbnb .card-art {
   background-image: url('images/rooftop-terrace.jpg');
 }
+.section-wallpaper #stay-tamarit .card-art {
+  background-image: url('images/tamarit-cliff.jpg');
+}
 .section-wallpaper .card-copy {
   padding: 1.3rem 1.35rem 1.5rem;
 }
