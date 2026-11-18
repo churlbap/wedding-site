@@ -158,8 +158,11 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
    the vine) or swallowing the text. */
 .section-wallpaper .card {
   position: relative;
-  background-color: #ffffff;
-  background-image: none;
+  /* soft paper texture instead of flat white behind the copy */
+  background-color: #efe8dd;
+  background-image: url('images/paper-texture.jpg');
+  background-size: 320px auto;
+  background-repeat: repeat;
   border: 0;
   padding: 1.5rem 1.5rem 1.8rem;
   box-shadow: 0 14px 34px rgba(0,0,0,.18);
@@ -178,8 +181,10 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
    Putting the words on top of the painting meant covering the middle of it,
    which defeats the point of using the picture at all. */
 .section-wallpaper .card#stay-claustre {
-  background-color: #ffffff;
-  background-image: none;
+  background-color: #efe8dd;
+  background-image: url('images/paper-texture.jpg');
+  background-size: 320px auto;
+  background-repeat: repeat;
   padding: 0;
   overflow: hidden;
 }
