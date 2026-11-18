@@ -135,6 +135,12 @@ body.page-home .section { background: transparent; }
 body.page-home .site-footer { background-color: transparent; }
 body.page-home .section-wallpaper { background-color: transparent; background-image: none; }
 
+/* The whole document is burgundy on this page. The body was cream, so the
+   footer's top margin and anything below it showed as a pale strip at the
+   bottom of the screen. Matching the body removes the gap entirely. */
+body.page-stay { background-color: var(--burgundy); }
+body.page-stay .site-footer { margin-top: 0; }
+
 /* Burgundy page background, matched to the home page hero */
 .section-wallpaper { position: relative; max-width: none; overflow: hidden;
   background-color: var(--burgundy);
