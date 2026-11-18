@@ -193,7 +193,11 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   background-image: url('images/old-town-street.jpg');
 }
 .section-wallpaper #stay-may .card-art {
-  background-image: url('images/beach-cafe.jpg');
+  background-image: url('images/may-rooftop-pool.jpg');
+  /* landscape painting — less height than the portrait ones, framed slightly
+     high to keep the infinity pool edge and the parasols in shot */
+  height: clamp(200px, 52vw, 330px);
+  background-position: center 50%;
 }
 .section-wallpaper #stay-airbnb .card-art {
   background-image: url('images/rooftop-terrace.jpg');
