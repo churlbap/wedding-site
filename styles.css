@@ -205,8 +205,13 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 .section-wallpaper .card p { color: var(--ink-soft); }
 /* The tag strip is uppercase and widely letter-spaced, which makes an
    italic vanish. Give the emphasised initials weight instead. */
-.tag em { font-style: normal; font-weight: 500; }
-.section-wallpaper .card .tag { border-color: rgba(80,30,31,.3); color: var(--burgundy); }
+.tag em { font-style: normal; font-weight: 700; }
+.section-wallpaper .card .tag {
+  border-color: rgba(58,17,19,.55);
+  color: #3a1113;
+  font-weight: 600;
+  background: rgba(255,252,246,.7);
+}
 
 /* Illustrated area map on Where to Stay — same paper texture as the cards,
    so the page reads as one piece. */
@@ -234,7 +239,7 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 
 
 
-.tag { display: inline-block; font-size: .6rem; text-transform: uppercase; letter-spacing: .24em; background: transparent; color: var(--burgundy); border: 1px solid var(--line); border-radius: 0; padding: .3rem .7rem; margin: 0 .35rem .8rem 0; }
+.tag { display: inline-block; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; background: transparent; color: #3a1113; border: 1px solid rgba(58,17,19,.55); border-radius: 0; padding: .34rem .72rem; margin: 0 .35rem .8rem 0; }
 
 /* Timeline */
 .timeline { max-width: 620px; margin: 0 auto; position: relative; padding-left: 1.75rem; }
