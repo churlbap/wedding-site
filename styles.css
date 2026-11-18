@@ -190,7 +190,11 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   background-repeat: no-repeat;
 }
 .section-wallpaper #stay-claustre .card-art {
-  background-image: url('images/old-town-street.jpg');
+  background-image: url('images/gran-claustre-alley.jpg');
+  /* landscape painting — shorter band, framed to keep the archway on the
+     left and the vine down to the cobbles */
+  height: clamp(200px, 52vw, 330px);
+  background-position: center 55%;
 }
 .section-wallpaper #stay-may .card-art {
   background-image: url('images/may-rooftop-pool.jpg');
@@ -262,7 +266,12 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   border-color: var(--burgundy);
 }
 .section-wallpaper .card h3 { color: var(--burgundy); }
-.section-wallpaper .card p { color: var(--ink-soft); }
+/* Body copy was soft grey-brown at weight 300, which the paper grain ate
+   alive on a phone. Darker ink and a touch more weight so it reads easily. */
+.section-wallpaper .card p {
+  color: #33292a;
+  font-weight: 400;
+}
 /* The tag strip is uppercase and widely letter-spaced, which makes an
    italic vanish. Give the emphasised initials weight instead. */
 .tag em { font-style: normal; font-weight: 700; }
