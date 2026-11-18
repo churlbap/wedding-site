@@ -169,11 +169,11 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 }
 /* The oval crest above each title is gone — its artwork has a white
    background, which showed as a white disc against the paper texture. */
-/* Gran Claustre: the old-town painting gets its own full-width band at the
-   top of the card, completely unobstructed. The copy sits below it on white.
-   Putting the words on top of the painting meant covering the middle of it,
-   which defeats the point of using the picture at all. */
-.section-wallpaper .card#stay-claustre {
+/* Cards with a painting: the artwork gets its own clear band at the top,
+   completely unobstructed, and the copy sits below it on the same paper
+   texture as the other cards. Putting words on top of the painting meant
+   covering the middle of it, which defeats the point of the picture. */
+.section-wallpaper .card:has(.card-art) {
   background-color: #efe8dd;
   background-image: url('images/paper-texture.jpg');
   background-size: 320px auto;
@@ -181,18 +181,21 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   padding: 0;
   overflow: hidden;
 }
-.section-wallpaper .card#stay-claustre .card-art {
-  /* taller band so far more of the painting is in frame — roughly two thirds
-     of it now instead of a third — and pushed down towards the bottom so the
-     cobbles and the sunlit lane are what you see, rather than mostly sky and
-     rooftop. */
+.section-wallpaper .card-art {
+  /* taller band so most of the painting is in frame — roughly two thirds —
+     framed low so the foreground (cobbles, chairs, sand) is what you see. */
   height: clamp(280px, 74vw, 470px);
-  background-image: url('images/old-town-street.jpg');
   background-size: cover;
   background-position: center 68%;
   background-repeat: no-repeat;
 }
-.section-wallpaper .card#stay-claustre .card-copy {
+.section-wallpaper #stay-claustre .card-art {
+  background-image: url('images/old-town-street.jpg');
+}
+.section-wallpaper #stay-may .card-art {
+  background-image: url('images/beach-cafe.jpg');
+}
+.section-wallpaper .card-copy {
   padding: 1.3rem 1.35rem 1.5rem;
 }
 .section-wallpaper .card h3 { color: var(--burgundy); }
