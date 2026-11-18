@@ -185,10 +185,14 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 }
 .section-wallpaper .card#stay-claustre::before { display: none; }
 .section-wallpaper .card#stay-claustre .card-art {
-  height: clamp(190px, 42vw, 280px);
+  /* taller band so far more of the painting is in frame — roughly two thirds
+     of it now instead of a third — and pushed down towards the bottom so the
+     cobbles and the sunlit lane are what you see, rather than mostly sky and
+     rooftop. */
+  height: clamp(280px, 74vw, 470px);
   background-image: url('images/old-town-street.jpg');
   background-size: cover;
-  background-position: center 38%;
+  background-position: center 68%;
   background-repeat: no-repeat;
 }
 .section-wallpaper .card#stay-claustre .card-copy {
