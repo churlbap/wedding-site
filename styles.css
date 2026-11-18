@@ -359,6 +359,15 @@ body.page-stay .site-footer { margin-top: 0; }
 
 /* Footer */
 .site-footer { background: var(--burgundy); color: var(--cream); text-align: center; padding: 3.5rem 1.25rem; margin-top: 2rem; }
+/* The mouse couple sits at the foot of every page, a small mark under the
+   names. Transparent WebP so it rests straight on the burgundy. */
+.site-footer .footer-mice {
+  width: clamp(110px, 26vw, 165px);
+  height: auto;
+  margin: 0 auto 1.4rem;
+  display: block;
+  opacity: .95;
+}
 .site-footer .names { font-family: var(--script); font-size: 2.6rem; line-height: 1; letter-spacing: .02em; }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
 
