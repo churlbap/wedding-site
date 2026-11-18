@@ -167,15 +167,8 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   padding: 1.5rem 1.5rem 1.8rem;
   box-shadow: 0 14px 34px rgba(0,0,0,.18);
 }
-.section-wallpaper .card::before {
-  content: ''; display: block;
-  width: 78px; height: 104px;
-  margin: 0 auto .75rem;
-  background-image: url('images/card-oval.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+/* The oval crest above each title is gone — its artwork has a white
+   background, which showed as a white disc against the paper texture. */
 /* Gran Claustre: the old-town painting gets its own full-width band at the
    top of the card, completely unobstructed. The copy sits below it on white.
    Putting the words on top of the painting meant covering the middle of it,
@@ -188,7 +181,6 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   padding: 0;
   overflow: hidden;
 }
-.section-wallpaper .card#stay-claustre::before { display: none; }
 .section-wallpaper .card#stay-claustre .card-art {
   /* taller band so far more of the painting is in frame — roughly two thirds
      of it now instead of a third — and pushed down towards the bottom so the
