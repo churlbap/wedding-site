@@ -173,28 +173,26 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   background-repeat: no-repeat;
   background-position: center;
 }
-/* Gran Claustre: the old-town painting sits behind the card, with a
-   translucent panel behind the copy so every word stays readable over the
-   brushwork. */
+/* Gran Claustre: the old-town painting gets its own full-width band at the
+   top of the card, completely unobstructed. The copy sits below it on white.
+   Putting the words on top of the painting meant covering the middle of it,
+   which defeats the point of using the picture at all. */
 .section-wallpaper .card#stay-claustre {
-  background-color: transparent;
-  background-image: url('images/old-town-street.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 1.1rem;
+  background-color: #ffffff;
+  background-image: none;
+  padding: 0;
+  overflow: hidden;
 }
 .section-wallpaper .card#stay-claustre::before { display: none; }
-.section-wallpaper .card#stay-claustre .card-copy {
-  background: rgba(255,255,255,.82);
-  padding: 1.3rem 1.25rem 1.4rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.section-wallpaper .card#stay-claustre .card-art {
+  height: clamp(190px, 42vw, 280px);
+  background-image: url('images/old-town-street.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
 }
-.section-wallpaper .card#stay-claustre .tag {
-  background: rgba(255,255,255,.75);
+.section-wallpaper .card#stay-claustre .card-copy {
+  padding: 1.3rem 1.35rem 1.5rem;
 }
 .section-wallpaper .card h3 { color: var(--burgundy); }
 .section-wallpaper .card p { color: var(--ink-soft); }
