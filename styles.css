@@ -200,7 +200,11 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
   background-position: center 50%;
 }
 .section-wallpaper #stay-airbnb .card-art {
-  background-image: url('images/rooftop-terrace.jpg');
+  background-image: url('images/airbnb-pool.jpg');
+  /* landscape painting — framed slightly high to keep the pool, the gazebo
+     and the sea horizon all in shot */
+  height: clamp(200px, 52vw, 330px);
+  background-position: center 45%;
 }
 .section-wallpaper #stay-tamarit .card-art {
   background-image: url('images/tamarit-pines.jpg');
