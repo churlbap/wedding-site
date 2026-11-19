@@ -1,6 +1,7 @@
 /* Envelope opening overlay.
-   A burgundy envelope sealed with the couple's wax seal, sitting on the aged
-   landscape. Tap to break the seal, the flap opens, the site appears. */
+   A burgundy envelope sealed with the couple's wax seal, on the aged
+   landscape. Built to read as paper rather than as a flat shape: soft
+   creases, light falling across the flap, fine grain, and real shadows. */
 
 .env-overlay {
   position: fixed;
@@ -11,7 +12,6 @@
   align-items: center;
   justify-content: center;
   gap: 2.4rem;
-  /* the aged landscape sits behind the envelope */
   background-color: #b9a07a;
   background-image: url('images/envelope-bg-v1.jpg');
   background-size: cover;
@@ -22,8 +22,7 @@
   transition: opacity .85s ease, visibility .85s ease;
 }
 
-/* A light scrim so the envelope edges read against the painting, without
-   muting the foliage. */
+/* Light scrim: keeps the envelope edges readable without muting the painting. */
 .env-overlay::before {
   content: '';
   position: absolute;
@@ -39,32 +38,40 @@
 }
 
 /* ---------- the envelope ---------- */
-/* Burgundy paper, roughly 5:4, so it sits like a real envelope seen flat. */
 .env {
   position: relative;
   z-index: 2;
   width: min(170px, 41vw);
   aspect-ratio: 5 / 4;
-  perspective: 1000px;
-  filter: drop-shadow(0 26px 48px rgba(30, 14, 10, .5));
+  perspective: 900px;
+  /* a real object has weight: a tight contact shadow plus a wider cast one */
+  filter:
+    drop-shadow(0 3px 4px rgba(24, 10, 8, .45))
+    drop-shadow(0 22px 34px rgba(24, 10, 8, .38));
   transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
 }
 
 .env-overlay.is-done .env {
-  transform: translateY(26px) scale(.96);
+  transform: translateY(20px) scale(.96);
   opacity: 0;
 }
 
 .env-body {
   position: absolute;
   inset: 0;
-  /* measured from the reference: around #4a1519 */
-  background: #4a1519;
-  border: 1px solid rgba(0, 0, 0, .22);
+  /* paper: a base tone, a gentle top-to-bottom light fall, and fine grain */
+  background-color: #4a1519;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, .07), rgba(0, 0, 0, .14)),
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, .014) 0 1px,
+      rgba(0, 0, 0, .014) 1px 2px);
+  border-radius: 1.5px;
   overflow: hidden;
 }
 
-/* the two lower folds, a touch darker so the paper creases read */
+/* The two lower folds. Soft shading rather than flat triangles, so the
+   creases look pressed into paper instead of cut out of card. */
 .env-body::before,
 .env-body::after {
   content: '';
@@ -72,34 +79,74 @@
   bottom: 0;
   width: 78%;
   height: 100%;
-  background: #431217;
 }
 .env-body::before {
   left: 0;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
-  border-right: 1px solid rgba(0, 0, 0, .18);
+  background: linear-gradient(to bottom right,
+    rgba(255, 255, 255, .05) 0%,
+    rgba(0, 0, 0, .12) 45%,
+    rgba(0, 0, 0, .22) 100%);
 }
 .env-body::after {
   right: 0;
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  border-left: 1px solid rgba(0, 0, 0, .18);
+  background: linear-gradient(to bottom left,
+    rgba(255, 255, 255, .04) 0%,
+    rgba(0, 0, 0, .14) 45%,
+    rgba(0, 0, 0, .24) 100%);
 }
 
-/* the flap, hinged along the top edge, tip meeting the centre */
+/* the seam where the folds meet, a soft crease down the centre */
+.env-seam {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1px;
+  height: 42%;
+  transform: translateX(-50%);
+  background: linear-gradient(to top,
+    rgba(0, 0, 0, .34),
+    rgba(0, 0, 0, .10) 60%,
+    transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* The flap: hinged at the top, tip meeting the centre. Gradients give it a
+   crown so light falls across it the way it does on folded paper. */
 .env-flap {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 58%;
-  background: #521a1f;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
   transform: rotateX(0deg);
   transition: transform 1s cubic-bezier(.65, 0, .35, 1);
   z-index: 3;
-  /* a fine highlight along the fold, so it reads as paper not a flat shape */
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09);
+  background-color: #541a20;
+  background-image:
+    /* light pooled at the fold, shade toward the tip */
+    linear-gradient(to bottom,
+      rgba(255, 255, 255, .10) 0%,
+      rgba(255, 255, 255, .03) 30%,
+      rgba(0, 0, 0, .12) 78%,
+      rgba(0, 0, 0, .26) 100%),
+    /* a faint lateral fall so it is not evenly lit across */
+    linear-gradient(to right,
+      rgba(0, 0, 0, .12),
+      rgba(255, 255, 255, .04) 45%,
+      rgba(0, 0, 0, .10)),
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, .012) 0 1px,
+      rgba(0, 0, 0, .012) 1px 2px);
+  /* the crease itself, and a shadow where the flap lifts off the body */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .14),
+    inset 0 -3px 8px rgba(0, 0, 0, .22),
+    0 2px 5px rgba(0, 0, 0, .28);
 }
 
 .env-overlay.is-open .env-flap {
@@ -108,7 +155,6 @@
 }
 
 /* ---------- the wax seal ---------- */
-/* small, about 16% of the envelope width, sitting on the flap tip */
 .env-seal {
   position: absolute;
   top: 58%;
@@ -125,7 +171,10 @@
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .45));
+  /* wax catches light along its rim and throws a short hard shadow */
+  filter:
+    drop-shadow(0 1px 1px rgba(0, 0, 0, .55))
+    drop-shadow(0 3px 5px rgba(0, 0, 0, .45));
 }
 
 .env-overlay.is-open .env-seal {
@@ -148,7 +197,7 @@
   letter-spacing: .26em;
   text-transform: uppercase;
   color: rgba(247, 244, 239, .82);
-  text-shadow: 0 1px 3px rgba(30, 14, 10, .5);
+  text-shadow: 0 1px 3px rgba(30, 14, 10, .55);
   transition: opacity .4s ease;
 }
 
