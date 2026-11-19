@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Aesthetic proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9df;
+    --wine:#5e1626;
+    --ink:#2a2224;
+    --ink-soft:#5a4f4f;
+    --rule:rgba(94,22,38,.16);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Jost','Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:var(--sans);font-weight:300;color:var(--ink);
+    background-color:var(--paper);
+    background-image:url('images/embossed-paper.jpg');
+    background-size:460px auto;background-repeat:repeat;
+    line-height:1.75;
+  }
+  .note{max-width:620px;margin:0 auto;padding:2rem 1.25rem 0;text-align:center}
+  .note .tag{display:inline-block;font-size:.58rem;letter-spacing:.22em;
+    text-transform:uppercase;font-weight:600;color:var(--wine);
+    border:1px solid rgba(94,22,38,.35);padding:.3rem .7rem}
+  .note h1{font-family:var(--serif);font-weight:500;color:var(--wine);
+    font-size:1.6rem;margin:.9rem 0 .4rem;line-height:1.2}
+  .note p{font-size:.85rem;color:var(--ink-soft)}
+
+  /* full-bleed painting band, no box */
+  .band{height:clamp(200px,46vw,320px);margin:2rem 0 0;
+    background-image:url('images/swans-faq.jpg');
+    background-size:cover;background-position:center 40%}
+
+  .wrap{max-width:620px;margin:0 auto;padding:0 1.25rem}
+
+  .hero{padding:2.6rem 0 1rem;text-align:center}
+  .hero img{width:min(460px,86vw);height:auto;margin:0 auto;}
+  .hero .date{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--ink-soft);margin-top:1rem}
+
+  .rule{height:1px;background:var(--rule);margin:2rem 0}
+
+  h2{font-family:var(--serif);font-weight:500;color:var(--wine);
+    font-size:1.9rem;line-height:1.15;margin-bottom:.6rem}
+  h3{font-family:var(--serif);font-weight:500;color:var(--wine);
+    font-size:1.25rem;margin-bottom:.3rem}
+  p{font-size:.94rem;color:var(--ink);margin-bottom:.75rem}
+  .small{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:600;color:var(--ink-soft);margin-bottom:.4rem}
+
+  /* entries are ruled lines, not cards */
+  .entry{padding:1.2rem 0;border-bottom:1px solid var(--rule)}
+  .entry:last-child{border-bottom:0}
+
+  .cta{display:inline-block;font-family:var(--sans);font-size:.68rem;
+    letter-spacing:.22em;text-transform:uppercase;text-decoration:none;
+    color:var(--paper);background:var(--wine);padding:.85rem 1.9rem;
+    border:1px solid var(--wine)}
+  .cta.ghost{background:transparent;color:var(--wine)}
+
+  footer{text-align:center;padding:3rem 1.25rem 3.5rem;margin-top:2.5rem;
+    border-top:1px solid var(--rule)}
+  footer .names{font-family:var(--serif);font-size:1.5rem;color:var(--wine)}
+  footer p{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ink-soft);margin-top:.7rem}
+  footer img{width:42px;margin:1rem auto 0;display:block}
+</style>
+</head>
+<body>
+  <div class="note">
+    <span class="tag">Proposal one</span>
+    <h1>Pressed petals</h1>
+    <p>Paper ground, wine ink, one painting per page. Cards become rules.</p>
+  </div>
+
+  <div class="band" role="img" aria-label="Oil painting of two swans on still water"></div>
+
+  <div class="wrap">
+    <div class="hero">
+      <img src="images/signature.png" alt="Charlotte and Ciarán" width="1600" height="225">
+      <div class="date">3 July 2027, Castell de Tamarit</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <h2>Three days in the sun</h2>
+    <p>A long weekend on the Catalan coast, north of Tarragona.</p>
+
+    <div class="entry">
+      <div class="small">Friday 2 July</div>
+      <h3>Welcome Drinks</h3>
+      <p>Arrive, settle in, and meet us for drinks in the evening.</p>
+    </div>
+    <div class="entry">
+      <div class="small">Saturday 3 July</div>
+      <h3>The Wedding Day</h3>
+      <p>Ceremony, food and dancing at Castell de Tamarit.</p>
+    </div>
+    <div class="entry">
+      <div class="small">Sunday 4 July</div>
+      <h3>The Party Continues</h3>
+      <p>Sunshine, sea, a very long lunch, one last night together.</p>
+    </div>
+
+    <div class="rule"></div>
+
+    <h2>Where to stay</h2>
+    <p>Rooms held at May Altafulla and Hotel Altafulla Mar. Register early, the block is limited.</p>
+    <div class="entry">
+      <div class="small">Our top pick</div>
+      <h3>May Altafulla Beach Boutique Hotel</h3>
+      <p>Right by the beach, rooftop bar, 200 per night with breakfast.</p>
+      <p><a class="cta" href="#">Register interest</a></p>
+    </div>
+    <div class="entry">
+      <div class="small">Old town</div>
+      <h3>Gran Claustre</h3>
+      <p>Characterful hotel in the lanes of the old town.</p>
+      <p><a class="cta ghost" href="#">Visit website</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="names">Charlotte &amp; Ciaran</div>
+    <p>3 July 2027 · Castell de Tamarit · Spain</p>
+    <img src="images/mice-pair.webp" alt="">
+  </footer>
+</body>
+</html>
