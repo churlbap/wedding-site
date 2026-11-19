@@ -1,37 +1,21 @@
 /* Envelope opening overlay.
-   Shown over the page, then peeled away to reveal the site behind it.
-   Only active on the home page, and only while the prototype switch is on. */
+   The envelope itself is the whole opening screen: no frame, no card.
+   Tap to break the seal, the flap opens, the overlay fades to the site. */
 
 .env-overlay {
   position: fixed;
   inset: 0;
   z-index: 999;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* warm wash behind the frame, so no white shows at the edges */
-  background: #cdbfa2;
+  gap: 2.4rem;
+  /* the site cream, so the reveal feels continuous */
+  background: #f7f4ef;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: opacity .85s ease, visibility .85s ease;
-}
-
-/* The lace frame is an element rather than a background image, so the
-   envelope can be positioned against its measured cream interior. The
-   interior runs 29% to 72% on both axes of this artwork. */
-.env-frame {
-  position: relative;
-  aspect-ratio: 686 / 1200;
-  height: min(100%, calc(100vw * 1200 / 686));
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.env-frame > img.env-lace {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
 }
 
 .env-overlay.is-done {
@@ -41,45 +25,29 @@
 }
 
 /* ---------- the envelope ---------- */
-/* pinned to the measured paper area: 29%..72% on both axes */
 .env {
-  position: absolute;
-  left: 29%;
-  right: 28%;
-  top: 29%;
-  bottom: 28%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 900px;
-  transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
-}
-
-/* the envelope itself, sized within that paper area */
-.env-sheet {
   position: relative;
-  width: 92%;
+  width: min(360px, 84vw);
   aspect-ratio: 3 / 2;
-  max-height: 46%;
+  perspective: 1000px;
   transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
 }
 
-.env-overlay.is-done .env-sheet {
-  transform: translateY(18px) scale(.96);
+.env-overlay.is-done .env {
+  transform: translateY(26px) scale(.96);
   opacity: 0;
 }
 
-/* the paper body, with the two diagonal folds suggested by soft shading */
+/* paper body, with the two lower folds suggested by shading */
 .env-body {
   position: absolute;
   inset: 0;
   background: #fbf7ef;
-  border: 1px solid rgba(82, 30, 32, .16);
-  box-shadow: 0 18px 44px rgba(82, 30, 32, .16);
+  border: 1px solid rgba(82, 30, 32, .18);
+  box-shadow: 0 22px 52px rgba(82, 30, 32, .18);
   overflow: hidden;
 }
 
-/* the two lower folds, drawn as triangles meeting in the middle */
 .env-body::before,
 .env-body::after {
   content: '';
@@ -99,7 +67,7 @@
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 
-/* the flap, hinged along the top edge */
+/* flap, hinged along the top edge */
 .env-flap {
   position: absolute;
   top: 0;
@@ -117,7 +85,6 @@
 
 .env-overlay.is-open .env-flap {
   transform: rotateX(-178deg);
-  /* the flap must drop behind the body once it has swung over */
   z-index: 1;
 }
 
@@ -126,8 +93,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 28%;
-  max-width: 84px;
+  width: 30%;
+  max-width: 100px;
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   z-index: 5;
@@ -139,7 +106,7 @@
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 3px 6px rgba(82, 30, 32, .3));
+  filter: drop-shadow(0 3px 7px rgba(82, 30, 32, .32));
 }
 
 .env-overlay.is-open .env-seal {
@@ -149,17 +116,12 @@
 }
 
 @keyframes seal-breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.045); }
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.045); }
 }
 
-/* ---------- the hint underneath ---------- */
+/* ---------- the hint ---------- */
 .env-hint {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 5%;
-  text-align: center;
   font-family: 'Jost', 'Segoe UI', sans-serif;
   font-size: .6rem;
   letter-spacing: .26em;
@@ -170,7 +132,7 @@
 
 .env-overlay.is-open .env-hint { opacity: 0; }
 
-/* Anyone who has asked their phone for less motion gets the site immediately. */
+/* less motion: skip straight to the site */
 @media (prefers-reduced-motion: reduce) {
   .env-overlay { display: none; }
 }
