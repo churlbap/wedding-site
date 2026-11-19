@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Ten more hands, and the ampersand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&family=Indie+Flower&family=Architects+Daughter&family=Gochi+Hand&family=Caveat+Brush&family=Sriracha&family=Coming+Soon&family=Neucha&family=Dawning+of+a+New+Day&family=Nanum+Pen+Script&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ee;
+    --ink:#221b1c;
+    --wine:#5e1626;
+    --soft:#6d6060;
+    --rule:rgba(34,27,28,.13);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);
+    font-family:-apple-system,'Segoe UI',sans-serif;padding:0 0 4rem}
+  .head{max-width:780px;margin:0 auto;padding:2.2rem 1.2rem 1.2rem;text-align:center}
+  .head .k{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;
+    font-weight:700;color:var(--wine)}
+  .head h1{font-size:1.2rem;font-weight:600;margin:.7rem 0 .3rem;letter-spacing:-.01em}
+  .head p{font-size:.78rem;color:var(--soft);line-height:1.65}
+
+  .opt{max-width:880px;margin:0 auto;padding:1.7rem 1.2rem 1.9rem;
+    border-top:1px solid var(--rule)}
+  .meta{display:flex;align-items:baseline;gap:.7rem;margin-bottom:.7rem;flex-wrap:wrap}
+  .num{font-size:.6rem;letter-spacing:.16em;font-weight:700;color:#fff;
+    background:var(--wine);width:1.5rem;height:1.5rem;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;flex:none}
+  .fname{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+    font-weight:700;color:var(--ink)}
+  .note{font-size:.72rem;color:var(--soft);font-style:italic}
+
+  .names{font-size:clamp(1.9rem,8.4vw,3.5rem);line-height:1.3;
+    word-break:break-word}
+
+  /* the big lone ampersand, so the glyph itself can be judged */
+  .ampbox{display:flex;align-items:center;gap:1rem;margin-top:.9rem;
+    padding-top:.8rem;border-top:1px dotted var(--rule)}
+  .ampbig{font-size:clamp(2.6rem,13vw,4.6rem);line-height:1;color:var(--wine)}
+  .amplbl{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--soft);line-height:1.6;font-weight:600}
+
+  .f1{font-family:'Shadows Into Light Two',cursive}
+  .f2{font-family:'Indie Flower',cursive}
+  .f3{font-family:'Architects Daughter',cursive}
+  .f4{font-family:'Gochi Hand',cursive}
+  .f5{font-family:'Caveat Brush',cursive}
+  .f6{font-family:'Sriracha',cursive}
+  .f7{font-family:'Coming Soon',cursive}
+  .f8{font-family:'Neucha',cursive}
+  .f9{font-family:'Dawning of a New Day',cursive;font-size:clamp(2.1rem,9.6vw,4rem)}
+  .f10{font-family:'Nanum Pen Script',cursive;font-size:clamp(2.2rem,10vw,4.2rem)}
+
+  /* ---------------- ampersand ideas ---------------- */
+  .ideas{max-width:880px;margin:0 auto;padding:2.6rem 1.2rem 0}
+  .ideas .lead{text-align:center;margin-bottom:1.6rem}
+  .ideas .lead .k{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;
+    font-weight:700;color:var(--wine)}
+  .ideas h2{font-family:'Caveat',cursive;font-size:2.1rem;margin:.4rem 0 .2rem;
+    font-weight:700}
+  .ideas .lead p{font-size:.78rem;color:var(--soft);max-width:44ch;margin:0 auto}
+
+  .idea{border-top:1px solid var(--rule);padding:1.5rem 0 1.7rem}
+  .idea .lab{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;
+    font-weight:700;color:var(--wine);margin-bottom:.7rem}
+  .idea .desc{font-size:.76rem;color:var(--soft);margin-top:.8rem;line-height:1.65}
+
+  .stage{background:#fffdf8;border:1px solid var(--rule);padding:1.6rem 1rem;
+    text-align:center;overflow:hidden}
+  .stage.dark{background:var(--wine);border-color:var(--wine)}
+
+  /* 1: the & as the hero, names small either side */
+  .i1{font-family:'Caveat',cursive;font-weight:700;line-height:.9}
+  .i1 .big{display:block;font-size:clamp(3.4rem,17vw,6rem);color:var(--wine)}
+  .i1 .pair{font-size:1.05rem;color:var(--ink);letter-spacing:.06em}
+
+  /* 2: & in wine, names in ink */
+  .i2{font-family:'Indie Flower',cursive;font-size:clamp(1.8rem,8vw,2.9rem)}
+  .i2 .amp{color:#a85434;font-size:1.25em;vertical-align:-.08em}
+
+  /* 3: & with the date tucked in the loop */
+  .i3{font-family:'Caveat Brush',cursive;font-size:clamp(2rem,8.6vw,3.2rem);
+    display:inline-flex;align-items:center;gap:.15em}
+  .i3 .amp{position:relative;display:inline-block;line-height:1}
+  .i3 .amp span{position:absolute;left:50%;top:58%;transform:translate(-50%,-50%) rotate(-6deg);
+    font-family:-apple-system,sans-serif;font-size:.2em;letter-spacing:.14em;
+    font-weight:700;color:#a85434;white-space:nowrap}
+
+  /* 4: hand-drawn wobble, names knocked off the line */
+  .i4{font-family:'Gochi Hand',cursive;font-size:clamp(1.9rem,8.4vw,3.1rem);
+    color:var(--ink)}
+  .i4 .a{display:inline-block;transform:rotate(-4deg) translateY(-.06em);color:#6f7d54}
+  .i4 .b{display:inline-block;transform:rotate(2deg) translateY(.04em)}
+  .i4 .c{display:inline-block;transform:rotate(-2deg) translateY(-.02em)}
+
+  /* 5: reversed out of wine */
+  .i5{font-family:'Indie Flower',cursive;font-size:clamp(1.9rem,8.4vw,3.1rem);
+    color:#fdf6e6}
+  .i5 .amp{color:#e2a887}
+
+  /* 6: tiny mouse tucked beside the & */
+  .i6{display:inline-flex;align-items:flex-end;gap:.5rem}
+  .i6 .txt{font-family:'Indie Flower',cursive;font-size:clamp(1.8rem,8vw,2.9rem)}
+  .i6 img{width:clamp(34px,9vw,52px);height:auto;margin-bottom:.15em}
+
+  .foot{max-width:780px;margin:2.4rem auto 0;padding:2rem 1.2rem 0;
+    text-align:center;border-top:1px solid var(--rule);
+    font-size:.78rem;color:var(--soft);line-height:1.7}
+  .foot b{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="k">Batch two</div>
+  <h1>Ten more hands, and the ampersand</h1>
+  <p>Each one shows your names, then the ampersand on its own and large, because the &amp; is where these fonts differ most. Down the bottom are six ways to make the &amp; do something of its own.</p>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">1</span><span class="fname">Shadows Into Light Two</span><span class="note">light, tilted, looks written in a hurry</span></div>
+  <div class="names f1">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f1">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">2</span><span class="fname">Indie Flower</span><span class="note">round, bouncy, very friendly</span></div>
+  <div class="names f2">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f2">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">3</span><span class="fname">Architects Daughter</span><span class="note">draftsman's pencil, upright and honest</span></div>
+  <div class="names f3">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f3">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">4</span><span class="fname">Gochi Hand</span><span class="note">marker, wobbly, warm</span></div>
+  <div class="names f4">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f4">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">5</span><span class="fname">Caveat Brush</span><span class="note">brush pen, thick and quick</span></div>
+  <div class="names f5">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f5">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">6</span><span class="fname">Sriracha</span><span class="note">loose brush, sloping, a bit wild</span></div>
+  <div class="names f6">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f6">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">7</span><span class="fname">Coming Soon</span><span class="note">school exercise book, neat-ish</span></div>
+  <div class="names f7">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f7">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">8</span><span class="fname">Neucha</span><span class="note">thin, spidery, grown-up scrawl</span></div>
+  <div class="names f8">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f8">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">9</span><span class="fname">Dawning of a New Day</span><span class="note">very fast, very loose, almost illegible</span></div>
+  <div class="names f9">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f9">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="opt">
+  <div class="meta"><span class="num">10</span><span class="fname">Nanum Pen Script</span><span class="note">thin pen, tall, elegant scrawl</span></div>
+  <div class="names f10">Charlotte &amp; Ciaran</div>
+  <div class="ampbox"><span class="ampbig f10">&amp;</span><span class="amplbl">the ampersand<br>as this font draws it</span></div>
+</div>
+
+<div class="ideas">
+  <div class="lead">
+    <div class="k">The unique bit</div>
+    <h2>Six things to do with the ampersand</h2>
+    <p>The &amp; you liked was more than a character. Here are ways to make it carry the design.</p>
+  </div>
+
+  <div class="idea">
+    <div class="lab">I. Let the &amp; be the hero</div>
+    <div class="stage">
+      <div class="i1">
+        <span class="pair">Charlotte</span>
+        <span class="big">&amp;</span>
+        <span class="pair">Ciaran</span>
+      </div>
+    </div>
+    <div class="desc">The ampersand set huge between the names, stacked. It becomes the mark itself, and it is the one element nobody else's wedding site has.</div>
+  </div>
+
+  <div class="idea">
+    <div class="lab">II. Two colours, one ampersand</div>
+    <div class="stage">
+      <div class="i2">Charlotte <span class="amp">&amp;</span> Ciaran</div>
+    </div>
+    <div class="desc">Names in ink, ampersand in a warm terracotta and a touch larger. Subtle, but it makes the middle of the line the focal point.</div>
+  </div>
+
+  <div class="idea">
+    <div class="lab">III. Hide the date inside the loop</div>
+    <div class="stage">
+      <div class="i3">Charlotte <span class="amp">&amp;<span>3 · 7 · 27</span></span> Ciaran</div>
+    </div>
+    <div class="desc">The wedding date set tiny inside the loop of the ampersand. People only spot it when they look properly, which is exactly the kind of detail that gets mentioned.</div>
+  </div>
+
+  <div class="idea">
+    <div class="lab">IV. Knock it off the line</div>
+    <div class="stage">
+      <div class="i4"><span class="b">Charlotte</span> <span class="a">&amp;</span> <span class="c">Ciaran</span></div>
+    </div>
+    <div class="desc">Each part rotated a degree or two, as if written by hand on a table that moved. Reads as genuinely handwritten rather than a font pretending.</div>
+  </div>
+
+  <div class="idea">
+    <div class="lab">V. Reversed out of wine</div>
+    <div class="stage dark">
+      <div class="i5">Charlotte <span class="amp">&amp;</span> Ciaran</div>
+    </div>
+    <div class="desc">Cream script on the wine ground, ampersand in a paler peach. Works on the hero and on the footer, and it is the version that will look best on a phone in sunlight.</div>
+  </div>
+
+  <div class="idea">
+    <div class="lab">VI. A mouse in the margin</div>
+    <div class="stage">
+      <div class="i6">
+        <span class="txt">Charlotte <span style="color:#a85434">&amp;</span> Ciaran</span>
+        <img src="images/mice-pair.webp" alt="">
+      </div>
+    </div>
+    <div class="desc">One of your mice standing next to the names, small, like a signature in the corner of an illustration. Ties the names to the paintings and gives the whole thing a private joke.</div>
+  </div>
+</div>
+
+<div class="foot">
+  <p>The messiest of the ten are <b>9, 1 and 6</b>. <b>3 and 7</b> are the most readable, so they could do headings as well as names. Say a number for the font, and a number for the ampersand idea, and I will build the pair together.</p>
+</div>
+
+</body>
+</html>
