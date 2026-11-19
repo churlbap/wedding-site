@@ -41,8 +41,9 @@
 .env {
   position: relative;
   z-index: 2;
-  width: min(170px, 41vw);
-  aspect-ratio: 5 / 4;
+  /* wider than tall now, and noticeably bigger, so the seal reads */
+  width: min(260px, 74vw);
+  aspect-ratio: 3 / 2;
   perspective: 900px;
   /* a real object has weight: a tight contact shadow plus a wider cast one */
   filter:
@@ -59,6 +60,7 @@
 .env-body {
   position: absolute;
   inset: 0;
+  z-index: 1;
   /* paper: a base tone, a gentle top-to-bottom light fall, and fine grain */
   background-color: #4a1519;
   background-image:
@@ -149,6 +151,32 @@
     0 2px 5px rgba(0, 0, 0, .28);
 }
 
+/* Two little mice peeking over the edge once the flap is open. They live
+   inside the body, so its overflow clips them and they rise into view rather
+   than appearing whole. */
+.env-mice {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 42%;
+  z-index: 4;
+  transform: translate(-50%, 96%);
+  opacity: 0;
+  transition: transform .8s cubic-bezier(.25, .8, .3, 1) .25s,
+              opacity .5s ease .3s;
+  pointer-events: none;
+  filter: drop-shadow(0 -2px 4px rgba(0, 0, 0, .3));
+}
+.env-mice img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.env-overlay.is-open .env-mice {
+  transform: translate(-50%, 6%);
+  opacity: 1;
+}
+
 .env-overlay.is-open .env-flap {
   transform: rotateX(-178deg);
   z-index: 1;
@@ -159,7 +187,7 @@
   position: absolute;
   top: 58%;
   left: 50%;
-  width: 16%;
+  width: 26%;
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   z-index: 5;
