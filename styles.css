@@ -71,8 +71,8 @@ a { color: var(--burgundy); }
 .monogram em { font-style: normal; font-size: .55em; vertical-align: middle; opacity: .8; padding: 0 .06em; }
 
 /* Hero */
-.hero { position: relative; min-height: 82vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;
-  padding: 1.1rem 1.25rem 3rem;
+.hero { position: relative; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;
+  padding: 1.1rem 1.25rem 1.6rem;
   background-color: var(--burgundy);
   overflow: hidden;
 }
@@ -632,7 +632,7 @@ body.page-register .site-footer .seal-tight { margin-top: .45rem; }
 
 /* Photo strip on burgundy */
 .strip-band { background-color: var(--burgundy);
-  padding: 3rem 1.25rem; text-align: center; }
+  padding: .6rem 1.25rem 2.2rem; text-align: center; }
 .strip { display: flex; align-items: center; justify-content: center; gap: clamp(.6rem, 3vw, 1.6rem); margin: 0 auto; }
 .strip img { height: auto; border: 0; }
 .strip-photo { width: min(200px, 52vw); box-shadow: 0 18px 45px rgba(0,0,0,.34); }
