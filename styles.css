@@ -198,7 +198,7 @@ body.page-stay .site-footer { margin-top: 0; }
    so the boxes read as pressed card stock rather than plain paper. */
 body.page-area .section-wallpaper .card {
   background-color: #efe9df;
-  background-image: url('images/embossed-paper.jpg');
+  background-image: url('images/embossed-paper-clean.jpg');
   /* one copy stretched to fill the card exactly. Tiling it at a fixed size
      left a visible seam where the pattern met itself on each box. */
   background-size: 100% 100%;
@@ -389,7 +389,7 @@ body.page-area .section-wallpaper .card {
    and the footer becomes paper with dark text to match. */
 body.page-faq {
   background-color: #efe9df;
-  background-image: url('images/embossed-paper.jpg');
+  background-image: url('images/embossed-paper-clean.jpg');
   /* One copy filling the screen, pinned so it does not stretch down a long
      page. Tiling left seams; stretching the whole document would blur the
      relief into mush. Pinned at viewport size gives continuous paper. */
@@ -416,7 +416,7 @@ body.page-faq .nav-links a:hover { color: var(--burgundy); border-color: var(--b
 /* paper footer, dark type */
 body.page-faq .site-footer {
   background-color: transparent;
-  background-image: url('images/embossed-paper.jpg');
+  background-image: url('images/embossed-paper-clean.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: var(--burgundy);
