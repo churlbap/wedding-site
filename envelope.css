@@ -7,15 +7,31 @@
   inset: 0;
   z-index: 999;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  /* the same cream as the site, so the reveal feels continuous */
-  background: #f7f4ef;
+  /* warm wash behind the frame, so no white shows at the edges */
+  background: #cdbfa2;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: opacity .85s ease, visibility .85s ease;
+}
+
+/* The lace frame is an element rather than a background image, so the
+   envelope can be positioned against its measured cream interior. The
+   interior runs 29% to 72% on both axes of this artwork. */
+.env-frame {
+  position: relative;
+  aspect-ratio: 686 / 1200;
+  height: min(100%, calc(100vw * 1200 / 686));
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.env-frame > img.env-lace {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .env-overlay.is-done {
@@ -25,16 +41,31 @@
 }
 
 /* ---------- the envelope ---------- */
+/* pinned to the measured paper area: 29%..72% on both axes */
 .env {
-  position: relative;
-  width: min(320px, 78vw);
-  aspect-ratio: 3 / 2;
+  position: absolute;
+  left: 29%;
+  right: 28%;
+  top: 29%;
+  bottom: 28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   perspective: 900px;
   transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
 }
 
-.env-overlay.is-done .env {
-  transform: translateY(26px) scale(.96);
+/* the envelope itself, sized within that paper area */
+.env-sheet {
+  position: relative;
+  width: 92%;
+  aspect-ratio: 3 / 2;
+  max-height: 46%;
+  transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
+}
+
+.env-overlay.is-done .env-sheet {
+  transform: translateY(18px) scale(.96);
   opacity: 0;
 }
 
@@ -95,9 +126,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 92px;
-  height: 92px;
-  margin: -46px 0 0 -46px;
+  width: 28%;
+  max-width: 84px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
   z-index: 5;
   transition: transform .45s cubic-bezier(.3, 0, .2, 1), opacity .45s ease;
   animation: seal-breathe 2.6s ease-in-out infinite;
@@ -112,7 +144,7 @@
 
 .env-overlay.is-open .env-seal {
   animation: none;
-  transform: scale(1.18) rotate(-9deg);
+  transform: translate(-50%, -50%) scale(1.18) rotate(-9deg);
   opacity: 0;
 }
 
@@ -123,6 +155,11 @@
 
 /* ---------- the hint underneath ---------- */
 .env-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  text-align: center;
   font-family: 'Jost', 'Segoe UI', sans-serif;
   font-size: .6rem;
   letter-spacing: .26em;
