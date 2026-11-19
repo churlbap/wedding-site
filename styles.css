@@ -355,22 +355,27 @@ body.page-stay .site-footer { margin-top: 0; }
 .faq-item:first-of-type { border-top: 1px solid var(--line); }
 
 /* FAQ on the vintage floral wallpaper */
+/* FAQ sits on embossed floral paper. Tiled rather than stretched, so the
+   relief repeats at its own scale instead of smearing across a tall phone
+   screen. The cream panels are gone: on a paper ground they looked like
+   floating cards, so the copy now sits directly on the paper. */
 .faq-page { position: relative; max-width: none !important; overflow: hidden;
-  background-color: var(--cream-soft);
-  background-image: url('images/faq-bg.jpg');
-  /* width-fit at the painting's own proportions, then repeat down the page so
-     the border is visible for the full length instead of only at the top.
-     100% 100% stretched it into an invisible sliver on a tall phone. */
-  background-size: 100% auto;
+  background-color: #efe9df;
+  background-image: url('images/embossed-paper.jpg');
+  background-size: 460px auto;
   background-position: top center;
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   padding: clamp(2.5rem, 7vw, 4.5rem) 1.25rem clamp(3rem, 9vw, 5.5rem); }
 .faq-page > * { position: relative; z-index: 1; max-width: 640px; margin-left: auto; margin-right: auto; }
-/* translucent panels so the copy reads over the painting */
-.faq-page .lede { background: rgba(255,250,240,.72); padding: 1rem 1.2rem; }
-.faq-page .faq-item { background: rgba(255,250,240,.72); padding: 1.3rem 1.4rem; border-bottom: 0;
-  margin-bottom: .85rem; backdrop-filter: blur(1px); }
+/* no panels: the paper is the background */
+.faq-page .lede { background: transparent; padding: 1rem 0; }
+.faq-page .faq-item { background: transparent; padding: 1.3rem 0; border-bottom: 0;
+  margin-bottom: .85rem; }
 .faq-page .faq-item:first-of-type { border-top: 0; }
+/* a hairline between questions, since the boxes no longer separate them */
+.faq-page .faq-item:not(:last-of-type) {
+  border-bottom: 1px solid rgba(94,22,38,.16);
+}
 .faq-page h2 { color: var(--burgundy); }
 .faq-page .faq-item h3 { color: var(--burgundy); }
 .faq-item h3 { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; color: var(--burgundy); margin-bottom: .5rem; }
