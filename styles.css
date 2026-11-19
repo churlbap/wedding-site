@@ -11,6 +11,8 @@
   --accent: #5e1626;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --script: 'Italianno', 'Cormorant Garamond', cursive;
+  /* the couple's chosen hand, used for their names */
+  --hand: 'Dawning of a New Day', 'Italianno', cursive;
   --sans: 'Jost', 'Segoe UI', sans-serif;
   /* legacy aliases so older markup keeps working */
   --sand: var(--cream);
@@ -89,11 +91,22 @@ a { color: var(--burgundy); }
 .hero-cherubs img { width: 100%; height: auto; }
 .hero-kicker { text-transform: uppercase; letter-spacing: .42em; font-size: .68rem; font-weight: 400; color: rgba(255,246,226,.75); margin-bottom: 1.6rem; }
 .hero h1 { font-family: var(--script); font-weight: 400; font-size: clamp(3.6rem, 13vw, 8rem); line-height: .95; color: var(--cream); }
-/* The names are the couple's own calligraphy, supplied as an image rather
-   than set in a font. The artwork is a wide single line, so it is sized by
-   width and allowed to scale down on narrow screens. */
-.hero-names { display: flex; justify-content: center; margin: 0 0 .4rem; }
-.hero-names img { width: min(620px, 92vw); height: auto; display: block; }
+/* The names are set in the couple's chosen hand (Dawning of a New Day),
+   all one colour, with each part tilted a degree or two so it reads as
+   written rather than typeset. The accent on Ciarán is part of the font. */
+.hero-names {
+  font-family: var(--hand);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 12vw, 4.8rem);
+  line-height: 1.1;
+  color: var(--cream);
+  margin: 0 0 .4rem;
+  display: block;
+}
+.hero-names span { display: inline-block; }
+.hero-names .n1 { transform: rotate(-3deg) translateY(-.05em); }
+.hero-names .amp { transform: rotate(4deg) translateY(.04em); }
+.hero-names .n2 { transform: rotate(-1.5deg) translateY(.03em); }
 
 .hero h1 .amp { font-style: normal; color: var(--cream); opacity: .75; padding: 0 .1em; }
 .hero-date { font-family: var(--sans); text-transform: uppercase; letter-spacing: .32em; font-size: clamp(.7rem, 1.6vw, .82rem); color: var(--cream); margin: 1.8rem 0 2.4rem; }
@@ -438,7 +451,8 @@ body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
   display: block;
   opacity: 1;
 }
-.site-footer .names { font-family: var(--script); font-size: 2.6rem; line-height: 1; letter-spacing: .02em; }
+.site-footer .names { font-family: var(--hand); font-size: 2.4rem;
+  line-height: 1.15; letter-spacing: .01em; }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
 
 /* Photo strip on burgundy */
