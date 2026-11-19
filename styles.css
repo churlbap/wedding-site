@@ -200,6 +200,12 @@ body.page-home .hero,
 body.page-home .strip-band { background-color: transparent; background-image: none; }
 body.page-home .section { background: transparent; }
 body.page-home .site-footer { background-color: transparent; }
+/* On the home page the date should sit right under the last day, not float
+   below three stacked spacings. Section padding, footer margin and footer
+   padding were all adding up to a visible gap. */
+body.page-home .section { padding-bottom: 1.2rem; }
+body.page-home .site-footer { margin-top: 0; padding-top: 1.4rem; }
+
 body.page-home .section-wallpaper { background-color: transparent; background-image: none; }
 
 /* The whole document is burgundy on this page. The body was cream, so the
