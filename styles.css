@@ -141,19 +141,29 @@ a { color: var(--burgundy); }
 .btn.ghost { background: transparent; color: var(--burgundy); border: 1px solid var(--burgundy); }
 .btn.ghost:hover { background: var(--burgundy); color: var(--cream); }
 /* on the burgundy hero the ghost button needs cream ink */
-/* The hero call to action in powder blue: cream on burgundy was reading as
-   just another outlined element, and the blue is the site accent now. */
+/* The hero call to action matches the bold filled button used on the
+   Where to Stay cards: solid fill, a defined border, weight, a base shadow
+   and a press. Powder blue fill with burgundy text, since it sits on the
+   burgundy hero. */
 .hero .btn {
   background: var(--accent);
   color: var(--burgundy);
-  border-color: var(--accent);
-  font-weight: 500;
+  border: 1px solid rgba(82,30,32,.35);
+  font-weight: 600;
+  padding: 1.05rem 2.4rem;
+  box-shadow: 0 3px 0 rgba(42,18,20,.30);
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease, transform .12s ease;
 }
 .hero .btn:hover,
 .hero .btn:focus-visible {
-  background: var(--cream);
+  background: #fff;
   color: var(--burgundy);
-  border-color: var(--cream);
+  border-color: #fff;
+  box-shadow: 0 4px 0 rgba(42,18,20,.34);
+}
+.hero .btn:active {
+  box-shadow: 0 1px 0 rgba(42,18,20,.32);
+  transform: translateY(1px);
 }
 .hero .btn.ghost { color: var(--cream); border-color: rgba(255,246,226,.55); }
 .hero .btn.ghost:hover { background: var(--cream); color: var(--burgundy); border-color: var(--cream); }
