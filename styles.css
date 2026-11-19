@@ -598,6 +598,14 @@ body.page-faq .site-footer p { color: rgba(82,30,32,.7); }
 .site-footer .footer-mice-car { width: 54px; }
 /* the car scene sits really small on Where to Stay, a detail rather than a mark */
 .site-footer .footer-mice-xs { width: 34px; }
+/* The car mice standing alone in the footer, now the flower pair is gone. */
+.site-footer .footer-mice-car-xs {
+  width: 44px;
+  height: auto;
+  display: block;
+  margin: .8rem auto 0;
+  opacity: .92;
+}
 /* The wax seal closes every page. Small and quiet, a signature rather than a
    feature, sitting under the date with the mice above it. */
 .site-footer .footer-seal {
