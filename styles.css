@@ -199,8 +199,11 @@ body.page-stay .site-footer { margin-top: 0; }
 body.page-area .section-wallpaper .card {
   background-color: #efe9df;
   background-image: url('images/embossed-paper.jpg');
-  background-size: 300px auto;
-  background-repeat: repeat;
+  /* one copy stretched to fill the card exactly. Tiling it at a fixed size
+     left a visible seam where the pattern met itself on each box. */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section-wallpaper .card {
@@ -387,8 +390,13 @@ body.page-area .section-wallpaper .card {
 body.page-faq {
   background-color: #efe9df;
   background-image: url('images/embossed-paper.jpg');
-  background-size: 460px auto;
-  background-repeat: repeat;
+  /* One copy filling the screen, pinned so it does not stretch down a long
+     page. Tiling left seams; stretching the whole document would blur the
+     relief into mush. Pinned at viewport size gives continuous paper. */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }
 body.page-faq .site-header {
   background-color: #efe9df;
@@ -409,8 +417,8 @@ body.page-faq .nav-links a:hover { color: var(--burgundy); border-color: var(--b
 body.page-faq .site-footer {
   background-color: transparent;
   background-image: url('images/embossed-paper.jpg');
-  background-size: 460px auto;
-  background-repeat: repeat;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: var(--burgundy);
   border-top: 1px solid rgba(94,22,38,.16);
   margin-top: 0;
@@ -420,10 +428,7 @@ body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
 
 .faq-page { position: relative; max-width: none !important; overflow: hidden;
   background-color: #efe9df;
-  background-image: url('images/embossed-paper.jpg');
-  background-size: 460px auto;
-  background-position: top center;
-  background-repeat: repeat;
+  background-image: none;
   padding: clamp(2.5rem, 7vw, 4.5rem) 1.25rem clamp(3rem, 9vw, 5.5rem); }
 .faq-page > * { position: relative; z-index: 1; max-width: 640px; margin-left: auto; margin-right: auto; }
 /* no panels: the paper is the background */
