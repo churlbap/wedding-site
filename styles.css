@@ -633,21 +633,21 @@ body.page-register .btn:focus-visible {
    single line with the mice and the date sharing a baseline. */
 .site-footer { position: relative; }
 .site-footer .footer-base {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
+  position: relative;
   margin-top: .55rem;
 }
+/* The mice sit out at the right edge and a few lines lower than the date,
+   so they read as a tucked-away detail rather than part of the address. */
 .site-footer .footer-mice-inline {
+  position: absolute;
+  right: 0;
+  bottom: -2.2rem;
   width: 30px;
   height: auto;
   display: block;
-  flex: 0 0 auto;
   opacity: .95;
 }
-/* inside the row the date drops its own top margin, so it sits level with
-   the mice rather than floating below them */
+/* the date keeps its own centred line now that the mice have left the row */
 .site-footer .footer-base p { margin-top: 0; }
 
 /* The monogram emblem used on the home page: portrait, so it needs more
