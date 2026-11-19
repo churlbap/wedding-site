@@ -234,6 +234,29 @@ body.page-register .notice {
   border-color: transparent;
   border-left: 2px solid var(--accent);
 }
+/* The Where to Stay card buttons now match the Register Interest button:
+   powder blue fill, burgundy text, same weight and padding. Both are the
+   primary action on their page, so they should look identical. */
+body.page-stay .card .btn {
+  background: var(--accent);
+  color: var(--burgundy);
+  border: 1px solid rgba(82,30,32,.35);
+  font-weight: 600;
+  padding: 1.05rem 2.4rem;
+  box-shadow: 0 3px 0 rgba(42,18,20,.30);
+}
+body.page-stay .card .btn:hover,
+body.page-stay .card .btn:focus-visible {
+  background: #fff;
+  color: var(--burgundy);
+  border-color: #fff;
+  box-shadow: 0 4px 0 rgba(42,18,20,.34);
+}
+body.page-stay .card .btn:active {
+  box-shadow: 0 1px 0 rgba(42,18,20,.32);
+  transform: translateY(1px);
+}
+
 body.page-register .btn {
   background: var(--accent);
   color: var(--burgundy);
