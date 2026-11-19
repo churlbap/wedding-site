@@ -189,6 +189,11 @@ body.page-home .section .lede::after { background: rgba(255,246,226,.3); }
   margin: .45rem 0 .5rem; }
 .day-item p { color: rgba(255,246,226,.82); font-size: .94rem; line-height: 1.75; margin: 0; }
 
+/* The seal closing the itinerary on the home page, sitting in the space
+   between the last day and the footer. */
+.seal-close { display: flex; justify-content: center; margin: 2.6rem auto 0; }
+.seal-close img { width: 64px; height: auto; display: block; opacity: .95; }
+
 body.page-home .card { background: rgba(255,246,226,.94); }
 /* on the home page let the page texture show through instead of re-tiling */
 body.page-home .hero,
