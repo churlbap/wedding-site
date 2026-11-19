@@ -381,11 +381,11 @@ body.page-stay .site-footer { margin-top: 0; }
 /* Two tiny mice tucked under the date at the very bottom of the page. Small
    and faint on purpose: a detail for anyone who looks, not a feature. */
 .site-footer .footer-mice {
-  width: 54px;
+  width: 42px;
   height: auto;
-  margin: 1.1rem auto 0;
+  margin: 1rem auto 0;
   display: block;
-  opacity: .5;
+  opacity: 1;
 }
 .site-footer .names { font-family: var(--script); font-size: 2.6rem; line-height: 1; letter-spacing: .02em; }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
