@@ -64,28 +64,8 @@ a { color: var(--burgundy); }
 .nav-links { display: flex; gap: .5rem; justify-content: space-between; align-items: center; }
 .nav-links a { flex: 1 1 auto; text-align: center; }
 .brand { display: block; padding: 1.05rem 1rem .35rem; text-align: center; text-decoration: none; position: relative; z-index: 1; }
-/* The four nav buttons carry the same sage paint as the monogram ribbon.
-   The sage is light, so the type goes dark burgundy rather than cream. */
-.nav-links a {
-  text-decoration: none;
-  font-size: .64rem;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--burgundy);
-  font-weight: 500;
-  padding: .38rem .6rem;
-  border: 1px solid rgba(247,244,239,.55);
-  background-color: #bdc4a7;
-  background-image: url('images/sage-wash-v1.jpg');
-  background-size: cover;
-  background-position: center;
-  transition: color .2s ease, border-color .2s ease, filter .2s ease;
-}
-.nav-links a:hover {
-  color: var(--burgundy);
-  border-color: var(--cream);
-  filter: brightness(1.08);
-}
+.nav-links a { text-decoration: none; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,246,226,.9); padding: .38rem .6rem; border: 1px solid rgba(255,246,226,.4); transition: color .2s ease, border-color .2s ease; }
+.nav-links a:hover { color: var(--cream); border-color: var(--cream); }
 
 .monogram { font-family: var(--script); font-size: 2.5rem; line-height: .85; color: var(--cream); white-space: nowrap; }
 .monogram em { font-style: normal; font-size: .55em; vertical-align: middle; opacity: .8; padding: 0 .06em; }
@@ -545,7 +525,7 @@ body.page-faq .header-flowers::after { display: none; }
 /* the header is a pale painting now, so the monogram and nav go dark */
 body.page-faq .monogram { color: var(--burgundy); }
 body.page-faq .monogram em { color: var(--burgundy); }
-body.page-faq .nav-links a { color: var(--burgundy); border-color: rgba(88,24,41,.3); }
+body.page-faq .nav-links a { color: var(--burgundy); border-color: rgba(88,24,41,.4); }
 body.page-faq .nav-links a:hover { color: var(--burgundy); border-color: var(--burgundy); }
 /* paper footer, dark type */
 body.page-faq .site-footer {
