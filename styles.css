@@ -90,7 +90,11 @@ a { color: var(--burgundy); }
 }
 
 /* cherub line art, blended onto the burgundy */
-.hero-cherubs { position: relative; top: auto; left: auto; transform: none; margin: 0 auto 1.4rem; width: min(240px, 46vw); opacity: .28; mix-blend-mode: screen; pointer-events: none; z-index: 1; }
+/* The cherub monogram sits at the top of the hero. The old harp stamp was a
+   flat line drawing at 28% opacity with screen blending, which washed it out.
+   This one is a coloured emblem, so it shows at full strength and a size that
+   reads like a stamp. */
+.hero-cherubs { position: relative; top: auto; left: auto; transform: none; margin: 0 auto 1.2rem; width: min(190px, 42vw); opacity: 1; mix-blend-mode: normal; pointer-events: none; z-index: 1; }
 .hero-cherubs img { width: 100%; height: auto; }
 .hero-kicker { text-transform: uppercase; letter-spacing: .42em; font-size: .68rem; font-weight: 400; color: rgba(255,246,226,.75); margin-bottom: 1.6rem; }
 .hero h1 { font-family: var(--script); font-weight: 400; font-size: clamp(3.6rem, 13vw, 8rem); line-height: .95; color: var(--cream); }
