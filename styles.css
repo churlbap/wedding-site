@@ -366,17 +366,9 @@ body.page-register .btn:focus-visible {
    oval floral frame as a small crest above each title. An oval cannot sit
    behind copy of varying length without either stretching (which flattened
    the vine) or swallowing the text. */
-/* Local Area only: the cards use the same embossed floral paper as the FAQ,
-   so the boxes read as pressed card stock rather than plain paper. */
-body.page-area .section-wallpaper .card {
-  background-color: #efe9df;
-  background-image: url('images/embossed-paper-clean.jpg');
-  /* one copy stretched to fill the card exactly. Tiling it at a fixed size
-     left a visible seam where the pattern met itself on each box. */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+/* Local Area uses the same card treatment as Where to Stay: cream card,
+   soft paper texture, rounded none, drop shadow. The embossed override is
+   gone, so both pages read as one set. */
 
 .section-wallpaper .card {
   position: relative;
