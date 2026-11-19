@@ -494,9 +494,10 @@ body.page-faq .site-footer p { color: rgba(82,30,32,.75); }
    and faint on purpose: a detail for anyone who looks, not a feature. */
 /* The quiet blue does the accent work: dates, tags and the small caps lines,
    where the old palette had a warm tone that no longer exists. */
-.day-when { color: var(--accent); }
+/* the date lines were powder blue; all writing is cream now, as asked */
+.day-when { color: rgba(255,246,226,.72); }
 .faq-page .faq-item h3 { color: var(--burgundy); }
-.hand-accent, .accent-line { color: var(--accent); }
+.hand-accent, .accent-line { color: var(--cream); }
 body.page-faq .site-footer p { color: rgba(82,30,32,.7); }
 
 .site-footer .footer-mice-row {
