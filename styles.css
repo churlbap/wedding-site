@@ -512,6 +512,16 @@ body.page-faq .site-footer p { color: rgba(82,30,32,.7); }
 .site-footer .footer-mice-car { width: 54px; }
 /* the car scene sits really small on Where to Stay, a detail rather than a mark */
 .site-footer .footer-mice-xs { width: 34px; }
+/* The wax seal closes every page. Small and quiet, a signature rather than a
+   feature, sitting under the date with the mice above it. */
+.site-footer .footer-seal {
+  width: 46px;
+  height: auto;
+  display: block;
+  margin: .9rem auto 0;
+  opacity: .95;
+}
+
 .site-footer .names { font-family: var(--hand); font-size: 2.4rem;
   line-height: 1.15; letter-spacing: .01em; }
 /* same knocked-off-the-line tilt as the hero, so the names match everywhere */
