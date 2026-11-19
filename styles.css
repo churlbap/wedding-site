@@ -1,14 +1,14 @@
 /* Charlotte & Ciaran — 3 July 2027 — Castell de Tamarit */
 /* Palette matched to the Canva Save the Date */
 :root {
-  --ink: #1c1c1c;
-  --ink-soft: #5c5450;
-  --cream: #fff6e2;
-  --cream-soft: #faf7ef;
-  --burgundy: #5e1626;
-  --burgundy-soft: #7d2032;
-  --line: rgba(94,22,38,.18);
-  --accent: #5e1626;
+  --ink: #241520;
+  --ink-soft: #5d5560;
+  --cream: #f7f4ef;
+  --cream-soft: #f2eee8;
+  --burgundy: #321624;
+  --burgundy-soft: #4a2338;
+  --line: rgba(50,22,36,.18);
+  --accent: #bfd1df;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --script: 'Italianno', 'Cormorant Garamond', cursive;
   /* the couple's chosen hand, used for their names */
@@ -16,7 +16,7 @@
   --sans: 'Jost', 'Segoe UI', sans-serif;
   /* legacy aliases so older markup keeps working */
   --sand: var(--cream);
-  --sand-deep: #eadfc9;
+  --sand-deep: #dcd3c6;
   --sea: var(--burgundy);
   --sea-deep: var(--burgundy);
   --white: var(--cream-soft);
@@ -53,7 +53,7 @@ a { color: var(--burgundy); }
   }
 }
 .header-flowers::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
-  background: linear-gradient(to bottom, rgba(80,30,31,0) 0%, rgba(80,30,31,.55) 45%, rgba(80,30,31,.92) 78%, #501e1f 100%); }
+  background: linear-gradient(to bottom, rgba(50,22,36,0) 0%, rgba(50,22,36,.55) 45%, rgba(50,22,36,.92) 78%, #321624 100%); }
 .nav { display: block; padding: 0 1rem .95rem; max-width: 100%; width: 100%; margin: 0; border: 0; position: relative; z-index: 1; }
 .nav-links { display: flex; gap: .5rem; justify-content: space-between; align-items: center; }
 .nav-links a { flex: 1 1 auto; text-align: center; }
@@ -286,7 +286,7 @@ body.page-area .section-wallpaper .card {
   color: var(--cream);
   border: 1px solid var(--burgundy-soft);
   font-weight: 500;
-  box-shadow: 0 3px 0 rgba(94,22,38,.28);
+  box-shadow: 0 3px 0 rgba(50,22,36,.28);
   transition: background .18s ease, color .18s ease, box-shadow .18s ease, transform .12s ease;
 }
 .section-wallpaper .card .btn:hover,
@@ -294,10 +294,10 @@ body.page-area .section-wallpaper .card {
   background: var(--burgundy-soft);
   color: #fff;
   border-color: var(--burgundy-soft);
-  box-shadow: 0 4px 0 rgba(94,22,38,.32);
+  box-shadow: 0 4px 0 rgba(50,22,36,.32);
 }
 .section-wallpaper .card .btn:active {
-  box-shadow: 0 1px 0 rgba(94,22,38,.3);
+  box-shadow: 0 1px 0 rgba(50,22,36,.3);
   transform: translateY(1px);
 }
 /* the secondary "Visit Website" button stays an outline, but with enough
@@ -326,8 +326,8 @@ body.page-area .section-wallpaper .card {
    italic vanish. Give the emphasised initials weight instead. */
 .tag em { font-style: normal; font-weight: 700; }
 .section-wallpaper .card .tag {
-  border-color: rgba(94,22,38,.55);
-  color: #3f0f1d;
+  border-color: rgba(50,22,36,.55);
+  color: #2c1220;
   font-weight: 600;
   background: rgba(255,252,246,.7);
 }
@@ -350,15 +350,15 @@ body.page-area .section-wallpaper .card {
   transform: translate(-50%,-50%);
   border-radius: 50%; -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .map-hot:hover, .map-hot:focus-visible {
-  outline: none; box-shadow: 0 0 0 3px rgba(255,246,226,.55), 0 0 0 6px rgba(80,30,31,.25); }
+  outline: none; box-shadow: 0 0 0 3px rgba(255,246,226,.55), 0 0 0 6px rgba(50,22,36,.25); }
 /* reference points that don't link anywhere: visible on hover only, no pointer */
 .map-hot-plain, .map-hot-venue { cursor: default; }
-.map-hot-plain:hover, .map-hot-venue:hover { box-shadow: 0 0 0 3px rgba(80,30,31,.18); }
+.map-hot-plain:hover, .map-hot-venue:hover { box-shadow: 0 0 0 3px rgba(50,22,36,.18); }
 .map-hot-venue:hover { box-shadow: 0 0 0 3px rgba(255,246,226,.45); }
 
 
 
-.tag { display: inline-block; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; background: transparent; color: #3f0f1d; border: 1px solid rgba(94,22,38,.55); border-radius: 0; padding: .34rem .72rem; margin: 0 .35rem .8rem 0; }
+.tag { display: inline-block; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; background: transparent; color: #2c1220; border: 1px solid rgba(50,22,36,.55); border-radius: 0; padding: .34rem .72rem; margin: 0 .35rem .8rem 0; }
 
 /* Timeline */
 .timeline { max-width: 620px; margin: 0 auto; position: relative; padding-left: 1.75rem; }
@@ -407,7 +407,7 @@ body.page-faq .header-flowers::after { display: none; }
 /* the header is a pale painting now, so the monogram and nav go dark */
 body.page-faq .monogram { color: var(--burgundy); }
 body.page-faq .monogram em { color: var(--burgundy); }
-body.page-faq .nav-links a { color: var(--burgundy); border-color: rgba(94,22,38,.4); }
+body.page-faq .nav-links a { color: var(--burgundy); border-color: rgba(50,22,36,.4); }
 body.page-faq .nav-links a:hover { color: var(--burgundy); border-color: var(--burgundy); }
 /* paper footer, dark type */
 body.page-faq .site-footer {
@@ -416,11 +416,11 @@ body.page-faq .site-footer {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: var(--burgundy);
-  border-top: 1px solid rgba(94,22,38,.16);
+  border-top: 1px solid rgba(50,22,36,.16);
   margin-top: 0;
 }
 body.page-faq .site-footer .names { color: var(--burgundy); }
-body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
+body.page-faq .site-footer p { color: rgba(50,22,36,.75); }
 
 /* No fill here: the paper lives on the body for this page. A solid colour
    on this section would paint straight over it, which is exactly what went
@@ -444,7 +444,7 @@ body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
 .faq-page .faq-item:first-of-type { border-top: 0; }
 /* a hairline between questions, since the boxes no longer separate them */
 .faq-page .faq-item:not(:last-of-type) {
-  border-bottom: 1px solid rgba(94,22,38,.16);
+  border-bottom: 1px solid rgba(50,22,36,.16);
 }
 .faq-page h2 { color: var(--burgundy); }
 .faq-page .faq-item h3 { color: var(--burgundy); }
@@ -455,6 +455,13 @@ body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
 .site-footer { background: var(--burgundy); color: var(--cream); text-align: center; padding: 3.5rem 1.25rem; margin-top: 2rem; }
 /* Two tiny mice tucked under the date at the very bottom of the page. Small
    and faint on purpose: a detail for anyone who looks, not a feature. */
+/* The quiet blue does the accent work: dates, tags and the small caps lines,
+   where the old palette had a warm tone that no longer exists. */
+.day-when { color: var(--accent); }
+.faq-page .faq-item h3 { color: var(--burgundy); }
+.hand-accent, .accent-line { color: var(--accent); }
+body.page-faq .site-footer p { color: rgba(50,22,36,.7); }
+
 .site-footer .footer-mice {
   width: 42px;
   height: auto;
