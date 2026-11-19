@@ -37,7 +37,7 @@ a { color: var(--burgundy); }
   align-items: stretch; justify-content: space-between; overflow: hidden; }
 .header-flowers { position: absolute; inset: 0; z-index: 0; pointer-events: none;
   /* phones get the single unmirrored artwork, as originally designed */
-  background-image: url('images/bot-bottom-powder-v1.jpg');
+  background-image: url('images/bot-bottom.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -47,7 +47,7 @@ a { color: var(--burgundy); }
    rather than a visible reflection on a narrow screen */
 @media (min-width: 900px) {
   .header-flowers {
-    background-image: url('images/bot-bottom-powder-wide-v1.jpg');
+    background-image: url('images/bot-bottom-wide.jpg');
     background-repeat: repeat-x;
     background-size: auto 100%;
   }
