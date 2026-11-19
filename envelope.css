@@ -11,11 +11,25 @@
   align-items: center;
   justify-content: center;
   gap: 2.4rem;
-  /* the site cream, so the reveal feels continuous */
-  background: #f7f4ef;
+  /* the aged landscape sits behind the envelope */
+  background-color: #b9a07a;
+  background-image: url('images/envelope-bg-v1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: opacity .85s ease, visibility .85s ease;
+}
+
+/* A warm scrim over the painting, so the cream envelope still reads against
+   all that ochre and foliage instead of dissolving into it. */
+.env-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(58, 38, 22, .38);
+  pointer-events: none;
 }
 
 .env-overlay.is-done {
@@ -27,6 +41,7 @@
 /* ---------- the envelope ---------- */
 .env {
   position: relative;
+  z-index: 2;
   width: min(360px, 84vw);
   aspect-ratio: 3 / 2;
   perspective: 1000px;
@@ -122,11 +137,13 @@
 
 /* ---------- the hint ---------- */
 .env-hint {
+  position: relative;
+  z-index: 2;
   font-family: 'Jost', 'Segoe UI', sans-serif;
   font-size: .6rem;
   letter-spacing: .26em;
   text-transform: uppercase;
-  color: rgba(82, 30, 32, .55);
+  color: rgba(247, 244, 239, .78);
   transition: opacity .4s ease;
 }
 
