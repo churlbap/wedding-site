@@ -181,6 +181,15 @@ body.page-stay .site-footer { margin-top: 0; }
    oval floral frame as a small crest above each title. An oval cannot sit
    behind copy of varying length without either stretching (which flattened
    the vine) or swallowing the text. */
+/* Local Area only: the cards use the same embossed floral paper as the FAQ,
+   so the boxes read as pressed card stock rather than plain paper. */
+body.page-area .section-wallpaper .card {
+  background-color: #efe9df;
+  background-image: url('images/embossed-paper.jpg');
+  background-size: 300px auto;
+  background-repeat: repeat;
+}
+
 .section-wallpaper .card {
   position: relative;
   /* soft paper texture instead of flat white behind the copy */
