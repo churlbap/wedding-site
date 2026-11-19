@@ -31,15 +31,16 @@ a { color: var(--burgundy); }
 .site-header { position: sticky; top: 0; z-index: 50; background-color: var(--burgundy);
   background-image: url('images/burgundy-texture-v3.jpg');
   background-size: 700px 700px;
-  /* the header is exactly as tall as the floral band, so the image can never
-     overhang into the hero and leave a translucent double-exposure */
-  height: clamp(150px, 54vw, 235px); display: flex; flex-direction: column;
+  /* 44.9vw is the artwork's own aspect ratio (704x316), so the band fills
+     the header edge to edge with nothing above it. 54vw left a strip of
+     burgundy along the top because the art could not reach both edges. */
+  height: clamp(150px, 44.9vw, 235px); display: flex; flex-direction: column;
   align-items: stretch; justify-content: space-between; overflow: hidden; }
 .header-flowers { position: absolute; inset: 0; z-index: 0; pointer-events: none;
   /* phones get the single unmirrored artwork, as originally designed */
   background-image: url('images/bot-bottom.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center top;
   opacity: 1; }
 
