@@ -128,9 +128,12 @@
   height: 58%;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
+  /* Folds DOWN over the front of the envelope. Rotating it backwards put it
+     outside the envelope's clip, which is why nothing appeared to move. */
   transform: rotateX(0deg);
-  transition: transform 1s cubic-bezier(.65, 0, .35, 1);
+  transition: transform .9s cubic-bezier(.5, 0, .3, 1), opacity .3s ease .6s;
   z-index: 3;
+  backface-visibility: visible;
   background-color: #541a20;
   background-image:
     /* light pooled at the fold, shade toward the tip */
@@ -155,7 +158,10 @@
 }
 
 .env-overlay.is-open .env-flap {
-  transform: rotateX(-178deg);
+  /* 176 degrees: a full flip would mirror the artwork, so it stops just short
+     and fades out as it lands, which reads as the flap lying open */
+  transform: rotateX(176deg);
+  opacity: .95;
   z-index: 1;
 }
 
