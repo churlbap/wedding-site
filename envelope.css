@@ -28,7 +28,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(58, 38, 22, .38);
+  background: rgba(58, 38, 22, .22);
   pointer-events: none;
 }
 
