@@ -160,7 +160,7 @@
   bottom: 0;
   width: 42%;
   z-index: 4;
-  transform: translate(-50%, 96%);
+  transform: translate(-50%, 118%);
   opacity: 0;
   transition: transform .8s cubic-bezier(.25, .8, .3, 1) .25s,
               opacity .5s ease .3s;
@@ -173,7 +173,9 @@
   display: block;
 }
 .env-overlay.is-open .env-mice {
-  transform: translate(-50%, 6%);
+  /* only heads and shoulders clear the edge: the rest of the body stays
+     tucked below it, inside the envelope, where the overflow clips it */
+  transform: translate(-50%, 46%);
   opacity: 1;
 }
 
