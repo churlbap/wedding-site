@@ -224,6 +224,32 @@ body.page-home .section-wallpaper { background-color: transparent; background-im
 body.page-stay { background-color: var(--burgundy); }
 body.page-stay .site-footer { margin-top: 0; }
 
+/* Register Interest sits on the burgundy ground like Where to Stay, so the
+   form labels, notice and photo frame need to work against it. */
+body.page-register .us-photo { margin: 0 auto 2.2rem; }
+body.page-register .field label { color: rgba(255,246,226,.78); }
+body.page-register .notice {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: transparent;
+  border-left: 2px solid var(--accent);
+}
+body.page-register .btn {
+  background: var(--accent);
+  color: var(--burgundy);
+  border: 1px solid rgba(82,30,32,.35);
+  font-weight: 600;
+  padding: 1.05rem 2.4rem;
+  box-shadow: 0 3px 0 rgba(42,18,20,.30);
+}
+body.page-register .btn:hover,
+body.page-register .btn:focus-visible {
+  background: #fff;
+  color: var(--burgundy);
+  border-color: #fff;
+}
+
+
 /* Burgundy page background, matched to the home page hero */
 .section-wallpaper { position: relative; max-width: none; overflow: hidden;
   background-color: var(--burgundy); }
