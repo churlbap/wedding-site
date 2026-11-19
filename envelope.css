@@ -154,59 +154,6 @@
     0 2px 5px rgba(0, 0, 0, .28);
 }
 
-/* The envelope interior: a paler lining visible once the flap opens, with
-   the mice rising out of the mouth where the flap folds down. The mouth is
-   clipped at the flap line, so their bodies stay tucked inside. */
-.env-mouth {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  /* the flap tip sits at 58%, so that is the mouth of the envelope */
-  height: 58%;
-  /* same V shape as the flap, so the opening reads as a V rather than a
-     band across the top */
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  overflow: hidden;
-  z-index: 4;
-  pointer-events: none;
-  /* paler lining, so the mice read against it rather than the dark paper */
-  background: #d8c9ae;
-  background-image: linear-gradient(to bottom,
-    rgba(255, 255, 255, .5) 0%,
-    rgba(255, 255, 255, .22) 55%,
-    rgba(120, 90, 60, .18) 100%);
-  opacity: 0;
-  transition: opacity .4s ease .1s;
-}
-
-.env-overlay.is-open .env-mouth { opacity: 1; }
-
-/* The mice sit outside the V-clipped mouth, so the triangular opening clips
-   the lining but not them. The envelope itself clips their bodies. */
-.env-mice {
-  position: absolute;
-  left: 50%;
-  top: 34%;
-  width: 40%;
-  z-index: 4;
-  transform: translate(-50%, 120%);
-  opacity: 0;
-  transition: transform .75s cubic-bezier(.25, .8, .3, 1) .35s,
-              opacity .45s ease .4s;
-  filter: drop-shadow(0 -2px 4px rgba(0, 0, 0, .25));
-}
-.env-mice img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.env-overlay.is-open .env-mice {
-  /* rise up through the mouth until heads and shoulders show */
-  transform: translate(-50%, 0);
-  opacity: 1;
-}
-
 .env-overlay.is-open .env-flap {
   transform: rotateX(-178deg);
   z-index: 1;
