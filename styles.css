@@ -408,6 +408,22 @@ body.page-area .section-wallpaper .card {
 .event h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--burgundy); margin: .35rem 0 .4rem; }
 
 /* Forms */
+/* The couple's photo above the register interest form. Portrait crop, soft
+   frame, sitting between the intro and the form. */
+.us-photo {
+  max-width: 320px;
+  margin: 2rem auto 2.4rem;
+  padding: .55rem;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(0,0,0,.14);
+}
+.us-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .form-grid { display: grid; gap: 1.3rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 640px; margin: 0 auto; }
 .field label { display: block; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-bottom: .45rem; }
 .field input, .field select, .field textarea { width: 100%; padding: .8rem .9rem; border: 1px solid var(--line); border-radius: 0; background: var(--cream); font-family: var(--sans); font-weight: 300; font-size: 1rem; color: var(--ink); }
