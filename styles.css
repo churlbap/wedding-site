@@ -101,19 +101,18 @@ a { color: var(--burgundy); }
 /* The names are set in the couple's chosen hand (Dawning of a New Day),
    all one colour, with each part tilted a degree or two so it reads as
    written rather than typeset. The accent on Ciarán is part of the font. */
+/* The names in the hero are the couple's own calligraphy, supplied as an
+   image with the burgundy paper keyed out, so it sits straight on the hero. */
 .hero-names {
-  font-family: var(--hand);
-  font-weight: 400;
-  font-size: clamp(2.6rem, 12vw, 4.8rem);
-  line-height: 1.1;
-  color: var(--cream);
+  display: flex;
+  justify-content: center;
   margin: 0 0 .4rem;
+}
+.hero-names img {
+  width: min(560px, 88vw);
+  height: auto;
   display: block;
 }
-.hero-names span { display: inline-block; }
-.hero-names .n1 { transform: rotate(-3deg) translateY(-.05em); }
-.hero-names .amp { transform: rotate(4deg) translateY(.04em); }
-.hero-names .n2 { transform: rotate(-1.5deg) translateY(.03em); }
 
 .hero h1 .amp { font-style: normal; color: var(--cream); opacity: .75; padding: 0 .1em; }
 .hero-date { font-family: var(--sans); text-transform: uppercase; letter-spacing: .32em; font-size: clamp(.7rem, 1.6vw, .82rem); color: var(--cream); margin: 1.8rem 0 2.4rem; }
