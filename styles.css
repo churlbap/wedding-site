@@ -127,10 +127,39 @@ a { color: var(--burgundy); }
 
 /* Buttons */
 .btn { display: inline-block; font-family: var(--sans); font-weight: 400; text-transform: uppercase; letter-spacing: .26em; font-size: .7rem; text-decoration: none; padding: 1rem 2.2rem; border-radius: 0; background: var(--cream); color: var(--burgundy); border: 1px solid var(--cream); cursor: pointer; transition: background .2s ease, color .2s ease; }
+/* Two buttons side by side had no space between them, so the filled button
+   and the outline button touched. They now sit in a flex row with a real gap,
+   and stack with room to breathe when the screen is too narrow for both. */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  margin-top: .9rem;
+}
+.btn-row .btn { margin: 0; }
+@media (max-width: 420px) {
+  .btn-row { gap: .7rem; }
+  .btn-row .btn { flex: 1 1 100%; text-align: center; }
+}
 .btn:hover { background: transparent; color: var(--cream); border-color: var(--cream); }
 .btn.ghost { background: transparent; color: var(--burgundy); border: 1px solid var(--burgundy); }
 .btn.ghost:hover { background: var(--burgundy); color: var(--cream); }
 /* on the burgundy hero the ghost button needs cream ink */
+/* The hero call to action in powder blue: cream on burgundy was reading as
+   just another outlined element, and the blue is the site accent now. */
+.hero .btn {
+  background: var(--accent);
+  color: var(--burgundy);
+  border-color: var(--accent);
+  font-weight: 500;
+}
+.hero .btn:hover,
+.hero .btn:focus-visible {
+  background: var(--cream);
+  color: var(--burgundy);
+  border-color: var(--cream);
+}
 .hero .btn.ghost { color: var(--cream); border-color: rgba(255,246,226,.55); }
 .hero .btn.ghost:hover { background: var(--cream); color: var(--burgundy); border-color: var(--cream); }
 
