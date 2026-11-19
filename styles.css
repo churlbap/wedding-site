@@ -613,6 +613,20 @@ body.page-faq .site-footer p { color: rgba(88,24,41,.7); }
 }
 /* The wax seal closes every page. Small and quiet, a signature rather than a
    feature, sitting under the date with the mice above it. */
+/* The mice tucked small into the corner of the footer, a detail rather than
+   a mark, with the wax seal centred above.
+   The footer needs to be the positioning context for them. */
+.site-footer { position: relative; }
+.site-footer .footer-mice-corner {
+  position: absolute;
+  right: .9rem;
+  bottom: .55rem;
+  width: 34px;
+  height: auto;
+  opacity: .55;
+  pointer-events: none;
+}
+
 /* The monogram emblem used on the home page: portrait, so it needs more
    height than the round wax seal to read. */
 .site-footer .footer-monogram {
