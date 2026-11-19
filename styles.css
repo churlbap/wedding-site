@@ -22,8 +22,15 @@
   --white: var(--cream-soft);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--sans); font-weight: 300; color: var(--ink); background: var(--cream-soft); line-height: 1.75; letter-spacing: .01em; }
+/* No rubber-band overscroll: on a phone, pulling the page down revealed the
+   browser's own background above the floral header. Locking vertical
+   overscroll stops the page moving at all, so the artwork stays the highest
+   thing on screen. The html background is burgundy as a backstop for any
+   browser that ignores the lock. */
+html { scroll-behavior: smooth; overscroll-behavior-y: none;
+  background-color: var(--burgundy); }
+body { font-family: var(--sans); font-weight: 300; color: var(--ink); background: var(--cream-soft); line-height: 1.75; letter-spacing: .01em;
+  overscroll-behavior-y: none; }
 img { max-width: 100%; display: block; }
 a { color: var(--burgundy); }
 
