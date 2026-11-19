@@ -426,8 +426,11 @@ body.page-faq .site-footer {
 body.page-faq .site-footer .names { color: var(--burgundy); }
 body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
 
+/* No fill here: the paper lives on the body for this page. A solid colour
+   on this section would paint straight over it, which is exactly what went
+   wrong when the paper moved to body.page-faq. */
 .faq-page { position: relative; max-width: none !important; overflow: hidden;
-  background-color: #efe9df;
+  background-color: transparent;
   background-image: none;
   padding: clamp(2.5rem, 7vw, 4.5rem) 1.25rem clamp(3rem, 9vw, 5.5rem); }
 .faq-page > * { position: relative; z-index: 1; max-width: 640px; margin-left: auto; margin-right: auto; }
