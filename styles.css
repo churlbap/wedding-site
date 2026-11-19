@@ -5,10 +5,10 @@
   --ink-soft: #5c5450;
   --cream: #fff6e2;
   --cream-soft: #faf7ef;
-  --burgundy: #501e1f;
-  --burgundy-soft: #6f2222;
-  --line: rgba(80,30,31,.18);
-  --accent: #501e1f;
+  --burgundy: #5e1626;
+  --burgundy-soft: #7d2032;
+  --line: rgba(94,22,38,.18);
+  --accent: #5e1626;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --script: 'Italianno', 'Cormorant Garamond', cursive;
   --sans: 'Jost', 'Segoe UI', sans-serif;
@@ -261,7 +261,7 @@ body.page-stay .site-footer { margin-top: 0; }
   color: var(--cream);
   border: 1px solid var(--burgundy-soft);
   font-weight: 500;
-  box-shadow: 0 3px 0 rgba(58,17,19,.28);
+  box-shadow: 0 3px 0 rgba(94,22,38,.28);
   transition: background .18s ease, color .18s ease, box-shadow .18s ease, transform .12s ease;
 }
 .section-wallpaper .card .btn:hover,
@@ -269,10 +269,10 @@ body.page-stay .site-footer { margin-top: 0; }
   background: var(--burgundy-soft);
   color: #fff;
   border-color: var(--burgundy-soft);
-  box-shadow: 0 4px 0 rgba(58,17,19,.32);
+  box-shadow: 0 4px 0 rgba(94,22,38,.32);
 }
 .section-wallpaper .card .btn:active {
-  box-shadow: 0 1px 0 rgba(58,17,19,.3);
+  box-shadow: 0 1px 0 rgba(94,22,38,.3);
   transform: translateY(1px);
 }
 /* the secondary "Visit Website" button stays an outline, but with enough
@@ -301,8 +301,8 @@ body.page-stay .site-footer { margin-top: 0; }
    italic vanish. Give the emphasised initials weight instead. */
 .tag em { font-style: normal; font-weight: 700; }
 .section-wallpaper .card .tag {
-  border-color: rgba(58,17,19,.55);
-  color: #3a1113;
+  border-color: rgba(94,22,38,.55);
+  color: #3f0f1d;
   font-weight: 600;
   background: rgba(255,252,246,.7);
 }
@@ -333,7 +333,7 @@ body.page-stay .site-footer { margin-top: 0; }
 
 
 
-.tag { display: inline-block; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; background: transparent; color: #3a1113; border: 1px solid rgba(58,17,19,.55); border-radius: 0; padding: .34rem .72rem; margin: 0 .35rem .8rem 0; }
+.tag { display: inline-block; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; background: transparent; color: #3f0f1d; border: 1px solid rgba(94,22,38,.55); border-radius: 0; padding: .34rem .72rem; margin: 0 .35rem .8rem 0; }
 
 /* Timeline */
 .timeline { max-width: 620px; margin: 0 auto; position: relative; padding-left: 1.75rem; }
