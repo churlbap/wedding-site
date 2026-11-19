@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#521e20">
+  <title>Register Interest, Tamarit | Charlotte &amp; Ciaran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italianno&family=Jost:wght@300;400;500&display=swap&family=Dawning+of+a+New+Day&family=Great+Vibes" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=198">
+</head>
+<body class="page-stay page-register">
+  <header class="site-header">
+    <div class="header-flowers" aria-hidden="true"></div>
+    <a class="brand" href="index.html"><span class="monogram">C<em>&amp;</em>C</span></a>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="where-to-stay.html">Where to Stay</a>
+        <a href="local-area.html">Local Area</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section section-wallpaper">
+    <figure class="us-photo">
+      <img src="images/us-desert-v1.jpg" alt="Charlotte and Ciarán together" width="825" height="1100">
+    </figure>
+
+    <h2>Register to be included in the Tamarit room block</h2>
+    <p class="lede">Add your details and we'll be in touch to confirm your bungalow at Tamarit Beach Resort.</p>
+
+    <div class="bungalow-rates">
+      <h3>Atenea bungalow</h3>
+      <p class="bungalow-spec">One double room, one twin, one twin with a bunk, two bathrooms, kitchen. Sleeps 6 adults and a child.</p>
+      <p class="bungalow-price">&euro;1056 for the three nights <span>plus city tax</span></p>
+
+      <h3>Lavanda bungalow</h3>
+      <p class="bungalow-spec">One double room, one twin with a bunk, one bathroom. Sleeps 4 adults and a child.</p>
+      <p class="bungalow-price">&euro;840 for the three nights <span>plus city tax</span></p>
+
+      <p class="bungalow-note">Rates are for 2 to 5 July, so three nights. There is no two-person bungalow, so a couple booking Lavanda takes the whole unit. Sharing works out far cheaper per person.</p>
+    </div>
+
+    <form class="form-grid">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="guests">Number of guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" value="2">
+      </div>
+      <div class="field">
+        <label for="nights">Nights (approx.)</label>
+        <input type="text" id="nights" name="nights" placeholder="e.g. Fri to Mon (3 nights)">
+      </div>
+      <div class="field" style="grid-column:1/-1">
+        <label for="notes">Anything else we should know?</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+      </div>
+      <div style="grid-column:1/-1; text-align:center">
+        <button type="submit" class="btn">Register Interest</button>
+      </div>
+    </form>
+    <p class="notice">Registering here puts your name forward for a Tamarit bungalow. There is no commitment yet.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="names"><span class="n1">Charlotte</span> <span class="amp">&amp;</span> <span class="n2">Ciarán</span></div>
+    <p>3 July 2027 · Castell de Tamarit · Catalonia, Spain</p>
+    <img class="footer-seal seal-tight" src="images/wax-seal.webp" alt="" aria-hidden="true">
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
