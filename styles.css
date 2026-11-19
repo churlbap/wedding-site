@@ -359,6 +359,43 @@ body.page-stay .site-footer { margin-top: 0; }
    relief repeats at its own scale instead of smearing across a tall phone
    screen. The cream panels are gone: on a paper ground they looked like
    floating cards, so the copy now sits directly on the paper. */
+/* FAQ page only: the whole document is embossed paper, so no burgundy shows
+   anywhere. The header carries a swan painting instead of the floral band,
+   and the footer becomes paper with dark text to match. */
+body.page-faq {
+  background-color: #efe9df;
+  background-image: url('images/embossed-paper.jpg');
+  background-size: 460px auto;
+  background-repeat: repeat;
+}
+body.page-faq .site-header {
+  background-color: #efe9df;
+  background-image: url('images/swans-faq.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+}
+/* hide the floral band and its burgundy gradient on this page only */
+body.page-faq .header-flowers,
+body.page-faq .header-flowers::after { display: none; }
+/* the header is a pale painting now, so the monogram and nav go dark */
+body.page-faq .monogram { color: var(--burgundy); }
+body.page-faq .monogram em { color: var(--burgundy); }
+body.page-faq .nav-links a { color: var(--burgundy); border-color: rgba(94,22,38,.4); }
+body.page-faq .nav-links a:hover { color: var(--burgundy); border-color: var(--burgundy); }
+/* paper footer, dark type */
+body.page-faq .site-footer {
+  background-color: transparent;
+  background-image: url('images/embossed-paper.jpg');
+  background-size: 460px auto;
+  background-repeat: repeat;
+  color: var(--burgundy);
+  border-top: 1px solid rgba(94,22,38,.16);
+  margin-top: 0;
+}
+body.page-faq .site-footer .names { color: var(--burgundy); }
+body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
+
 .faq-page { position: relative; max-width: none !important; overflow: hidden;
   background-color: #efe9df;
   background-image: url('images/embossed-paper.jpg');
