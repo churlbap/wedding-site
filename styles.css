@@ -146,9 +146,10 @@ a { color: var(--burgundy); }
    and a press. Powder blue fill with burgundy text, since it sits on the
    burgundy hero. */
 .hero .btn {
-  background: var(--accent);
-  color: var(--burgundy);
-  border: 1px solid rgba(82,30,32,.35);
+  /* solid burgundy with cream text, matching the button on the live site */
+  background: #521e20;
+  color: var(--cream);
+  border: 1px solid rgba(247,244,239,.9);
   font-weight: 600;
   padding: 1.05rem 2.4rem;
   box-shadow: 0 3px 0 rgba(42,18,20,.30);
@@ -156,9 +157,9 @@ a { color: var(--burgundy); }
 }
 .hero .btn:hover,
 .hero .btn:focus-visible {
-  background: #fff;
-  color: var(--burgundy);
-  border-color: #fff;
+  background: #6b282c;
+  color: var(--cream);
+  border-color: var(--cream);
   box-shadow: 0 4px 0 rgba(42,18,20,.34);
 }
 .hero .btn:active {
@@ -238,19 +239,19 @@ body.page-register .notice {
    powder blue fill, burgundy text, same weight and padding. Both are the
    primary action on their page, so they should look identical. */
 body.page-stay .card .btn {
-  background: var(--accent);
-  color: var(--burgundy);
-  border: 1px solid rgba(82,30,32,.35);
+  background: #521e20;
+  color: var(--cream);
+  border: 1px solid rgba(247,244,239,.9);
   font-weight: 600;
   padding: 1.05rem 2.4rem;
-  box-shadow: 0 3px 0 rgba(42,18,20,.30);
+  box-shadow: 0 3px 0 rgba(82,30,32,.34);
 }
 body.page-stay .card .btn:hover,
 body.page-stay .card .btn:focus-visible {
-  background: #fff;
-  color: var(--burgundy);
-  border-color: #fff;
-  box-shadow: 0 4px 0 rgba(42,18,20,.34);
+  background: #6b282c;
+  color: var(--cream);
+  border-color: var(--cream);
+  box-shadow: 0 4px 0 rgba(82,30,32,.38);
 }
 body.page-stay .card .btn:active {
   box-shadow: 0 1px 0 rgba(42,18,20,.32);
@@ -258,18 +259,18 @@ body.page-stay .card .btn:active {
 }
 
 body.page-register .btn {
-  background: var(--accent);
-  color: var(--burgundy);
-  border: 1px solid rgba(82,30,32,.35);
+  background: #521e20;
+  color: var(--cream);
+  border: 1px solid rgba(247,244,239,.9);
   font-weight: 600;
   padding: 1.05rem 2.4rem;
-  box-shadow: 0 3px 0 rgba(42,18,20,.30);
+  box-shadow: 0 3px 0 rgba(82,30,32,.34);
 }
 body.page-register .btn:hover,
 body.page-register .btn:focus-visible {
-  background: #fff;
-  color: var(--burgundy);
-  border-color: #fff;
+  background: #6b282c;
+  color: var(--cream);
+  border-color: var(--cream);
 }
 
 
