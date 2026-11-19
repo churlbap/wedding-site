@@ -453,6 +453,11 @@ body.page-faq .site-footer p { color: rgba(94,22,38,.75); }
 }
 .site-footer .names { font-family: var(--hand); font-size: 2.4rem;
   line-height: 1.15; letter-spacing: .01em; }
+/* same knocked-off-the-line tilt as the hero, so the names match everywhere */
+.site-footer .names span { display: inline-block; }
+.site-footer .names .n1 { transform: rotate(-3deg) translateY(-.05em); }
+.site-footer .names .amp { transform: rotate(4deg) translateY(.04em); }
+.site-footer .names .n2 { transform: rotate(-1.5deg) translateY(.03em); }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
 
 /* Photo strip on burgundy */
