@@ -230,7 +230,33 @@ body.page-stay .site-footer { margin-top: 0; }
 
 /* Register Interest sits on the burgundy ground like Where to Stay, so the
    form labels, notice and photo frame need to work against it. */
-body.page-register /* Tamarit bungalow rates, shown above its register form. The rates are the
+body.page-register /* Horizontal photostrip on the Tamarit register page, four square shots in
+   a row that scrolls sideways if the screen is too narrow. */
+.us-strip {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  max-width: 680px;
+  overflow-x: auto;
+  padding-bottom: .3rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.us-strip::-webkit-scrollbar { display: none; }
+.us-strip img {
+  width: 23%;
+  min-width: 74px;
+  flex: 0 0 auto;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--cream);
+  box-shadow: 0 10px 22px rgba(0,0,0,.3);
+}
+
+/* Tamarit bungalow rates, shown above its register form. The rates are the
    thing guests actually want, so they sit before the fields. */
 .bungalow-rates {
   max-width: 560px;
