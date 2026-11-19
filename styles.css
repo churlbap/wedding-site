@@ -617,16 +617,10 @@ body.page-register .btn:focus-visible {
 .site-footer .footer-mice-row .footer-mice { margin: 0; }
 /* the car is a wider scene, so it sits a touch smaller to match the pair */
 .site-footer .footer-mice-car { width: 54px; }
-/* the car scene sits really small on Where to Stay, a detail rather than a mark */
-.site-footer .footer-mice-xs { width: 34px; }
-/* The car mice standing alone in the footer, now the flower pair is gone. */
-.site-footer .footer-mice-car-xs {
-  width: 44px;
-  height: auto;
-  display: block;
-  margin: .8rem auto 0;
-  opacity: .92;
-}
+/* Where to Stay uses the same footer as home, with the mice car in the
+   corner instead of the pair. It is a wider scene, so it needs a little
+   more width than the pair to read at the same visual weight. */
+.site-footer .footer-mice-car-inline { width: 44px; }
 /* The wax seal closes every page. Small and quiet, a signature rather than a
    feature, sitting under the date with the mice above it. */
 /* Home footer order: wax seal first, keeping the same space above it, then a
