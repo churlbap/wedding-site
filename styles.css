@@ -623,13 +623,23 @@ body.page-register .site-footer .names-mice {
 }
 body.page-register .site-footer .seal-tight { margin-top: .45rem; }
 
-.site-footer .names { font-family: var(--hand); font-size: 2.4rem;
-  line-height: 1.15; letter-spacing: .01em; }
-/* same knocked-off-the-line tilt as the hero, so the names match everywhere */
-.site-footer .names span { display: inline-block; }
-.site-footer .names .n1 { transform: rotate(-3deg) translateY(-.05em); }
-.site-footer .names .amp { transform: rotate(4deg) translateY(.04em); }
-.site-footer .names .n2 { transform: rotate(-1.5deg) translateY(.03em); }
+/* Footer names are set in a formal copperplate script, following the
+   calligraphy reference: flowing, prominent loops on the capital C's.
+   No tilt here. The knocked-off-the-line treatment belongs to the hero's
+   looser hand, and it fights a formal script. */
+.site-footer .names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  /* the reference frames the names between two hairlines; a slim rule above
+     and below gives the same stationery feel without a box */
+  padding: .5rem 0 .7rem;
+  border-top: 1px solid rgba(247, 244, 239, .22);
+  border-bottom: 0;
+  display: inline-block;
+}
+.site-footer .names .amp { font-size: .92em; }
 .site-footer p { font-size: .68rem; text-transform: uppercase; letter-spacing: .24em; opacity: .7; margin-top: 1rem; }
 
 /* Photo strip on burgundy */
