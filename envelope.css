@@ -44,6 +44,9 @@
   /* wider than tall now, and noticeably bigger, so the seal reads */
   width: min(260px, 74vw);
   aspect-ratio: 3 / 2;
+  /* nothing may leave the envelope's box. Without this the flap swung out
+     over half the page instead of folding back into it. */
+  overflow: hidden;
   perspective: 900px;
   /* a real object has weight: a tight contact shadow plus a wider cast one */
   filter:
@@ -161,6 +164,9 @@
   top: 0;
   /* the flap tip sits at 58%, so that is the mouth of the envelope */
   height: 58%;
+  /* same V shape as the flap, so the opening reads as a V rather than a
+     band across the top */
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
   overflow: hidden;
   z-index: 4;
   pointer-events: none;
@@ -176,12 +182,15 @@
 
 .env-overlay.is-open .env-mouth { opacity: 1; }
 
+/* The mice sit outside the V-clipped mouth, so the triangular opening clips
+   the lining but not them. The envelope itself clips their bodies. */
 .env-mice {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  width: 44%;
-  transform: translate(-50%, 100%);
+  top: 34%;
+  width: 40%;
+  z-index: 4;
+  transform: translate(-50%, 120%);
   opacity: 0;
   transition: transform .75s cubic-bezier(.25, .8, .3, 1) .35s,
               opacity .45s ease .4s;
@@ -193,8 +202,8 @@
   display: block;
 }
 .env-overlay.is-open .env-mice {
-  /* rise until heads and shoulders clear the mouth; the rest stays clipped */
-  transform: translate(-50%, 30%);
+  /* rise up through the mouth until heads and shoulders show */
+  transform: translate(-50%, 0);
   opacity: 1;
 }
 
