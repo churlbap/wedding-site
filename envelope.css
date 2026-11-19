@@ -1,0 +1,139 @@
+/* Envelope opening overlay.
+   Shown over the page, then peeled away to reveal the site behind it.
+   Only active on the home page, and only while the prototype switch is on. */
+
+.env-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  /* the same cream as the site, so the reveal feels continuous */
+  background: #f7f4ef;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity .85s ease, visibility .85s ease;
+}
+
+.env-overlay.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ---------- the envelope ---------- */
+.env {
+  position: relative;
+  width: min(320px, 78vw);
+  aspect-ratio: 3 / 2;
+  perspective: 900px;
+  transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
+}
+
+.env-overlay.is-done .env {
+  transform: translateY(26px) scale(.96);
+  opacity: 0;
+}
+
+/* the paper body, with the two diagonal folds suggested by soft shading */
+.env-body {
+  position: absolute;
+  inset: 0;
+  background: #fbf7ef;
+  border: 1px solid rgba(82, 30, 32, .16);
+  box-shadow: 0 18px 44px rgba(82, 30, 32, .16);
+  overflow: hidden;
+}
+
+/* the two lower folds, drawn as triangles meeting in the middle */
+.env-body::before,
+.env-body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 76%;
+  height: 100%;
+  background: #f4eee2;
+  border-top: 1px solid rgba(82, 30, 32, .07);
+}
+.env-body::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.env-body::after {
+  right: 0;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* the flap, hinged along the top edge */
+.env-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58%;
+  background: #f1e9da;
+  border-bottom: 1px solid rgba(82, 30, 32, .1);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  transform: rotateX(0deg);
+  transition: transform 1s cubic-bezier(.65, 0, .35, 1);
+  z-index: 3;
+}
+
+.env-overlay.is-open .env-flap {
+  transform: rotateX(-178deg);
+  /* the flap must drop behind the body once it has swung over */
+  z-index: 1;
+}
+
+/* ---------- the wax seal ---------- */
+.env-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 92px;
+  height: 92px;
+  margin: -46px 0 0 -46px;
+  z-index: 5;
+  transition: transform .45s cubic-bezier(.3, 0, .2, 1), opacity .45s ease;
+  animation: seal-breathe 2.6s ease-in-out infinite;
+}
+
+.env-seal img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 3px 6px rgba(82, 30, 32, .3));
+}
+
+.env-overlay.is-open .env-seal {
+  animation: none;
+  transform: scale(1.18) rotate(-9deg);
+  opacity: 0;
+}
+
+@keyframes seal-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.045); }
+}
+
+/* ---------- the hint underneath ---------- */
+.env-hint {
+  font-family: 'Jost', 'Segoe UI', sans-serif;
+  font-size: .6rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: rgba(82, 30, 32, .55);
+  transition: opacity .4s ease;
+}
+
+.env-overlay.is-open .env-hint { opacity: 0; }
+
+/* Anyone who has asked their phone for less motion gets the site immediately. */
+@media (prefers-reduced-motion: reduce) {
+  .env-overlay { display: none; }
+}

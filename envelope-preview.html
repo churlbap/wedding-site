@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Envelope preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="envelope.css">
+</head>
+<body class="page-home">
+
+<section class="hero">
+  <p class="hero-kicker">We're getting married</p>
+  <h1 class="hero-names"><span class="n1">Charlotte</span> <span class="amp">&amp;</span> <span class="n2">Ciarán</span></h1>
+  <p class="hero-date">Saturday 3rd July 2027, Castell de Tamarit, Catalonia</p>
+</section>
+
+<section class="section">
+  <h2>You're through</h2>
+  <p class="lede">This is where the site is waiting behind the envelope.</p>
+</section>
+
+<!-- ============ the envelope ============ -->
+<div class="env-overlay" aria-hidden="false">
+  <div class="env">
+    <div class="env-body"></div>
+    <div class="env-flap"></div>
+    <div class="env-seal">
+      <img src="images/wax-seal.webp" alt="">
+    </div>
+  </div>
+  <div class="env-hint">Tap to open</div>
+</div>
+
+<script>
+  // clear the once-per-session guard before the overlay script runs, so this
+  // preview replays every time rather than only on a first visit
+  try { sessionStorage.removeItem('envelopeSeen'); } catch (e) {}
+</script>
+<script src="envelope.js"></script>
+</body>
+</html>
