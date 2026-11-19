@@ -470,13 +470,25 @@ body.page-faq .site-footer p { color: rgba(82,30,32,.75); }
 .hand-accent, .accent-line { color: var(--accent); }
 body.page-faq .site-footer p { color: rgba(82,30,32,.7); }
 
+.site-footer .footer-mice-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  margin: 1rem auto 0;
+}
 .site-footer .footer-mice {
   width: 42px;
   height: auto;
-  margin: 1rem auto 0;
   display: block;
+  /* auto margins centre it when it stands alone on the other pages */
+  margin: 1rem auto 0;
   opacity: 1;
 }
+/* inside the row, the wrapper handles spacing, so the margins come off */
+.site-footer .footer-mice-row .footer-mice { margin: 0; }
+/* the car is a wider scene, so it sits a touch smaller to match the pair */
+.site-footer .footer-mice-car { width: 54px; }
 .site-footer .names { font-family: var(--hand); font-size: 2.4rem;
   line-height: 1.15; letter-spacing: .01em; }
 /* same knocked-off-the-line tilt as the hero, so the names match everywhere */
