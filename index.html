@@ -9,20 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italianno&family=Jost:wght@300;400;500&display=swap&family=Dawning+of+a+New+Day&family=Great+Vibes" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=226">
-  <link rel="stylesheet" href="envelope.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=227">
+  <link rel="stylesheet" href="envelope.css?v=15">
 </head>
 <body class="page-home">
 
 <!-- Envelope opening: shown once per visit, tap to break the seal and reveal the site -->
 <div class="env-overlay" aria-hidden="false">
   <div class="env">
-    <div class="env-body"></div>
-    <div class="env-seam"></div>
-    <div class="env-flap"></div>
-    <div class="env-seal">
-      <img src="images/wax-seal.webp" alt="">
-    </div>
+    <img class="env-state env-state-closed" src="images/env-closed-v1.png" alt="">
+    <img class="env-state env-state-open" src="images/env-open-v1.png" alt="">
   </div>
   <div class="env-hint">Tap to open</div>
 </div>
@@ -96,6 +92,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <script src="envelope.js?v=14"></script>
+  <script src="envelope.js?v=15"></script>
 </body>
 </html>

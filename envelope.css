@@ -40,184 +40,48 @@
   transition: opacity .5s ease .55s, visibility 0s linear 1.05s;
 }
 
-/* ---------- the envelope ---------- */
+/* ---------- the envelope ----------
+   Two fixed drawings rather than a shape assembled out of divs: one closed,
+   one open. Every version built from stacked gradients kept landing in the
+   wrong place, because a flap that has to be both clipped and repositioned
+   depends on geometry no one can see. These two images cannot misplace
+   themselves: the closed one is shown first, the open one cross-fades over
+   the top of it, and both are the same size and alignment. */
 .env {
   position: relative;
   z-index: 2;
-  /* wider than tall now, and noticeably bigger, so the seal reads */
-  width: min(260px, 74vw);
-  aspect-ratio: 3 / 2;
-  /* nothing may leave the envelope's box. Without this the flap swung out
-     over half the page instead of folding back into it. */
-  overflow: hidden;
-  perspective: 900px;
+  width: min(300px, 78vw);
+  /* both drawings are 560 x 620, so the box holds that ratio and they never
+     shift as the state changes */
+  aspect-ratio: 560 / 620;
   /* a real object has weight: a tight contact shadow plus a wider cast one */
   filter:
     drop-shadow(0 3px 4px rgba(24, 10, 8, .45))
     drop-shadow(0 22px 34px rgba(24, 10, 8, .38));
-  transition: transform .9s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
-}
-
-.env-overlay.is-done .env {
-  /* scale up past the frame so it reads as passing through the paper into
-     whatever is behind it, then dissolve at the edge of the screen */
-  transform: scale(4.2);
-  opacity: 0;
   transition: transform 1.05s cubic-bezier(.55, 0, .3, 1),
               opacity .45s ease .62s;
 }
 
-.env-body {
+.env-state {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  /* paper: a base tone, a gentle top-to-bottom light fall, and fine grain */
-  background-color: #4a1519;
-  background-image:
-    linear-gradient(to bottom, rgba(255, 255, 255, .07), rgba(0, 0, 0, .14)),
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, .014) 0 1px,
-      rgba(0, 0, 0, .014) 1px 2px);
-  border-radius: 1.5px;
-  overflow: hidden;
-}
-
-/* The two lower folds. Soft shading rather than flat triangles, so the
-   creases look pressed into paper instead of cut out of card. */
-.env-body::before,
-.env-body::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 78%;
-  height: 100%;
-}
-.env-body::before {
-  left: 0;
-  clip-path: polygon(0 0, 100% 100%, 0 100%);
-  background: linear-gradient(to bottom right,
-    rgba(255, 255, 255, .05) 0%,
-    rgba(0, 0, 0, .12) 45%,
-    rgba(0, 0, 0, .22) 100%);
-}
-.env-body::after {
-  right: 0;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  background: linear-gradient(to bottom left,
-    rgba(255, 255, 255, .04) 0%,
-    rgba(0, 0, 0, .14) 45%,
-    rgba(0, 0, 0, .24) 100%);
-}
-
-/* the seam where the folds meet, a soft crease down the centre */
-.env-seam {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 1px;
-  height: 42%;
-  transform: translateX(-50%);
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, .34),
-    rgba(0, 0, 0, .10) 60%,
-    transparent 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* The flap: hinged at the top, tip meeting the centre. Gradients give it a
-   crown so light falls across it the way it does on folded paper. */
-.env-flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 58%;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transform-origin: top center;
-  /* Folds DOWN over the front of the envelope. Rotating it backwards put it
-     outside the envelope's clip, which is why nothing appeared to move. */
-  transform: rotateX(0deg);
-  transition: transform .9s cubic-bezier(.5, 0, .3, 1), opacity .3s ease .6s;
-  z-index: 3;
-  backface-visibility: visible;
-  background-color: #541a20;
-  background-image:
-    /* light pooled at the fold, shade toward the tip */
-    linear-gradient(to bottom,
-      rgba(255, 255, 255, .10) 0%,
-      rgba(255, 255, 255, .03) 30%,
-      rgba(0, 0, 0, .12) 78%,
-      rgba(0, 0, 0, .26) 100%),
-    /* a faint lateral fall so it is not evenly lit across */
-    linear-gradient(to right,
-      rgba(0, 0, 0, .12),
-      rgba(255, 255, 255, .04) 45%,
-      rgba(0, 0, 0, .10)),
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, .012) 0 1px,
-      rgba(0, 0, 0, .012) 1px 2px);
-  /* the crease itself, and a shadow where the flap lifts off the body */
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .14),
-    inset 0 -3px 8px rgba(0, 0, 0, .22),
-    0 2px 5px rgba(0, 0, 0, .28);
-}
-
-.env-overlay.is-open .env-flap {
-  /* The flap lifts clear of the body and stands above it, apex up, so the
-     whole triangle sits at the very top edge the way an opened invitation
-     does. translateY(-100%) moves the element up by exactly its own height,
-     which puts its base on the envelope's top edge. */
-  transform: translateY(-100%);
-  opacity: 1;
-  z-index: 0;
-  clip-path: none;
-  background-color: transparent;
-  background-image: url('images/envelope-flap-open-v2.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  box-shadow: none;
-  filter: drop-shadow(0 -4px 9px rgba(20, 8, 7, .38));
-}
-
-/* Once open, the flap lives outside the envelope's box, so the box must stop
-   clipping or the triangle is cut off at the seam. */
-.env-overlay.is-open .env { overflow: visible; }
-
-/* ---------- the wax seal ---------- */
-.env-seal {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  width: 26%;
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  transition: transform .45s cubic-bezier(.3, 0, .2, 1), opacity .45s ease;
-  animation: seal-breathe 2.6s ease-in-out infinite;
-}
-
-.env-seal img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  /* wax catches light along its rim and throws a short hard shadow */
-  filter:
-    drop-shadow(0 1px 1px rgba(0, 0, 0, .55))
-    drop-shadow(0 3px 5px rgba(0, 0, 0, .45));
+  transition: opacity .5s ease;
 }
 
-.env-overlay.is-open .env-seal {
-  animation: none;
-  transform: translate(-50%, -50%) scale(1.16) rotate(-8deg);
+/* closed sits underneath and never moves; open fades in over it */
+.env-state-closed { opacity: 1; }
+.env-state-open { opacity: 0; }
+
+.env-overlay.is-open .env-state-closed { opacity: 0; }
+.env-overlay.is-open .env-state-open { opacity: 1; }
+
+/* the zoom: the whole envelope rushes at the camera on the way out */
+.env-overlay.is-done .env {
+  transform: scale(4.2);
   opacity: 0;
-}
-
-@keyframes seal-breathe {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.05); }
 }
 
 /* ---------- the hint ---------- */
