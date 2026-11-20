@@ -390,6 +390,22 @@ body.page-register .btn:focus-visible {
    up as the home page does instead of at the usual section padding */
 .section-wallpaper:has(.page-emblem) { padding-top: 1.4rem; }
 
+/* Where to Stay: the emblem sits small in the top left corner and laps over
+   the top of the map, so its date ribbon lands on the map itself. Being
+   absolute, it takes no space in the flow, so the map moves up underneath it
+   and the copy follows the map as normal. */
+body.page-stay .page-emblem {
+  position: absolute;
+  top: .4rem;
+  left: .75rem;
+  width: 120px;
+  margin: 0;
+  z-index: 3;
+}
+/* enough room above the map that only the lower part of the emblem, the
+   ribbon, actually crosses onto it */
+body.page-stay .map-wrap { margin-top: 6.1rem; }
+
 /* when the emblem is the header, the intro line sits straight under it */
 .page-emblem + .lede { margin-top: .2rem; }
 
