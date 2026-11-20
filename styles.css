@@ -390,8 +390,8 @@ body.page-register .btn:focus-visible {
    larger. 165px brings the drawn size under the cherubs so they sit equal. */
 .page-emblem {
   /* small and centred at the top of the page: a crest, not a banner */
-  width: min(140px, 34vw);
-  margin: 0 auto 1.1rem;
+  width: min(108px, 27vw);
+  margin: 0 auto .9rem;
 }
 .page-emblem img {
   width: 100%;
