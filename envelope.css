@@ -165,11 +165,21 @@
 }
 
 .env-overlay.is-open .env-flap {
-  /* 176 degrees: a full flip would mirror the artwork, so it stops just short
-     and fades out as it lands, which reads as the flap lying open */
-  transform: rotateX(176deg);
-  opacity: .95;
-  z-index: 1;
+  /* The flap comes open and stays visible as the triangle it is, with the lace
+     edging showing along both diagonals. Folding it away hid the shape
+     entirely, which is what made the open state look like nothing had happened.
+     A slight tilt and a wider shadow sell it as lifted off the paper. */
+  transform: rotateX(6deg) translateY(-2%) scale(1.06);
+  opacity: 1;
+  z-index: 4;
+  clip-path: none;
+  background-color: transparent;
+  background-image: url('images/envelope-flap-open-v2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: none;
+  filter: drop-shadow(0 6px 10px rgba(20, 8, 7, .5));
 }
 
 /* ---------- the wax seal ---------- */
