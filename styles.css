@@ -408,7 +408,7 @@ body.page-stay .page-emblem {
 }
 /* no overlap now: the emblem sits clear above the map, with a little air
    between the two, so it reads as a crest over the map rather than on it */
-body.page-stay .map-wrap { margin-top: 7.4rem; }
+body.page-stay .map-wrap { margin-top: 6.4rem; }
 
 /* when the emblem is the header, the intro line sits straight under it */
 .page-emblem + .lede { margin-top: .2rem; }
