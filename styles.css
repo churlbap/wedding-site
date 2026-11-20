@@ -688,7 +688,9 @@ body.page-stay .map-wrap { margin-top: 6.1rem; }
 .site-footer { position: relative; }
 .site-footer .footer-base {
   position: relative;
-  margin-top: .55rem;
+  /* a few lines of air under the wax seal, so it reads as a closed mark
+     rather than something crowding the date */
+  margin-top: 2.4rem;
 }
 /* The mice sit out at the right edge and a few lines lower than the date,
    so they read as a tucked-away detail rather than part of the address. */
