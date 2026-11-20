@@ -198,33 +198,6 @@ a { color: var(--burgundy); }
   margin: 0 auto 1.1rem;
 }
 
-/* The Where to Stay heading sits under the map now, with a question mark set
-   in the same script face so it reads as part of the lettering rather than
-   bolted on. Positioned tight to the tail of the final y. */
-.page-heading-question {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 0;
-  width: auto;
-  max-width: min(250px, 62vw);
-  margin: 1.4rem auto 1.1rem;
-}
-.page-heading-question img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.heading-q {
-  font-family: var(--script);
-  font-size: clamp(2.4rem, 8vw, 3.4rem);
-  line-height: 1;
-  color: var(--cream);
-  margin-left: -.12em;
-  transform: translateY(.02em) rotate(4deg);
-}
-
 /* heading present for assistive tech and search, invisible on screen */
 .visually-hidden {
   position: absolute;
