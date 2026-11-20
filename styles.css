@@ -389,8 +389,9 @@ body.page-register .btn:focus-visible {
    the fact that a solid oval is visually heavier than line art, made them read
    larger. 165px brings the drawn size under the cherubs so they sit equal. */
 .page-emblem {
-  width: min(165px, 38vw);
-  margin: 0 auto 1.2rem;
+  /* small and centred at the top of the page: a crest, not a banner */
+  width: min(140px, 34vw);
+  margin: 0 auto 1.1rem;
 }
 .page-emblem img {
   width: 100%;
@@ -401,21 +402,8 @@ body.page-register .btn:focus-visible {
    up as the home page does instead of at the usual section padding */
 .section-wallpaper:has(.page-emblem) { padding-top: 1.4rem; }
 
-/* Where to Stay: the emblem sits small in the top left corner and laps over
-   the top of the map, so its date ribbon lands on the map itself. Being
-   absolute, it takes no space in the flow, so the map moves up underneath it
-   and the copy follows the map as normal. */
-body.page-stay .page-emblem {
-  position: absolute;
-  top: .3rem;
-  left: .75rem;
-  width: 100px;
-  margin: 0;
-  z-index: 3;
-}
-/* no overlap now: the emblem sits clear above the map, with a little air
-   between the two, so it reads as a crest over the map rather than on it */
-body.page-stay .map-wrap { margin-top: 6.4rem; }
+/* Where to Stay: the emblem now sits centred in the flow like the other
+   pages, so it needs no placement of its own and the map follows normally. */
 
 /* when the emblem is the header, the intro line sits straight under it */
 .page-emblem + .lede { margin-top: .2rem; }
