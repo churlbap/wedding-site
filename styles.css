@@ -373,14 +373,18 @@ body.page-register .btn:focus-visible {
    an oval monogram with the page name, and a sage ribbon carrying the date.
    It is keyed out of its original maroon ground so it sits on the page. */
 .page-emblem {
-  max-width: 340px;
-  margin: 0 auto 1.4rem;
+  /* deliberately small: it is a crest above the copy, not a hero image. */
+  max-width: 190px;
+  margin: 0 auto .5rem;
 }
 .page-emblem img {
   width: 100%;
   height: auto;
   display: block;
 }
+/* when the emblem is the header, the intro line sits straight under it */
+.page-emblem + .lede { margin-top: .2rem; }
+
 .section-wallpaper .lede::after { background: rgba(255,246,226,.35); }
 .section-wallpaper .card { background: var(--cream); }
 
