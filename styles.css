@@ -179,18 +179,22 @@ a { color: var(--burgundy); }
 .section .lede::after { content: ''; display: block; width: 46px; height: 1px; background: var(--line); margin: 1.6rem auto 0; }
 
 /* The waiter illustration above "Three days in the sun". It arrives on a torn
-   cream scrap, so it is keyed out and sits straight on the burgundy ground
-   like the rest of the page rather than in a box of its own. */
+   cream scrap, so it is keyed out and sits straight on the burgundy ground.
+   Kept small and held back so it is a quiet flourish rather than something
+   that competes with the heading. The torn paper is pulled toward the
+   burgundy with a light multiply, which settles it into the page. */
 .waiters-art {
-  margin: 0 auto 1.6rem;
-  width: min(420px, 78vw);
+  margin: 0 auto 1.2rem;
+  width: min(270px, 58vw);
   transform: rotate(-1.2deg);
+  opacity: .82;
 }
 .waiters-art img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 10px 20px rgba(20, 8, 7, .35));
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 6px 14px rgba(20, 8, 7, .22));
 }
 
 /* Whimsical ornaments on the Local Area page */
