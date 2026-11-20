@@ -264,8 +264,10 @@ body.page-stay .site-footer { margin-top: 0; }
 
 /* Register Interest sits on the burgundy ground like Where to Stay, so the
    form labels, notice and photo frame need to work against it. */
-body.page-register /* Horizontal photostrip on the Tamarit register page, four square shots in
-   a row that scrolls sideways if the screen is too narrow. */
+body.page-register /* Horizontal photostrip on the register pages: four square shots in a row
+   that scrolls sideways if the screen is too narrow. Each is mounted on a
+   cream paper mat and warmed slightly, so the bright skies inside the photos
+   stop reading as harsh white next to the burgundy. */
 .us-strip {
   display: flex;
   gap: .5rem;
@@ -286,9 +288,22 @@ body.page-register /* Horizontal photostrip on the Tamarit register page, four s
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  border: 3px solid var(--cream);
-  box-shadow: 0 10px 22px rgba(0,0,0,.3);
+  /* a paper mat rather than a bright border: the same cream stock used for
+     the cards, with a soft edge instead of a hard white line */
+  padding: 5px;
+  background-color: #efe8dd;
+  background-image: url('images/paper-texture.jpg');
+  background-size: 320px auto;
+  border: 0;
+  box-shadow: 0 8px 18px rgba(20, 8, 7, .38);
+  /* pull the photo toward the site's warmth so the skies settle down */
+  filter: sepia(.22) saturate(.88) brightness(.95) contrast(1.03);
+  transition: filter .35s ease, transform .35s ease;
 }
+/* a small scrapbook tilt, alternating so the row does not look mechanical */
+.us-strip img:nth-child(odd) { transform: rotate(-1.1deg); }
+.us-strip img:nth-child(even) { transform: rotate(.9deg); }
+.us-strip img:hover { filter: sepia(.08) saturate(1) brightness(1); }
 
 /* Tamarit bungalow rates, shown above its register form. The rates are the
    thing guests actually want, so they sit before the fields. */
