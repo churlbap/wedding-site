@@ -50,10 +50,10 @@
 .env {
   position: relative;
   z-index: 2;
-  width: min(300px, 78vw);
-  /* both drawings are 560 x 620, so the box holds that ratio and they never
-     shift as the state changes */
-  aspect-ratio: 560 / 620;
+  /* wide rather than tall now: the envelope is photographed from the back,
+     so its body is landscape and the flap stands above it */
+  width: min(320px, 80vw);
+  aspect-ratio: 858 / 839;
   /* a real object has weight: a tight contact shadow plus a wider cast one */
   filter:
     drop-shadow(0 3px 4px rgba(24, 10, 8, .45))
