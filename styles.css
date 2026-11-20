@@ -288,22 +288,16 @@ body.page-register /* Horizontal photostrip on the register pages: four square s
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  /* a paper mat rather than a bright border: the same cream stock used for
-     the cards, with a soft edge instead of a hard white line */
+  /* A paper mat instead of a bright white border: the same cream stock the
+     cards use, with a soft shadow rather than a hard outline. The photos
+     themselves are untouched, straight, and shown at their own colour. */
   padding: 5px;
   background-color: #efe8dd;
   background-image: url('images/paper-texture.jpg');
   background-size: 320px auto;
   border: 0;
   box-shadow: 0 8px 18px rgba(20, 8, 7, .38);
-  /* pull the photo toward the site's warmth so the skies settle down */
-  filter: sepia(.22) saturate(.88) brightness(.95) contrast(1.03);
-  transition: filter .35s ease, transform .35s ease;
 }
-/* a small scrapbook tilt, alternating so the row does not look mechanical */
-.us-strip img:nth-child(odd) { transform: rotate(-1.1deg); }
-.us-strip img:nth-child(even) { transform: rotate(.9deg); }
-.us-strip img:hover { filter: sepia(.08) saturate(1) brightness(1); }
 
 /* Tamarit bungalow rates, shown above its register form. The rates are the
    thing guests actually want, so they sit before the fields. */
