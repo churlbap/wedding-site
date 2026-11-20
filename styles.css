@@ -372,10 +372,13 @@ body.page-register .btn:focus-visible {
 /* The Local Area page opens on its own emblem rather than a text heading:
    an oval monogram with the page name, and a sage ribbon carrying the date.
    It is keyed out of its original maroon ground so it sits on the page. */
-/* Same size and spacing as the cherubs on the home page, so the two pages
-   open the same way. */
+/* Matched to the cherubs on the home page. Their artwork fills only about
+   92% of its file, so a 190px box showed 176px of drawing, while these
+   emblems are cropped tight and showed the full 190. That 8% difference, plus
+   the fact that a solid oval is visually heavier than line art, made them read
+   larger. 165px brings the drawn size under the cherubs so they sit equal. */
 .page-emblem {
-  width: min(190px, 42vw);
+  width: min(165px, 38vw);
   margin: 0 auto 1.2rem;
 }
 .page-emblem img {
