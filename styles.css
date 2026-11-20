@@ -368,6 +368,19 @@ body.page-register .btn:focus-visible {
 .section-wallpaper::before { content: none; }
 .section-wallpaper > * { position: relative; z-index: 1; }
 .section-wallpaper h2, .section-wallpaper .lede { color: var(--cream); }
+
+/* The Local Area page opens on its own emblem rather than a text heading:
+   an oval monogram with the page name, and a sage ribbon carrying the date.
+   It is keyed out of its original maroon ground so it sits on the page. */
+.page-emblem {
+  max-width: 340px;
+  margin: 0 auto 1.4rem;
+}
+.page-emblem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .section-wallpaper .lede::after { background: rgba(255,246,226,.35); }
 .section-wallpaper .card { background: var(--cream); }
 
