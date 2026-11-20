@@ -32,9 +32,12 @@
 }
 
 .env-overlay.is-done {
+  /* the room fades only once the envelope is already rushing at the camera,
+     so the eye follows the paper inward rather than seeing a plain fade */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity .5s ease .55s, visibility 0s linear 1.05s;
 }
 
 /* ---------- the envelope ---------- */
@@ -56,8 +59,12 @@
 }
 
 .env-overlay.is-done .env {
-  transform: translateY(20px) scale(.96);
+  /* scale up past the frame so it reads as passing through the paper into
+     whatever is behind it, then dissolve at the edge of the screen */
+  transform: scale(4.2);
   opacity: 0;
+  transition: transform 1.05s cubic-bezier(.55, 0, .3, 1),
+              opacity .45s ease .62s;
 }
 
 .env-body {

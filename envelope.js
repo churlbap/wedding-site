@@ -33,18 +33,21 @@
     done = true;
     overlay.classList.add('is-done');
     try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
-    // take it out of the layer stack once the fade has finished
+    // take it out of the layer stack once the zoom has finished. The envelope
+    // now rushes at the camera over about a second before it dissolves, so this
+    // has to outlast that or the transition is cut off mid-flight.
     window.setTimeout(function () {
       if (overlay.parentNode) overlay.remove();
-    }, 950);
+    }, 1350);
   }
 
   function open() {
     if (opened) return;
     opened = true;
     overlay.classList.add('is-open');
-    // let the flap swing and the seal crack before the fade
-    window.setTimeout(finish, 1250);
+    // let the flap fold and the seal break, then start the zoom at the point
+    // the paper is open enough to see inside
+    window.setTimeout(finish, 1150);
   }
 
   // A tap or click anywhere opens it.
