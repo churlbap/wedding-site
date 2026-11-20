@@ -178,23 +178,30 @@ a { color: var(--burgundy); }
 .section .lede { text-align: center; font-family: var(--sans); font-weight: 300; font-style: normal; font-size: .95rem; color: var(--ink-soft); max-width: 34rem; margin: 1.2rem auto 3rem; }
 .section .lede::after { content: ''; display: block; width: 46px; height: 1px; background: var(--line); margin: 1.6rem auto 0; }
 
-/* The waiter illustration above "Three days in the sun". It arrives on a torn
-   cream scrap, so it is keyed out and sits straight on the burgundy ground.
-   Kept small and held back so it is a quiet flourish rather than something
-   that competes with the heading. The torn paper is pulled toward the
-   burgundy with a light multiply, which settles it into the page. */
-.waiters-art {
-  margin: 0 auto 1.2rem;
-  width: min(270px, 58vw);
-  transform: rotate(-1.2deg);
-  opacity: .82;
+/* The "Three days in the sun" artwork: the words and the waiters in one
+   piece. It replaces both the old illustration and the visible heading, so
+   the section heading is kept in the markup for screen readers only. */
+.three-days-art {
+  margin: 0 auto 1.4rem;
+  width: min(440px, 82vw);
 }
-.waiters-art img {
+.three-days-art img {
   width: 100%;
   height: auto;
   display: block;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 6px 14px rgba(20, 8, 7, .22));
+}
+/* heading present for assistive tech and search, invisible on screen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Whimsical ornaments on the Local Area page */
