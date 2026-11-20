@@ -190,6 +190,14 @@ a { color: var(--burgundy); }
   height: auto;
   display: block;
 }
+/* These page headings are script lettering rather than a portrait crest, so
+   they are wide and short. A crest width would shrink the words to nothing,
+   so they get their own width and a little more room below. */
+.page-emblem-script {
+  width: min(250px, 62vw);
+  margin: 0 auto 1.1rem;
+}
+
 /* heading present for assistive tech and search, invisible on screen */
 .visually-hidden {
   position: absolute;
