@@ -165,22 +165,26 @@
 }
 
 .env-overlay.is-open .env-flap {
-  /* The flap comes open and stays visible as the triangle it is, with the lace
-     edging showing along both diagonals. Folding it away hid the shape
-     entirely, which is what made the open state look like nothing had happened.
-     A slight tilt and a wider shadow sell it as lifted off the paper. */
-  transform: rotateX(6deg) translateY(-2%) scale(1.06);
+  /* The flap lifts clear of the body and stands above it, apex up, so the
+     whole triangle sits at the very top edge the way an opened invitation
+     does. translateY(-100%) moves the element up by exactly its own height,
+     which puts its base on the envelope's top edge. */
+  transform: translateY(-100%);
   opacity: 1;
-  z-index: 4;
+  z-index: 0;
   clip-path: none;
   background-color: transparent;
   background-image: url('images/envelope-flap-open-v2.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   box-shadow: none;
-  filter: drop-shadow(0 6px 10px rgba(20, 8, 7, .5));
+  filter: drop-shadow(0 -4px 9px rgba(20, 8, 7, .38));
 }
+
+/* Once open, the flap lives outside the envelope's box, so the box must stop
+   clipping or the triangle is cut off at the seam. */
+.env-overlay.is-open .env { overflow: visible; }
 
 /* ---------- the wax seal ---------- */
 .env-seal {
