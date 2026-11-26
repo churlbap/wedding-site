@@ -53,6 +53,14 @@ var FORMS_KEY = 'ojfq02d56tis9ch8xmvzegb4';
       var el = form.elements[n];
       if (el) fields[n] = el.value;
     });
+    // The form now collects real dates. The sheet keeps its existing "nights"
+    // column, so the dates are written into it as a range. That way nothing on
+    // the Apps Script side has to change or be redeployed.
+    var cin = form.elements.checkin, cout = form.elements.checkout;
+    if (cin && cout) {
+      fields.nights = (cin.value && cout.value) ? (cin.value + ' to ' + cout.value)
+                                                : (cin.value || cout.value || '');
+    }
     fields.form = formType;
     fields.key = FORMS_KEY;
 
