@@ -13,10 +13,16 @@
     var h = Math.floor(diff / 3600000) % 24;
     var m = Math.floor(diff / 60000) % 60;
     var s = Math.floor(diff / 1000) % 60;
-    if (ids.d) document.getElementById(ids.d).textContent = pad(d);
-    if (ids.h) document.getElementById(ids.h).textContent = pad(h);
-    if (ids.m) document.getElementById(ids.m).textContent = pad(m);
-    if (ids.s) document.getElementById(ids.s).textContent = pad(s);
+    // Only touch the countdown if the page actually has one. The guard used to
+    // check ids.d, which is a string and always truthy, so on any inner page
+    // getElementById returned null and setting textContent threw. That error
+    // aborted this whole file, so the form wiring below never ran at all.
+    var ed = document.getElementById(ids.d), eh = document.getElementById(ids.h),
+        em = document.getElementById(ids.m), es = document.getElementById(ids.s);
+    if (ed) ed.textContent = pad(d);
+    if (eh) eh.textContent = pad(h);
+    if (em) em.textContent = pad(m);
+    if (es) es.textContent = pad(s);
     if (past && ids.s) {
       var el = document.getElementById('countdown');
       if (el) el.querySelector('.hero-kicker') || (el.previousElementSibling.textContent = "We're married!");
