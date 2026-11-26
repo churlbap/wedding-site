@@ -622,9 +622,55 @@ body.page-register .btn:focus-visible {
 }
 
 .form-grid { display: grid; gap: 1.3rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 640px; margin: 0 auto; }
+/* display:grid above would beat the hidden attribute, so hiding the form after
+   submit needs this or it stays on screen. */
+.form-grid[hidden], .notice[hidden], .form-done[hidden] { display: none !important; }
 .field label { display: block; font-size: .62rem; text-transform: uppercase; letter-spacing: .24em; color: var(--ink-soft); margin-bottom: .45rem; }
 .field input, .field select, .field textarea { width: 100%; padding: .8rem .9rem; border: 1px solid var(--line); border-radius: 0; background: var(--cream); font-family: var(--sans); font-weight: 300; font-size: 1rem; color: var(--ink); }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--burgundy); }
+/* The confirmation that replaces the form once it has been sent. It needs to
+   be impossible to miss: the form disappears and this takes its place, rather
+   than leaving a line of small print below fields that still look untouched. */
+.form-done {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.2rem 1.6rem 2.4rem;
+  background: var(--cream);
+  text-align: center;
+}
+.form-done-mark {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  background: var(--burgundy);
+  color: var(--cream);
+  font-size: 1.6rem;
+  line-height: 54px;
+  font-weight: 400;
+}
+.form-done h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: var(--burgundy);
+  margin: 0 0 .5rem;
+}
+.form-done p {
+  font-size: .95rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 auto .4rem;
+  max-width: 26rem;
+}
+.form-done-small {
+  font-size: .8rem;
+  opacity: .75;
+  margin-top: .9rem;
+}
+/* while sending, the button says so and cannot be pressed twice */
+.btn[disabled] { opacity: .7; cursor: default; }
+
 .notice { background: var(--cream); border: 1px solid var(--line); border-left: 2px solid var(--burgundy); border-radius: 0; padding: 1rem 1.2rem; text-align: center; color: var(--ink-soft); font-size: .88rem; max-width: 640px; margin: 2rem auto 0; }
 
 /* FAQ */

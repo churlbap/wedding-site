@@ -72,15 +72,26 @@ var FORMS_KEY = 'ojfq02d56tis9ch8xmvzegb4';
     })
     .then(function () {
       form.reset();
-      setStatus('Thank you! Your response has been received. 💛', true);
+      showDone();
     })
     .catch(function () {
-      setStatus('Something went wrong sending — please try again in a moment.', false, true);
-    })
-    .then(function () {
+      setStatus('Something went wrong sending. Please try again in a moment.', false, true);
       if (btn) { btn.disabled = false; btn.textContent = formType === 'rsvp' ? 'Send RSVP' : 'Register Interest'; }
     });
   });
+
+  // Replace the form with a clear confirmation. Leaving the fields on screen
+  // made it impossible to tell whether anything had been sent.
+  function showDone() {
+    var done = document.querySelector('.form-done');
+    var note = document.querySelector('.notice');
+    form.hidden = true;
+    if (note) note.hidden = true;
+    if (!done) return;
+    done.hidden = false;
+    // bring it into view, since the button sits at the bottom of the page
+    try { done.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) { done.scrollIntoView(); }
+  }
 
   function setStatus(msg, ok, warn) {
     var el = document.querySelector('.notice');
