@@ -631,6 +631,17 @@ body.page-register .btn:focus-visible {
 /* The confirmation that replaces the form once it has been sent. It needs to
    be impossible to miss: the form disappears and this takes its place, rather
    than leaving a line of small print below fields that still look untouched. */
+/* Which place this particular form is for. Both register pages look alike, so
+   without this line it is easy to fill in the wrong one. */
+.form-which {
+  font-size: .82rem;
+  line-height: 1.6;
+  text-align: center;
+  color: rgba(247,244,239,.82);
+  margin: 0 0 .3rem;
+}
+.form-which strong { color: var(--cream); font-weight: 500; }
+
 .form-done {
   max-width: 640px;
   margin: 0 auto;
