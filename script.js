@@ -55,7 +55,7 @@ var FORMS_KEY = 'ojfq02d56tis9ch8xmvzegb4';
     var btn = form.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
     var fields = {};
-    ['name', 'email', 'attending', 'guests', 'nights', 'notes'].forEach(function (n) {
+    ['name', 'email', 'attending', 'guests', 'nights', 'notes', 'option'].forEach(function (n) {
       var el = form.elements[n];
       if (el) fields[n] = el.value;
     });
